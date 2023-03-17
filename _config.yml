@@ -3,6 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
+<<<<<<< HEAD
 title: Hexo
 subtitle: ''
 description: ''
@@ -14,6 +15,19 @@ timezone: ''
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: http://example.com
+=======
+title: GameDesign
+subtitle: 'GameDesign'
+description: 'Games change the world'
+keywords: Games
+author: kchris
+language: zh-CN
+timezone: 'UTC+8'
+
+# URL
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+url: https://github.com/kchris1027
+>>>>>>> fb3b9b103b93cf693fbdbf519a416c06108ce288
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -105,4 +119,7 @@ deploy:
   type: git
   repository: https://github.com/kchris1027/kchris1027.github.io.git
   branch: master
+<<<<<<< HEAD
 
+=======
+>>>>>>> fb3b9b103b93cf693fbdbf519a416c06108ce288
