@@ -105,3 +105,7 @@ deploy:
   type: git
   repo: https://github.com/kchris1027/kchris1027.github.io.git
   branch: master
+
+  type: git
+  repo: https://gitee.com/kchris1027/kchris1027.git
+  branch: master
