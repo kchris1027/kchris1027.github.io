@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: kchris
 subtitle: ''
 description: ''
 keywords:
 author: John Doe
-language: en
+language: zh-CN
 timezone: ''
 
 # URL
@@ -102,10 +102,14 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: git
-  repo: https://github.com/kchris1027/kchris1027.github.io.git
-  branch: master
+ - type: git
+   repo: https://github.com/kchris1027/kchris1027.github.io.git
+   branch: master
 
-  type: git
-  repo: https://gitee.com/kchris1027/kchris1027.git
-  branch: master
+ # - type: git
+ #  repo: https://gitee.com/kchris1027/kchris1027.git
+ #  branch: master
+
+ #- type: git
+ #  repo: https://e.coding.net/kchris1027/blog/kchris1027.git
+ #  branch: master
