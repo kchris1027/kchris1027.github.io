@@ -3,18 +3,23 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: kchris
+title: GameDesign
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
+author: kchris
 language: zh-CN
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
-permalink: :year/:month/:day/:title/
+url: http://kchris1027.github.io
+#permalink: :year/:month/:day/:title/
+#利用hexo-abbrink插件，生成文章唯一链接
+permalink: post/:abbrlink.html
+abbrlink:
+  alg: crc32
+  rep: hex
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
