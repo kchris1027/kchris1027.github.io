@@ -1,0 +1,126 @@
+{
+  "main": {
+    "id": "acfa02c1c16a025e",
+    "type": "split",
+    "children": [
+      {
+        "id": "cff0e0053abbdb9c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9f07b9660ab7e903",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "source/_posts/hello-world.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "eb378ea63ac8adaf",
+    "type": "split",
+    "children": [
+      {
+        "id": "aaecccf3bbfba3b5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0c0e558fa7623e96",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "00dff25af9e44c4c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "1224e4e0aefeddc9",
+    "type": "split",
+    "children": [
+      {
+        "id": "8bfba77cbd803b85",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c73d764876086923",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "source/_posts/hello-world.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "command-palette:打开命令面板": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "templates:插入模板": false
+    }
+  },
+  "active": "9f07b9660ab7e903",
+  "lastOpenFiles": [
+    "themes/butterfly/source/img/top01.jpg",
+    "themes/butterfly/source/img/71320265_p1.jpg",
+    "themes/butterfly/source/img/top.jpg",
+    "themes/butterfly/source/img/c-c-r-rebirth-s.jpg",
+    "scaffolds/page.md",
+    "source/_posts/ceshide.md",
+    "scaffolds/post.md",
+    "scaffolds/draft.md",
+    "themes/butterfly/source/img/404.jpg",
+    "themes/butterfly/source/img/cover.jpg",
+    "source/img/cover.jpg",
+    "themes/butterfly/source/img/favicon.png",
+    "themes/butterfly/source/img/friend_404.gif",
+    "source/img/60684267_p0.jpg",
+    "source/img"
+  ]
+}
