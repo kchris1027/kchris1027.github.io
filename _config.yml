@@ -100,6 +100,13 @@ include:
 exclude:
 ignore:
 
+#search
+search:
+  path: search.xml
+  field: post
+  content: true
+# template: ./search.xml
+
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
