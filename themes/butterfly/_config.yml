@@ -359,8 +359,8 @@ facebook_comments:
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  envId: http://207.148.100.215:8080/
-  region:
+  envId: 'http://207.148.100.215:8080/'
+  region: ap-tokyo
   visitor: true
   option:
 
