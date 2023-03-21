@@ -359,7 +359,7 @@ facebook_comments:
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  envId: 'http://207.148.100.215:8080/'
+  envId: https://comments.kongcai.tech/
   region: ap-tokyo
   visitor: true
   option:
