@@ -127,7 +127,7 @@ douban:
   movie:
     path: movies/index.html
     title: '看点不一样的~'
-    quote: '电影发明以后，人类的生命至少比以前延长了三倍'
+    quote: '一些还不错的电影推荐'
     option:
   #game:
   #  path: games/index.html
