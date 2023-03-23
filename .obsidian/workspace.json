@@ -107,6 +107,9 @@
   },
   "active": "9f07b9660ab7e903",
   "lastOpenFiles": [
+    "source/img/base/top01.jpg",
+    "source/img/base/top.jpg",
+    "source/img/base/cover.jpg",
     "source/_posts/hello-world.md",
     "source/_posts/MD书写说明.md",
     "scaffolds/page.md",
@@ -128,8 +131,6 @@
     "public/css/var.css",
     "public/img/base/friend_404.gif",
     "public/img/friend_404.gif",
-    "public/img/base/favicon.png",
-    "public/img/favicon.png",
     "node_modules/hexo-wordcount/README.md",
     "node_modules/hexo-generator-search/README.md",
     "source/_posts/ceshide.md",
