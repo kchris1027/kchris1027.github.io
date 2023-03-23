@@ -3,20 +3,20 @@
 # --------------------------------------
 
 menu:
-   Home: / || fas fa-home
-   Archives: /archives/ || fas fa-archive
-   Tags: /tags/ || fas fa-tags
-   Categories: /categories/ || fas fa-folder-open
+   主页: / || fas fa-home
+   时间线: /archives/ || fas fa-archive
+   标签: /tags/ || fas fa-tags
+   分类: /categories/ || fas fa-folder-open
    List||fas fa-list||hide:
      Music: /music/ || fas fa-music
      Movie: /movies/ || fas fa-video
-     iamges: /movies/ || fas fa-images
-   Link: /link/ || fas fa-link
-   About: /about/ || fas fa-heart
+    # iamges: /movies/ || fas fa-images
+  # Link: /link/ || fas fa-link
+  # About: /about/ || fas fa-heart
 
 nav:
-  logo:  # image
-  display_title: true
+  logo:  /img/base/icon.png
+  display_title: false
   fixed: false # fixed navigation bar
 
 # Code Blocks (代碼相關)
@@ -26,7 +26,7 @@ highlight_theme: darker #  darker / pale night / light / ocean / mac / mac light
 highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
-highlight_height_limit: false # unit: px
+highlight_height_limit: 500 # unit: px
 code_word_wrap: false
 
 # copy settings
@@ -606,9 +606,9 @@ display_mode: light
 
 # Beautify (美化頁面顯示)
 beautify:
-  enable: false
+  enable: true
   field: post # site/post
-  title-prefix-icon: '\f0c1' # '\f0c1'
+  title-prefix-icon: '\f02b' # '\f0c1'
   title-prefix-icon-color: '#F47466' # '#F47466'
 
 # Global font settings
@@ -690,19 +690,19 @@ aside:
     sort: date # date or updated
     sort_order: # Don't modify the setting unless you know how it works
   card_categories:
-    enable: true
+    enable: false
     limit: 8 # if set 0 will show all
     expand: none # none/true/false
     sort_order: # Don't modify the setting unless you know how it works
   card_tags:
-    enable: true
+    enable: false
     limit: 40 # if set 0 will show all
     color: false
     orderby: random # Order of tags, random/name/length
     order: 1 # Sort of order. 1, asc for ascending; -1, desc for descending
     sort_order: # Don't modify the setting unless you know how it works
   card_archives:
-    enable: true
+    enable: false
     type: monthly # yearly or monthly
     format: MMMM YYYY # eg: YYYY年MM月
     order: -1 # Sort of order. 1, asc for ascending; -1, desc for descending
@@ -829,7 +829,7 @@ pjax:
 
 # Inject the css and script (aplayer/meting)
 aplayerInject:
-  enable: false
+  enable: true
   per_page: true
 
 # Snackbar (Toast Notification 彈窗)
@@ -895,6 +895,7 @@ inject:
     # - <link rel="stylesheet" href="/xxx.css">
   bottom:
     # - <script src="xxxx"></script>
+    - <div class="aplayer no-destroy" data-id="7199616451&userid=96116466" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-autoplay="true"> </div>
 
 # CDN
 # Don't modify the following settings unless you know how they work
