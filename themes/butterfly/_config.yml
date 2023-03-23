@@ -43,7 +43,7 @@ copy:
 social:
   # fab fa-github: https://github.com/xxxxx || Github
   # fas fa-envelope: mailto:xxxxxx@gmail.com || Email
-  fas fa-envelope: mailto:1098158356@qq.com || Email
+  # fas fa-envelope: mailto:1098158356@qq.com || Email
 
 # search (搜索)
 # see https://butterfly.js.org/posts/ceeb73f/#搜索系統
@@ -678,9 +678,9 @@ aside:
     description:
     button:
       enable: true
-      icon: fab fa-github
-      text: Follow Me
-      link: https://github.com/kchris1027
+      icon: fas fa-envelope
+      text: Contact Me
+      link: mailto:1098158356@qq.com
   card_announcement:
     enable: true
     content: 暂时还没想好
