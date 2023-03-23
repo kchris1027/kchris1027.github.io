@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/hello-world.md",
+                "file": "source/_posts/MD书写说明.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source/_posts/hello-world.md",
+                "file": "source/_posts/MD书写说明.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,6 +107,9 @@
   },
   "active": "9f07b9660ab7e903",
   "lastOpenFiles": [
+    "source/_posts/hello-world.md",
+    "source/_posts/MD书写说明.md",
+    "scaffolds/page.md",
     "db.json",
     "public/img/base/top.jpg",
     "public/img/base/cover.jpg",
@@ -123,14 +126,12 @@
     "public/img/base/icon01.png",
     "public/img/base/icon.png",
     "public/css/var.css",
-    "public/css/index.css",
     "public/img/base/friend_404.gif",
     "public/img/friend_404.gif",
     "public/img/base/favicon.png",
     "public/img/favicon.png",
     "node_modules/hexo-wordcount/README.md",
     "node_modules/hexo-generator-search/README.md",
-    "scaffolds/page.md",
     "source/_posts/ceshide.md",
     "scaffolds/post.md",
     "scaffolds/draft.md"
