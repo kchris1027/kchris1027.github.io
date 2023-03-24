@@ -7,6 +7,6 @@ aplayer: true
 欢迎评论留言，与我分享您喜欢的音乐~
 {% endnote %}
 
-{% meting "383735929&userid=96116466" "netease" "playlist" "autoplay"%}
+{% meting "383735929&userid=96116466" "netease" "playlist" "autoplay" "order:random" %}
 
 
