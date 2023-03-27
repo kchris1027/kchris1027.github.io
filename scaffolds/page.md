@@ -1,6 +1,6 @@
 ---
-title: {{ title }}          #【必需】页面标题
-date: {{ date }}            #【必需】页面创建日期
+title: {{title}}                 
+date: {{date}}  {{time}}        
 # updated:                   #【可选】页面更新日期
 # type:                      #【必需】标签、分类和友情链接三个页面需要配置
 # comments:                  #【可选】显示页面评论模块(默认 true)

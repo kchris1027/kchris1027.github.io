@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "9f07b9660ab7e903",
+            "id": "057951910a2e246f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/MD书写说明.md",
+                "file": "source/_posts/AI绘画.md",
                 "mode": "source",
                 "source": false
               }
@@ -56,12 +56,21 @@
                 "sortOrder": "alphabetical"
               }
             }
+          },
+          {
+            "id": "7a470108f608c1a2",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 345.5
   },
   "right": {
     "id": "1224e4e0aefeddc9",
@@ -77,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source/_posts/MD书写说明.md",
+                "file": "source/_posts/AI绘画.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,14 +114,32 @@
       "templates:插入模板": false
     }
   },
-  "active": "9f07b9660ab7e903",
+  "active": "7a470108f608c1a2",
   "lastOpenFiles": [
+    "source/_posts/MD书写说明.md",
+    "source/_posts/hello-world.md",
+    "source/_posts/AI绘画.md",
+    "source/categories/index.md",
+    "scaffolds/ChatGPT_MD/Templates/app-idea-creator.md",
+    "未命名",
+    "scaffolds/ChatGPT_MD/Templates",
+    "scaffolds/ChatGPT_MD/Chats",
+    "scaffolds/ChatGPT_MD",
+    "scaffolds/ChatGPT_MD/Templates/to-mermaid-js.md",
+    "scaffolds/ChatGPT_MD/Templates/socratic-tutor.md",
+    "scaffolds/ChatGPT_MD/Templates/obsidian-api-documentation.md",
+    "scaffolds/ChatGPT_MD/Templates/code-block-explainer.md",
+    "scaffolds/draft.md",
+    "scaffolds/ChatGPT_MD/Templates/transcript-add-vocal-inflection.md",
+    "scaffolds/ChatGPT_MD/Templates/to-zettel.md",
+    "scaffolds/Chat Template Folder",
+    "scaffolds/Chat Folder",
+    "source/img/AI_Paint.png",
+    "scaffolds/post.md",
+    "scaffolds/page.md",
     "source/img/base/top01.jpg",
     "source/img/base/top.jpg",
     "source/img/base/cover.jpg",
-    "source/_posts/hello-world.md",
-    "source/_posts/MD书写说明.md",
-    "scaffolds/page.md",
     "db.json",
     "public/img/base/top.jpg",
     "public/img/base/cover.jpg",
@@ -121,20 +148,10 @@
     "public/img/base/pay_wechat.png",
     "public/js/search/local-search.js",
     "public/js/search/algolia.js",
-    "public/js/utils.js",
-    "public/js/tw_cn.js",
-    "public/js/search",
-    "public/js/main.js",
-    "public/js",
     "public/img/base/icon01.png",
     "public/img/base/icon.png",
-    "public/css/var.css",
-    "public/img/base/friend_404.gif",
-    "public/img/friend_404.gif",
     "node_modules/hexo-wordcount/README.md",
     "node_modules/hexo-generator-search/README.md",
-    "source/_posts/ceshide.md",
-    "scaffolds/post.md",
-    "scaffolds/draft.md"
+    "source/_posts/ceshide.md"
   ]
 }
