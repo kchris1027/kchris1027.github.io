@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -114,10 +113,10 @@
       "templates:插入模板": false
     }
   },
-  "active": "7a470108f608c1a2",
+  "active": "057951910a2e246f",
   "lastOpenFiles": [
-    "source/_posts/MD书写说明.md",
     "source/_posts/hello-world.md",
+    "source/_posts/MD书写说明.md",
     "source/_posts/AI绘画.md",
     "source/categories/index.md",
     "scaffolds/ChatGPT_MD/Templates/app-idea-creator.md",
