@@ -7,9 +7,9 @@ menu:
    时间线: /archives/ || fas fa-archive
    标签: /tags/ || fas fa-tags
    分类: /categories/ || fas fa-folder-open
-   List||fas fa-list||hide:
-     Music: /music/ || fas fa-music
-     Movie: /movies/ || fas fa-video
+   #List||fas fa-list||hide:
+    # Music: /music/ || fas fa-music
+    # Movie: /movies/ || fas fa-video
     # iamges: /movies/ || fas fa-images
   # Link: /link/ || fas fa-link
   # About: /about/ || fas fa-heart
