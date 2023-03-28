@@ -108,8 +108,8 @@ aside:
 | copyright             | 【可选】显示文章版权模块(默认为设置中post_copyright的enable配置) |
 | copyright_author      | 【可选】文章版权模块的`文章作者`                             |
 | copyright_author_href | 【可选】文章版权模块的`文章作者`链接                         |
-| copyright_url         | 【可选】文章版权模块的`文章連結`链接                        |
-| copyright_info        | 【可选】文章版权模块的`版權聲明`文字                         |
+| copyright_url         | 【可选】文章版权模块的`文章链接`链接                        |
+| copyright_info        | 【可选】文章版权模块的`版权声明`文字                         |
 | mathjax               | 【可选】显示mathjax(当设置mathjax的per_page: false时，才需要配置，默认 false) |
 | katex                 | 【可选】显示katex(当设置katex的per_page: false时，才需要配置，默认 false) |
 | aplayer               | 【可选】在需要的页面加载aplayer的js和css,请参考文章下面的音乐 配置 |
