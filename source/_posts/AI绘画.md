@@ -5,7 +5,7 @@ tags:
   - AI
   - 绘画
 categories: AI工具
-cover: /img/AI_Paint.png
+cover: /img/AI绘画/AI_Paint.png
 abbrlink: a01715fb
 ---
 
@@ -38,14 +38,47 @@ PicUP.AI 是一种基于 GAN 技术的 AI 绘画工具，它可以生成各种�
 
 **其他**
 
-除了上述几种主流的 AI 绘画工具之外，还有许多其他的工具，如 DALL-E2、Artbreeder、GANbreeder 等。这些工具都是基于 GAN 或其他 AI 技术的，可以生成各种不同的图像和艺术作品。它们的特点是生成的图像非常逼真，可以与真实的照片媲美。
+除了上述几种主流的 AI 绘画工具之外，还有许多其他的工具，如 DALL-E2、Artbreeder、GANbreeder 等。这些工具都是基于 GAN 或其他 AI 技术的，可以生成各种不同的图像和艺术作品。它们的特点是生成的图像非常逼真，可以与真实的照片媲美。    
 
-
+    
 ## 工具使用说明
 
 ### Stable Diffusion
 
-待补充
+1. 下载和安装  
+
+   方式一 : GitHub源码（需梯子）    [AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)  
+
+   方式二 : 一键整合包，开箱即用   [秋葉aaaki（推荐）](https://space.bilibili.com/12566101)
+
+2. 界面使用说明     
+  ![Alt text](../img/AI%E7%BB%98%E7%94%BB/%E7%95%8C%E9%9D%A2UI%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.jpg)  
+   - Stable Duffusion 模型(ckpt)  
+      大模型是数据训练出来的结果，决定了生成图片的美术风格以及它擅长的绘画面。资源可以在网上下载，根据自己的喜好挑选模型。  
+      对应本地资源存放目录 `.../models/Stable-diffusion`  
+   - 模型的 VAE(SD VAE)  
+      VAE 的主要作用是滤镜，决定了生成图像的色彩饱和度；虽然也有局部修正的作用，但作用效果不明显。有些大模型不用 VAE 直出的图像是灰色的，有些模型则不用。这部分建议多去尝试与组合，寻找自己的喜欢的风格色彩。
+      对应本地资源存放目录 `.../models/VAE`
+
+
+   - 提示词(Prompt)  
+      输入自己想要画面元素的关键词(tags)，这里用英文输入，中文输入效果不理想。
+
+   - 反向提示词(Negative prompt)  
+      输入自己不想要
+
+   - Embedding
+   - LoRA
+   - 采样迭代步数(Steps)
+   - 采样方法(Sampler)  
+
+
+3. 资源相关  
+
+    综合下载网站：https://civitai.com/  
+    AI绘画图集：https://pixai.art/
+
+
 
 
 
