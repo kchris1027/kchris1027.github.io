@@ -45,13 +45,13 @@ abbrlink: a01715fb
 
 ### Stable Diffusion
 
-### 下载和安装 
+#### 下载和安装 
 
    - 方式一 : GitHub源码（需梯子）    [AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)  
 
    - 方式二 : 一键整合包，开箱即用   [秋葉aaaki（推荐）](https://www.bilibili.com/video/BV17d4y1C73R/?spm_id_from=333.999.0.0)
 
-### 操作界面说明    
+#### 操作界面说明    
   ![Alt text](../img/AI%E7%BB%98%E7%94%BB/%E7%95%8C%E9%9D%A2UI%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.jpg)  
 
    - **Stable Duffusion 模型(ckpt)**  
@@ -89,7 +89,7 @@ abbrlink: a01715fb
 
 
 
-### 插件
+#### 插件
   - **Embedding (textual inversion)**   
       嵌入/文本反转，通俗理解：提示词打包，类似与提示词组的概念，可以使用别人已经打包好的tags,用于生成固定特征的人或事物。  
 
@@ -109,7 +109,7 @@ abbrlink: a01715fb
 
 
 
-### 资源站点  
+#### 资源站点  
 
   - C 站：https://civitai.com/  
   - Pixai 图站：https://pixai.art/  
