@@ -111,11 +111,11 @@ abbrlink: a01715fb
 
 #### 资源站点  
 
-  - C 站：https://civitai.com/  
-  - Pixai 图站：https://pixai.art/  
-  - Finding.Art 图站 https://finding.art/  
-  - AIGODLIKE  https://novelai.dev/  
-  - NovelAI.Dev https://novelai.dev/
+  - C 站： https://civitai.com/  
+  - Pixai 图站： https://pixai.art/  
+  - Finding.Art 图站： https://finding.art/  
+  - AIGODLIKE ： https://www.aigodlike.com/
+  - NovelAI.Dev ： https://novelai.dev/
 
 
 

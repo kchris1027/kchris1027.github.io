@@ -11,11 +11,10 @@
             "id": "057951910a2e246f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "diff-view",
               "state": {
                 "file": "source/_posts/AI绘画.md",
-                "mode": "source",
-                "source": false
+                "staged": false
               }
             }
           }
@@ -65,7 +64,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -85,7 +85,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source/_posts/AI绘画.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,8 +114,8 @@
   },
   "active": "057951910a2e246f",
   "lastOpenFiles": [
-    "source/_posts/AI绘画/AI_Paint.png",
     "source/_posts/AI绘画.md",
+    "source/_posts/AI绘画/AI_Paint.png",
     "source/_posts/MD书写说明.md",
     "source/_posts/hello-world.md",
     "source/categories/index.md",
