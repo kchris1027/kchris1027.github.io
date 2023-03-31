@@ -44,6 +44,9 @@ social:
   # fab fa-github: https://github.com/xxxxx || Github
   # fas fa-envelope: mailto:xxxxxx@gmail.com || Email
   # fas fa-envelope: mailto:1098158356@qq.com || Email
+   fab fa-bilibili: https://space.bilibili.com/6518211 || b站
+   fas fa-rss: http://kchris1027.github.io/link/atom.xml || RSS
+  
 
 # search (搜索)
 # see https://butterfly.js.org/posts/ceeb73f/#搜索系統

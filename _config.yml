@@ -107,7 +107,7 @@ ignore:
 
 #search
 search:
-  path: search.xml
+  path: search/search.xml
   field: post
   content: true
 # template: ./search.xml
@@ -117,6 +117,20 @@ aplayer:
   asset_inject: false
   meting: true
 
+#用于生成RSS的feed插件配置
+feed:
+  enable: true
+  type: atom
+  path: link/atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: icon.png
+  autodiscovery: true
+  template:
 
 #douban
 douban:
