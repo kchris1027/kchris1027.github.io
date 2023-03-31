@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>GameDesign</title>
+  <icon>http://kchris1027.github.io/icon.png</icon>
+  
+  <link href="http://kchris1027.github.io/link/atom.xml" rel="self"/>
+  
+  <link href="http://kchris1027.github.io/"/>
+  <updated>2023-03-31T11:03:10.494Z</updated>
+  <id>http://kchris1027.github.io/</id>
+  
+  <author>
+    <name>kchris</name>
+    <email>1098158356@qq.com</email>
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AI绘画</title>
+    <link href="http://kchris1027.github.io/post/a01715fb.html"/>
+    <id>http://kchris1027.github.io/post/a01715fb.html</id>
+    <published>2023-03-27T19:57:00.000Z</published>
+    <updated>2023-03-31T11:03:10.494Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;主流AI绘画工具&quot;&gt;&lt;a href=&quot;#主流AI绘画工具&quot; class=&quot;headerlink&quot; title=&quot;主流AI绘画工具&quot;&gt;&lt;/a&gt;主流AI绘画工具&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Stable</summary>
+        
+      
+    
+    
+    
+    <category term="AI工具" scheme="http://kchris1027.github.io/categories/AI%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="AI" scheme="http://kchris1027.github.io/tags/AI/"/>
+    
+    <category term="绘画" scheme="http://kchris1027.github.io/tags/%E7%BB%98%E7%94%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MD书写说明</title>
+    <link href="http://kchris1027.github.io/post/8afd3603.html"/>
+    <id>http://kchris1027.github.io/post/8afd3603.html</id>
+    <published>2023-03-23T13:41:30.000Z</published>
+    <updated>2023-03-31T11:03:10.494Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Front-matter&quot;&gt;&lt;a href=&quot;#Front-matter&quot; class=&quot;headerlink&quot; title=&quot;Front-matter&quot;&gt;&lt;/a&gt;Front-matter&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Front-matter 是</summary>
+        
+      
+    
+    
+    
+    <category term="Docs 文档" scheme="http://kchris1027.github.io/categories/Docs-%E6%96%87%E6%A1%A3/"/>
+    
+    
+    <category term="教程" scheme="http://kchris1027.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://kchris1027.github.io/post/4a17b156.html"/>
+    <id>http://kchris1027.github.io/post/4a17b156.html</id>
+    <published>2023-03-19T00:00:00.000Z</published>
+    <updated>2023-03-31T11:03:10.494Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
