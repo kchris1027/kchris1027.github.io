@@ -686,7 +686,7 @@ aside:
       link: mailto:1098158356@qq.com
   card_announcement:
     enable: true
-    content: 暂时还没想好
+    content: 欢迎来聊~
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
