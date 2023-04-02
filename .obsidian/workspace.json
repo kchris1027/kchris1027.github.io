@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/AI绘画.md",
+                "file": "source/_posts/ChatGPT的微信和qq接入.md",
                 "mode": "source",
                 "source": false
               }
@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source/_posts/AI绘画.md",
+                "file": "source/_posts/ChatGPT的微信和qq接入.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,14 +109,17 @@
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
       "command-palette:打开命令面板": false,
-      "markdown-importer:打开 Markdown 格式转换器": false,
-      "templates:插入模板": false
+      "templates:插入模板": false,
+      "remotely-save:Remotely Save": false
     }
   },
-  "active": "7a470108f608c1a2",
+  "active": "057951910a2e246f",
   "lastOpenFiles": [
-    "source/_posts/hello-world.md",
+    "source/img/AI绘画/AI_Paint.png",
+    "img.md",
+    "source/_posts/ChatGPT的微信和qq接入.md",
     "source/_posts/AI绘画.md",
+    "source/_posts/hello-world.md",
     "source/_posts/AI绘画/AI_Paint.png",
     "source/_posts/MD书写说明.md",
     "source/categories/index.md",
