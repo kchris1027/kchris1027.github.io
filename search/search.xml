@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>ChatGPT的微信和qq接入</title>
+      <link href="/post/1082c8d6.html"/>
+      <url>/post/1082c8d6.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="ChatGPT账号注册"><a href="#ChatGPT账号注册" class="headerlink" title="ChatGPT账号注册"></a>ChatGPT账号注册</h2><ul><li><p>通过在线SMS服务选择OpenAI支持的手机号完成账号注册<br>  <a href="https://chat.openai.com/">ChatGPT官网</a> （需代理）<br>  <a href="https://sms-activate.org/">SMS虚拟手机号码服务</a><br>  此处提供的sms服务需要付费，大概1$不到。网上也能找到免费的，不过质量层次不齐，不保证能接收到验证码，出于节省时间的目的，还是更推荐付费的。 </p></li><li><p>获取API为其他通讯方式的接入做准备<br>   <img src="/../img/ChatGPT%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%92%8Cqq%E6%8E%A5%E5%85%A5/API_KEY.png" alt="Alt text"><br>  进入 <a href="https://platform.openai.com/account/api-keys">OpenAI API</a> ，点击创建新的 key ，API key的调用是要收费的，具体收费方式详见官网，每个账号有 <code>5$</code> 的额度，个人使用还是足够的，多人使用推荐上 plus 版本。</p></li></ul><h2 id="微信接入"><a href="#微信接入" class="headerlink" title="微信接入"></a>微信接入</h2><p>主要还是通过GitHub开源项目进行接入，具体接入方式详见各自项目的说明文档  </p><ul><li>个人微信接入 <a href="https://github.com/limccn/chatgpt-on-wechat">chatgpt-on-wechat</a>  </li><li>公众号接入  <a href="https://github.com/zhayujie/bot-on-anything">bot-on-anything</a></li></ul><h2 id="QQ接入"><a href="#QQ接入" class="headerlink" title="QQ接入"></a>QQ接入</h2><ol><li>部署qq登录程序  <a href="https://github.com/Mrs4s/go-cqhttp">go-cqhttp</a><br>通讯方式选用反向代理，即 <code>severs</code> 部分的配置选用 <code>ws-reverse</code> 设置参数。服务器监听的地址需要与 <code>chatpgt-mirai-qq-bot</code> 的运行地址和端口保持一致。</li><li>对接ChatGPT  <a href="https://github.com/lss233chatgpt-mirai-qq-bot">chatgpt-mirai-qq-bot</a><br>该项目支持多种AI的调用方式，具体细节详见官方说明文档。</li></ol><blockquote><p>今年算是AI的爆发元年了，井喷式的AI工具涌现而出。最近一直在琢磨着将 AI 融入工作和生活，浅尝之下，不得不感叹AI带来的高效与便利。而如何更好的融合和使用这些AI工具，应该是未来几年需要持续摸索的一件事情了。</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> AI工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ChatGPT </tag>
+            
+            <tag> Bot </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>AI绘画</title>
       <link href="/post/a01715fb.html"/>
       <url>/post/a01715fb.html</url>
