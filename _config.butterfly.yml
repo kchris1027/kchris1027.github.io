@@ -8,7 +8,7 @@ menu:
     归档: /archives/ || fas fa-archive
     标签: /tags/ || fas fa-tags
     分类: /categories/ || fas fa-folder-open
-   手账: /artitalk/ || fas fa-pen-to-square
+  # 手账: /artitalk/ || fas fa-pen-to-square
   # 说说: /artitalk/ || fab fa-stack-overflow
    影音||fas fa-headphones||hide:
      Music: /music/ || fas fa-music
