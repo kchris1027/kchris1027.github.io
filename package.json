@@ -14,6 +14,7 @@
   "dependencies": {
     "hexo": "^6.3.0",
     "hexo-abbrlink": "^2.2.1",
+    "hexo-butterfly-artitalk": "^1.0.4",
     "hexo-deployer-git": "^4.0.0",
     "hexo-douban": "^2.1.7",
     "hexo-generator-archive": "^2.0.0",

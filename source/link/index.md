@@ -32,5 +32,9 @@ comments: false
       avatar: https://i0.wp.com/blog.fontawesome.com/wp-content/uploads/2022/11/sharp-light-swathe.png?w=1440&ssl=1
       descr: WebIcon  
 
+    - name: LeanCloud
+      link: https://leancloud.app/
+      avatar: https://th.bing.com/th?id=AMMS_83f5439f5ca9efd3360867200c99f591&w=110&h=110&c=7&rs=1&qlt=95&pcl=f9f9f9&o=6&cdv=1&pid=16.1
+      descr: 一站式云服务 
 
 {% endflink %}

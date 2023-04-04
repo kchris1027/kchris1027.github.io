@@ -4,14 +4,18 @@
 
 menu:
    主页: / || fas fa-home
-   归档: /archives/ || fas fa-archive
-   标签: /tags/ || fas fa-tags
-   分类: /categories/ || fas fa-folder-open
+   文章||fas fa-book||hide: 
+    归档: /archives/ || fas fa-archive
+    标签: /tags/ || fas fa-tags
+    分类: /categories/ || fas fa-folder-open
+   手账: /artitalk/ || fas fa-pen-to-square
+  # 说说: /artitalk/ || fab fa-stack-overflow
    影音||fas fa-headphones||hide:
      Music: /music/ || fas fa-music
      Movie: /movies/ || fas fa-video
     # iamges: /movies/ || fas fa-images
-   工具: /link/ || fas fa-book
+   工具: /link/ || fas fa-compass
+   留言板: /message/ || fas fa-comment-dots
   # About: /about/ || fas fa-heart
 
 nav:

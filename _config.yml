@@ -160,6 +160,18 @@ douban:
   #  option:
   timeout: 10000 
 
+#说说插件
+# Artitalk
+# see https://artitalk.js.org/
+artitalk:
+  enable: true
+  appId: b85G6KOAVjmVWflXeiym5LNq-MdYXbMMI
+  appKey: Dmb0wf2uPyYIaD31nXQBYl2d
+# path:
+# js:
+# option:
+# front_matter:
+
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
