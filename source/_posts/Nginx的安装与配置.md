@@ -1,7 +1,7 @@
 ---
 title: Nginx的安装与配置
 tags:
-  - vps
+  - Linux
   - ssl
 categories: Linux
 cover: /img/Nginx的安装与配置/logo.png

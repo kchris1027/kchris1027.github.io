@@ -663,7 +663,7 @@ preloader:
   # pace theme (see https://codebyzach.github.io/pace/)
   pace_css_url:
 
-# aside (側邊欄)
+# aside (侧边栏)
 # --------------------------------------
 
 aside:
