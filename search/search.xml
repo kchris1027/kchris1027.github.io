@@ -112,6 +112,31 @@
     
     
     <entry>
+      <title>Notes</title>
+      <link href="/post/c0da8988.html"/>
+      <url>/post/c0da8988.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Twikoo"><a href="#Twikoo" class="headerlink" title="Twikoo"></a><a href="https://twikoo.js.org/">Twikoo</a></h2><ul><li>存在问题：按照官方文档部署完成后，本地测试无问题，但是正式部署到云端服务器后，无法正常运作。</li><li>问题排查：服务器地址云函数运行正常，浏览器中按 F12 发现有报错 <code>This request has been blocked; the content must be served over HTTPS.</code> 该云函数是通过<code>http</code>协议访问的，会被浏览器拦截，本地测试运行则不会。</li><li>解决方案：通过<a href="http://kchris1027.github.io/post/13d4b70d.html">Nginx的安装与配置</a>，配置SSL证书走<code>https</code>协议访问。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Docs 文档 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Note </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MD书写说明</title>
       <link href="/post/8afd3603.html"/>
       <url>/post/8afd3603.html</url>
