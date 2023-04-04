@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Nginx的安装与配置</title>
+      <link href="/post/661ecc9.html"/>
+      <url>/post/661ecc9.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Nginx简介"><a href="#Nginx简介" class="headerlink" title="Nginx简介"></a>Nginx简介</h2><p>Nginx是一款高性能的Web服务器和反向代理服务器，它可以处理高并发的请求，同时还支持负载均衡、HTTP缓存和动态HTTP请求等功能。Nginx的设计理念是高并发、低消耗、高可靠性和易扩展，因此在大型网站的应用非常广泛。</p><p>Nginx的主要作用包括：</p><ol><li>Web服务器：Nginx可以作为Web服务器，处理HTTP请求，向客户端提供静态或动态的Web内容。</li><li>反向代理服务器：Nginx可以作为反向代理服务器，将客户端请求转发到后端服务器，处理后端服务器的响应结果并返回给客户端。</li><li>负载均衡器：Nginx可以作为负载均衡器，将客户端请求分发到多个后端服务器，实现负载均衡，提高系统的可扩展性和稳定性。</li><li>HTTP缓存服务器：Nginx可以作为HTTP缓存服务器，缓存静态文件和动态文件，提高Web应用的响应速度和性能。</li><li>TCP&#x2F;UDP代理服务器：Nginx还可以作为TCP&#x2F;UDP代理服务器，处理TCP&#x2F;UDP请求，实现代理和转发功能。</li></ol><p>具体使用方式详见 <a href="http://nginx.org/en/">官网</a> , 对于个人而言，一般是用来设置SSL证书，让域名代理的主机地址能通过<code>https</code>访问。</p><h2 id="开源项目"><a href="#开源项目" class="headerlink" title="开源项目"></a>开源项目</h2><ul><li><a href="https://github.com/nginx/nginx">nginx&#x2F;nginx</a><br>官方项目，使用方式略繁琐，网上的一些教程过时不好用，最好配合官网说明使用。  </li><li><a href="https://github.com/NginxProxyManager/nginx-proxy-manager">NginxProxyManager</a><br>基于Docker的可视化操作Web界面，配置简单明了。十分推荐！  </li><li><a href="chishin/nginx-proxy-manager-zh">nginx-proxy-manager-zh</a><br>NginxProxyManager的汉化版</li></ul><h2 id="安装与配置"><a href="#安装与配置" class="headerlink" title="安装与配置"></a>安装与配置</h2><p>系统：<code>Ubuntu 20.04 x64</code><br>已安装程序：<code>Docker</code> <code>Docker-Compose</code><br>使用功能：<code>SSL</code> </p><ol><li><p>创建<code>docker-compose.yml</code>文件，内容如下：  </p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.8&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">app:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">&#x27;jc21/nginx-proxy-manager:latest&#x27;</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">unless-stopped</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&#x27;80:80&#x27;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&#x27;81:81&#x27;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&#x27;443:443&#x27;</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./data:/data</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./letsencrypt:/etc/letsencrypt</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li><li><p>进入到对应文件目录，输入指令并运行：</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">docker-compose</span> <span class="string">up</span> <span class="string">-d</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#If using docker-compose-plugin</span></span><br><span class="line"><span class="string">docker</span> <span class="string">compose</span> <span class="string">up</span> <span class="string">-d</span></span><br></pre></td></tr></table></figure></li><li><p>配置防火墙<br>Ubuntu20 默认开启了防火墙，且默认端口均为开放，所以相关应用程序端口一定要加入白名单，不然就各种问题！</p></li></ol><ul><li>允许HTTP<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ufw allow 80</span><br></pre></td></tr></table></figure></li><li>允许HTTPS<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ufw allow 443</span><br></pre></td></tr></table></figure></li><li>允许Nginx管理WebUI<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ufw allow 81</span><br></pre></td></tr></table></figure></li></ul><ol start="4"><li><p>登录WebUI<br><a href="http://hostname(主机ip地址):81/">http://hostname(主机IP地址):81</a><br>默认账户 </p><pre><code>Email:    admin@example.comPassword: changeme</code></pre><p>初次登录后会要求修改默认账户名和密码</p></li><li><p>配置SSL<br><img src="/../img/Nginx%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/ssl.png" alt="Alt text"><br>进入<code>SSL Certificates</code> 面板，点击 <code>Add SSL Certificate</code>，如果有域名证书的选择 <code>Custom</code> ,输入备注名称上传对应证书文件和密钥即可；没有证书的也可以选择 <code>Let&#39;s Encrypt</code>自行申请免费证书。<br><em>注：域名证书可在域名供应商那里申请到免费的，以阿里云来说，每个域名明年可申请20张免费证书。</em> </p></li><li><p>配置代理<br><img src="/../img/Nginx%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/hosts.png" alt="Alt text"><br>进入 <code>Hosts</code> 面板选择 Proxy Host，点击 <code>Add Proxy Host</code> ,按照如下示例配置：<br> <img src="/../img/Nginx%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/ssl03.png" alt="Alt text"><br>保存后，你就可以通过配有证书的域名以 <code>https</code> 的方式访问对应主机端口的应用了。</p></li></ol><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这里只以Nginx的SSL功能举例，也是本人常用的一个功能。但对于Nginx来说，该功能只是冰山一角，更多的功能使用待各位自行发掘。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vps </tag>
+            
+            <tag> ssl </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ChatGPT的微信和qq接入</title>
       <link href="/post/1082c8d6.html"/>
       <url>/post/1082c8d6.html</url>
