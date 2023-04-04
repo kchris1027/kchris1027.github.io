@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Portainer安装</title>
+      <link href="/post/13d4b70d.html"/>
+      <url>/post/13d4b70d.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Portainer是一个开源的Docker管理工具，它可以帮助用户在Web界面上轻松地管理Docker容器、镜像、卷和网络等。  </p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol><li><p>确认已经安装了<code>Docker</code>和<code>Docker Compose</code>，如果没有，请先安装。</p></li><li><p>在终端中输入以下命令，从Docker Hub上下载Portainer的最新版本：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker pull portainer/portainer-ce</span><br></pre></td></tr></table></figure></li><li><p>创建一个新的Docker容器并运行Portainer：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">sudo docker run -d \</span><br><span class="line">    -p 8000:8000 \</span><br><span class="line">    -p 9000:9000 \</span><br><span class="line">    --name portainer \</span><br><span class="line">    --restart always \</span><br><span class="line">    -v /var/run/docker.sock:/var/run/docker.sock \ </span><br><span class="line">    -v portainer_data:/data \</span><br><span class="line">    portainer/portainer-ce  </span><br><span class="line"></span><br></pre></td></tr></table></figure><p>解释一下上面的命令：</p><ul><li><code>-d</code> 参数表示以后台模式运行容器</li><li><code>-p</code> 参数将主机的端口映射到容器的端口，例如 <code>-p 8000:8000</code> 将主机的8000端口映射到容器的8000端口</li><li><code>--name</code> 参数指定容器的名称为 <code>portainer</code></li><li><code>--restart always</code> 参数表示容器在崩溃或重启后将自动重新启动</li><li><code>-v</code> 参数将主机的目录或文件夹挂载到容器中，例如 <code>-v /var/run/docker.sock:/var/run/docker.sock</code> 将主机的Docker socket文件挂载到容器中，方便容器访问宿主机的Docker引擎</li><li><code>portainer/portainer-ce</code> 是要运行的Docker镜像的名称</li></ul></li><li><p>打开Web浏览器，访问 <code>http://localhost:9000</code>，按照界面上的提示设置管理员账号和密码，然后就可以开始使用Portainer了。</p><p><em>注意：如果使用的是远程服务器，则需要将 <code>localhost</code> 替换为服务器的IP地址或域名。另外，建议在使用Portainer之前先了解Docker的基本概念和使用方法。</em></p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> Docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Nginx的安装与配置</title>
       <link href="/post/661ecc9.html"/>
       <url>/post/661ecc9.html</url>
@@ -20,7 +47,7 @@
       
         <tags>
             
-            <tag> vps </tag>
+            <tag> Linux </tag>
             
             <tag> ssl </tag>
             
