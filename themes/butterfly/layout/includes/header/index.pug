@@ -50,3 +50,5 @@ header#page-header(class=`${isHomeClass+isFixedClass}` style=bg_img)
     else
       #page-site-info
         h1#site-title=site_title
+    //- wave特效 添加如下，注意代码缩进与if top_img一致哦~
+  !=partial('includes/header/wave_style', {}, {cache: true})
