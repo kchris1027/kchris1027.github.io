@@ -899,15 +899,18 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
+    #页面顶部波浪线
     - <link rel="stylesheet" href="/css/wave_style.css">
+    #加载进度条
     - <link rel="stylesheet" href="/css/progress_bar.css">
-    - <link rel="stylesheet" href="/css/custom.css">
     # - <link rel="stylesheet" href="/xxx.css">
   bottom:
     #水波纹效果 对应配置文件js/ripples 文件夹下的js配置
     - <script defer src="/js/ripples/jquery.min.js"></script>
     - <script defer data-pjax src="/js/ripples/jquery.ripples.js"></script>
     - <script defer data-pjax src="/js/ripples/ripples.js"></script>
+    #页脚养鱼
+    - <script defer data-pjax src="/js/fish/addfish.js"></script>
     # - <script src="xxxx"></script>
     #全局音乐播放器
     #- <div class="aplayer no-destroy" data-id="7199616451&userid=96116466" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-autoplay="true" data-lrctype="0"> </div>
