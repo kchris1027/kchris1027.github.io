@@ -659,13 +659,13 @@ subtitle:
 
 # Loading Animation (加載動畫)
 preloader:
-  enable: false
+  enable: true
   # source
   # 1. fullpage-loading
   # 2. pace (progress bar)
-  source: 1
+  source: 2
   # pace theme (see https://codebyzach.github.io/pace/)
-  pace_css_url:
+  pace_css_url: /css/progress_bar.css
 
 # aside (侧边栏)
 # --------------------------------------
@@ -900,10 +900,10 @@ css_prefix: true
 inject:
   head:
     - <link rel="stylesheet" href="/css/wave_style.css">
+    - <link rel="stylesheet" href="/css/progress_bar.css">
+    - <link rel="stylesheet" href="/css/custom.css">
     # - <link rel="stylesheet" href="/xxx.css">
   bottom:
-    - <script src="/js/self.js"></script>
-
     #水波纹效果 对应配置文件js/ripples 文件夹下的js配置
     - <script defer src="/js/ripples/jquery.min.js"></script>
     - <script defer data-pjax src="/js/ripples/jquery.ripples.js"></script>
