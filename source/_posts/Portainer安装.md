@@ -18,21 +18,13 @@ Portainer是一个开源的Docker管理工具，它可以帮助用户在Web界�
 2.  在终端中输入以下命令，从Docker Hub上下载Portainer的最新版本：
     
     ```bash
-    sudo docker pull portainer/portainer-ce
+    docker pull portainer/portainer-ce
     ```
     
 3.  创建一个新的Docker容器并运行Portainer：
     
-    ```bash
-    sudo docker run -d \
-        -p 8000:8000 \
-        -p 9000:9000 \
-        --name portainer \
-        --restart always \
-        -v /var/run/docker.sock:/var/run/docker.sock \ 
-        -v portainer_data:/data \
-        portainer/portainer-ce  
-
+    ```docker
+    docker run -d -p 8000:8000 -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
     ```
     
     解释一下上面的命令：
