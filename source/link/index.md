@@ -4,9 +4,33 @@ date: 2023-03-28 17:55:17
 comments: false
 ---
 {% flink %}
-- class_name: 使用手册
+- class_name: 设计工具
+  class_desc: 工欲善其事必先利其器
+  link_list:
+    - name: Gamma
+      link: https://gamma.app/
+      avatar: https://assets.website-files.com/62e823626cd4fdd0e5dc1527/62e823626cd4fdc26bdc1576_Gamma.svg
+      descr: AI文档制作
+
+
+- class_name: 其他工具
   class_desc:
   link_list:
+
+    - name: TinyPNG
+      link: https://tinypng.com/
+      avatar: https://tinypng.com/images/panda-chewing.png
+      descr: 在线压图 
+
+    - name: Font Awesome
+      link: https://fontawesome.com/
+      avatar: https://i0.wp.com/blog.fontawesome.com/wp-content/uploads/2022/11/sharp-light-swathe.png?w=1440&ssl=1
+      descr: WebIcon  
+
+    - name: LeanCloud
+      link: https://leancloud.app/
+      avatar: https://th.bing.com/th?id=AMMS_83f5439f5ca9efd3360867200c99f591&w=110&h=110&c=7&rs=1&qlt=95&pcl=f9f9f9&o=6&cdv=1&pid=16.1
+      descr: 一站式云服务 
 
     - name: MarkDown
       link: https://markdown.com.cn/cheat-sheet.html#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95
@@ -22,28 +46,5 @@ comments: false
       link: https://butterfly.js.org/posts/4aa8abbe/
       avatar: https://butterfly.js.org/img/avatar.png
       descr: Butterfly 配置文档
-
-- class_name: 网站资源
-  class_desc:
-  link_list:
-
-    - name: Font Awesome
-      link: https://fontawesome.com/
-      avatar: https://i0.wp.com/blog.fontawesome.com/wp-content/uploads/2022/11/sharp-light-swathe.png?w=1440&ssl=1
-      descr: WebIcon  
-
-    - name: LeanCloud
-      link: https://leancloud.app/
-      avatar: https://th.bing.com/th?id=AMMS_83f5439f5ca9efd3360867200c99f591&w=110&h=110&c=7&rs=1&qlt=95&pcl=f9f9f9&o=6&cdv=1&pid=16.1
-      descr: 一站式云服务 
-
-- class_name: 工具专栏
-  class_desc:
-  link_list:
-
-    - name: TinyPNG
-      link: https://tinypng.com/
-      avatar: https://tinypng.com/images/panda-chewing.png
-      descr: 在线压图 
 
 {% endflink %}

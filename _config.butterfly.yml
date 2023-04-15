@@ -110,7 +110,7 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: /img/base/cover.jpg
+index_img: https://raw.githubusercontent.com/kchris1027/blog-img/main/images/sky_girl.png
 
 # If the banner of page not setting, it will show the top_img
 default_top_img: /img/base/top.jpg
