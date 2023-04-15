@@ -250,6 +250,8 @@ header#page-header(class=isHomeClass style=bg_img)
 
 重新部署后即可看到效果。 
 
+## [首页置顶轮播插件](https://akilar.top/posts/8e1264d1/)
+## [统计图表插件](https://guole.fun/posts/18158/)
 
 
 

@@ -7,6 +7,7 @@ categories: AI工具
 cover: /img/ChatGPT的微信和qq接入/top.png
 abbrlink: 1082c8d6
 date: 2023-04-01 13:45:24
+swiper_index: 1
 ---
 
 ## ChatGPT账号注册

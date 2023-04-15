@@ -9,7 +9,6 @@ description:                  #【可选】文章描述
 # top_img:                      #【可选】文章顶部图片
 # comments:                     #【可选】显示文章评论模块(默认 true)
 cover:                        #【可选】文章缩略图(如果没有设置top_img,文章页顶部将显示缩略图，可设为false/图片地址/留空)
-#hidden: true                   #隐藏文章（包括首页、存档、分类页面、标签页面、Feed、站点地图等）
 # toc:                          #【可选】显示文章TOC(默认为设置中toc的enable配置)
 # toc_number:                   #【可选】显示toc_number(默认为设置中toc的number配置)
 # toc_style_simple:             #【可选】显示 toc 简洁模式
@@ -23,4 +22,8 @@ cover:                        #【可选】文章缩略图(如果没有设置top
 # aplayer:                      #【可选】在需要的页面加载aplayer的js和css,请参考文章下面的音乐 配置
 # highlight_shrink:             #【可选】配置代码框是否展开(true/false)(默认为设置中highlight_shrink的配置)
 # aside:                        #【可选】显示侧边栏 (默认 true)
+
+# 以下是插件相关配置
+# hidden: true                  #是否隐藏文章（包括首页、存档、分类页面、标签页面、Feed、站点地图等）
+# swiper_index: 1               #置顶轮播图顺序，非负整数，数字越大越靠前
 ---
