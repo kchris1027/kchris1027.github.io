@@ -9,6 +9,7 @@ description:
 cover: /img/AI绘画/AI_Paint.png
 abbrlink: a01715fb
 swiper_index: 1
+swiper_desc: 画一个AI的画
 ---
 
 ## 主流AI绘画工具

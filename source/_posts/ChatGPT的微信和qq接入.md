@@ -8,6 +8,7 @@ cover: /img/ChatGPT的微信和qq接入/top.png
 abbrlink: 1082c8d6
 date: 2023-04-01 13:45:24
 swiper_index: 1
+swiper_desc: 最佳私人助手！
 ---
 
 ## ChatGPT账号注册

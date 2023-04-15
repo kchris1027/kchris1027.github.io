@@ -25,5 +25,9 @@ cover:                        #【可选】文章缩略图(如果没有设置top
 
 # 以下是插件相关配置
 # hidden: true                  #是否隐藏文章（包括首页、存档、分类页面、标签页面、Feed、站点地图等）
-# swiper_index: 1               #置顶轮播图顺序，非负整数，数字越大越靠前
+
+# 插件 hexo-swiper-bar 配置
+# swiper_index: 1               #数字越大越靠前
+# swiper_desc:                  #文章简述
+# swiper_cover:                 #图片显示，可以不配置，默认cover
 ---

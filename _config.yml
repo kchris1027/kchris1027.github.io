@@ -200,22 +200,18 @@ hide_posts:
   noindex: true
 
 # 首页置顶轮播
-# hexo-butterfly-swiper
-# see https://akilar.top/posts/8e1264d1/
+# hexo-swiper-bar
+# see https://zfe.space/post/hexo-swiper.html
 swiper:
-  enable: true # 开关
-  priority: 5 #过滤器优先权
-  enable_page: all # 应用页面
-  timemode: date #date/updated
-  layout: # 挂载容器类型
+  enable: true
+  priority: 2
+  enable_page: /
+  layout:
     type: id
     name: recent-posts
     index: 0
-  default_descr: ( •̀ ω •́ )✧
-  swiper_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css #swiper css依赖
-  swiper_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js #swiper js依赖
-  custom_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css # 适配主题样式补丁
-  custom_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js # swiper初始化方法
+  temple_html: '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container">${temple_html_item}</div></div>'
+  plus_style: ""
 
 
 # Extensions
