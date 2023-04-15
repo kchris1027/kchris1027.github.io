@@ -1,9 +1,9 @@
 $(document).ready(function () {
     try {
       $("#page-header").ripples({
-        resolution: 1024,
+        resolution: 512,
         dropRadius: 10, //px
-        perturbance: 0.04,
+        perturbance: 0.02,
       });
     } catch (e) {
       $(".error").show().text(e);
