@@ -1,21 +1,33 @@
----
-title: link
-date: 2023-03-28 17:55:17
-comments: false
-type: 'link'
----
-<!-- {% flink %}
+# - class_name: 推荐博客
+#   flink_style: flexcard
+#   link_list:
+#     - name: 安知鱼`Blog
+#       link: https://anzhiy.cn/
+#       avatar: https://img02.anzhiy.cn/adminuploads/1/2022/09/15/63232b7d91d22.jpg
+#       descr: 生活明朗，万物可爱
+#       siteshot: https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/anzhiy.cn.jpg
+
 - class_name: 设计工具
   class_desc: 工欲善其事必先利其器
+  flink_style: flexcard
   link_list:
+
+    - name: Epic Learing
+      link: https://dev.epicgames.com/community/unreal-engine/getting-started/games
+      avatar: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTITiyEOujyVBqfaPMqzeU8JEXDv97oZlGBQA&usqp=CAU
+      descr: 虚幻官方教程
+      siteshot: https://fastly.jsdelivr.net/gh/kchris1027/blog-img@main/images/16815722270111681572169062.png
+
     - name: Gamma
       link: https://gamma.app/
-      avatar: https://assets.website-files.com/62e823626cd4fdd0e5dc1527/62e823626cd4fdc26bdc1576_Gamma.svg
+      avatar: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYIMZPkvI528tFMApT49l6eDBOewfVwXvRJQ&usqp=CAU
       descr: AI文档制作
+
 
 
 - class_name: 其他工具
   class_desc:
+  flink_style: butterfly
   link_list:
 
     - name: TinyPNG
@@ -47,5 +59,3 @@ type: 'link'
       link: https://butterfly.js.org/posts/4aa8abbe/
       avatar: https://butterfly.js.org/img/avatar.png
       descr: Butterfly 配置文档
-
-{% endflink %} -->
