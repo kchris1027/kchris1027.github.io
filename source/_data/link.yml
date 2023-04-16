@@ -12,16 +12,25 @@
   flink_style: flexcard
   link_list:
 
+    - name: GDC
+      link: https://www.youtube.com/@Gdconf/feature
+      avatar: /img/link/GDC_logo.jpg
+      descr: 游戏开发者大会
+      siteshot: /img/link/GDC.png
+
     - name: Epic Learing
       link: https://dev.epicgames.com/community/unreal-engine/getting-started/games
-      avatar: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTITiyEOujyVBqfaPMqzeU8JEXDv97oZlGBQA&usqp=CAU
+      avatar: /img/link/unreal_icon.jfif
       descr: 虚幻官方教程
-      siteshot: https://fastly.jsdelivr.net/gh/kchris1027/blog-img@main/images/16815722270111681572169062.png
+      siteshot: /img/link/unreal.png
 
     - name: Gamma
       link: https://gamma.app/
-      avatar: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYIMZPkvI528tFMApT49l6eDBOewfVwXvRJQ&usqp=CAU
+      avatar: /img/link/Gamma_icon.gif
       descr: AI文档制作
+      siteshot:
+    
+
 
 
 
