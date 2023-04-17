@@ -222,9 +222,9 @@ theme: butterfly
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
- - type: git
-   repo: https://github.com/kchris1027/kchris1027.github.io.git
-   branch: master
+#  - type: git
+#    repo: https://github.com/kchris1027/kchris1027.github.io.git
+#    branch: master
 
  # - type: git
  #  repo: https://gitee.com/kchris1027/kchris1027.git
@@ -233,3 +233,7 @@ deploy:
  #- type: git
  #  repo: https://e.coding.net/kchris1027/blog/kchris1027.git
  #  branch: master
+
+  - type: git
+    repo: root@45.77.97.0:/root/website_data/git/blog.git
+    branch: master
