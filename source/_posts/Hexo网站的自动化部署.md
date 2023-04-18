@@ -60,7 +60,7 @@ cover:
     ```
     推送至仓库后会自动化执行对应脚本。  
     此处用到了三个脚本，有兴趣的可自行了解：  
-    - [checkout](https://github.com/actions/checkout)  
+    - [actions/checkout](https://github.com/actions/checkout)  
     - [JamesIves/github-pages-deploy-action](https://github.com/JamesIves/github-pages-deploy-action)  
     - [easingthemes/ssh-deploy](https://github.com/easingthemes/ssh-deploy)  
     额外注释：
