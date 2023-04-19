@@ -80,17 +80,17 @@
 
 [data-theme=dark]
 .waves-area .parallax>use:first-child {
-    fill: #0f172ab3
+    fill: #0d0d0db3
 }
 [data-theme=dark]
 .waves-area .parallax>use:nth-child(2) {
-    fill: #0f172a80
+    fill: #0d0d0d80
 }
 [data-theme=dark]
 .waves-area .parallax>use:nth-child(3) {
-    fill: #0f172a4d
+    fill: #0d0d0d4d
 }
 [data-theme=dark]
 .waves-area .parallax>use:nth-child(4) {
-    fill: #070b14
+    fill: #0d0d0d
 }
