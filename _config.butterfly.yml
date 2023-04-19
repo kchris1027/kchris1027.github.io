@@ -16,7 +16,7 @@ menu:
     # iamges: /movies/ || fas fa-images
    工具: /link/ || fas fa-compass
    留言板: /message/ || fas fa-comment-dots
-  # About: /about/ || fas fa-heart
+   关于: /about/ || fas fa-heart
 
 nav:
   logo:  /img/base/icon.png
@@ -905,7 +905,11 @@ inject:
     - <link rel="stylesheet" href="/css/progress_bar.css">
     #twikoo
     - <link rel="stylesheet" href="/css/twikoo_tips.css">
+    # 关于页面的必要文件
+    - <script type="text/javascript" src ="/js/reward.js" ></script>
+    - <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.16/dist/sweetalert2.all.min.js"></script>
     # - <link rel="stylesheet" href="/xxx.css">
+
   bottom:
     #水波纹效果 对应配置文件js/ripples 文件夹下的js配置
     - <script defer src="/js/ripples/jquery.min.js"></script>
@@ -916,6 +920,12 @@ inject:
     # - <script src="xxxx"></script>
     #全局音乐播放器
     #- <div class="aplayer no-destroy" data-id="7199616451&userid=96116466" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-autoplay="true" data-lrctype="0"> </div>
+    # 网站统计数据
+    - <script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script>
+    - <script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>
+    - <script> LA.init({id:"K2NNRDxRALSyQWuV",ck:"K2NNRDxRALSyQWuV"})</script>
+    - <script>new LingQue.Monitor().init({id:"K2NNRDxRALSyQWuV",sendSuspicious:true});</script>
+
 
 # CDN
 # Don't modify the following settings unless you know how they work
@@ -993,3 +1003,5 @@ CDN:
     # artalk_js:
     # artalk_css:
     # busuanzi:
+    # countupJS
+    countup_js: /js/countup.js
