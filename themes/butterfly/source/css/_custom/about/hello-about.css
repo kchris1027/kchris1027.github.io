@@ -13,7 +13,7 @@
     position: relative;
     height: 315px;
     width: 100%;
-    background: #ffffff;
+    background: #6dc1f7;
     overflow: hidden;
   }
   
@@ -86,7 +86,7 @@
   
   .cursor {
     position: absolute;
-    background: #2128bd;
+    background: #6dc1f7;
     width: 20px;
     height: 20px;
     margin: -10px 0 0 -10px;
