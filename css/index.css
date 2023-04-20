@@ -3418,7 +3418,7 @@ h1.page-title + .tag-cloud-list {
   content: '';
 }
 #page-header.full_page {
-  height: 1300px;
+  height: 100vh;
   background-attachment: fixed;
 }
 #page-header.full_page #site-info {
@@ -7679,7 +7679,7 @@ blockquote.pullquote.right {
   }
 .hello-about {
     margin: 20px auto;
-    border-radius: 12px;
+    border-radius: 10px;
     background: var(--anzhiyu-card-bg);
     /* border: var(--style-border-always); */
     box-shadow: var(--anzhiyu-shadow-border);
