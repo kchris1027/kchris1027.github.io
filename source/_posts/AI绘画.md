@@ -6,7 +6,7 @@ tags:
   - 绘画
 categories: AI工具
 description: 
-cover: /img/AI绘画/AI_Paint.png
+cover: /img/base/cover02.png
 abbrlink: a01715fb
 swiper_index: 1
 swiper_desc: 画一个AI的画

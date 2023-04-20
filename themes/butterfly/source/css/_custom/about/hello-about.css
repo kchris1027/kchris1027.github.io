@@ -1,6 +1,6 @@
 .hello-about {
     margin: 20px auto;
-    border-radius: 12px;
+    border-radius: 10px;
     background: var(--anzhiyu-card-bg);
     /* border: var(--style-border-always); */
     box-shadow: var(--anzhiyu-shadow-border);
