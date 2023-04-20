@@ -50,7 +50,7 @@ swiper_cover: /img/MiniGame/cover.png
             width:570px!important;height:501px!important
     }
     iframe{
-            position:absolute;transform:scale(.6)!important;width:570px!important;height:570px!important;left:-100px!important;top:-100px!important
+            position:absolute;transform:scale(.6)!important;width:570px!important;height:570px!important;left:-120px!important;top:-100px!important
     }
   }
 </style>
