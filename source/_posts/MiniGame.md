@@ -12,13 +12,6 @@ swiper_cover: /img/MiniGame/cover.png
 ---  
 
 {% tabs %}  
-<!-- tab MiniGames -->
-{% raw %}
-<div class="aspect-ratio" >
-    <iframe src="https://demonisblack.com/code/2022/minigames/game/" scrolling="no" border="0" frameborder="0" framespacing="0" high_quality="1" danmaku="1" allowfullscreen="" loading="lazy"></iframe>
-</div>
-{% endraw %}
-<!-- endtab --> 
 
 <!-- tab Catch Cat -->
 {% raw %}
@@ -65,6 +58,13 @@ swiper_cover: /img/MiniGame/cover.png
 {% btn 'https://github.com/SadTomlzr/catch-cat',项目地址,,block right outline %}  
 <!-- endtab --> 
 
+<!-- tab MiniGames -->
+{% raw %}
+<div class="aspect-ratio" >
+    <iframe src="https://demonisblack.com/code/2022/minigames/game/" scrolling="no" border="0" frameborder="0" framespacing="0" high_quality="1" danmaku="1" allowfullscreen="" loading="lazy"></iframe>
+</div>
+{% endraw %}
+<!-- endtab --> 
 
 <!-- tab Downhill Ski -->
 {% raw %}
