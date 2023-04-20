@@ -39,26 +39,26 @@
     margin: auto;
     border-radius: 50%;
     overflow: hidden;
-    width: 180px;
-    height: 180px;
+    width: 120px;
+    height: 120px;
   }
   #about-page .author-box .author-img img {
     border-radius: 50%;
     overflow: hidden;
-    width: 180px;
-    height: 180px;
+    width: 120px;
+    height: 120px;
   }
   
   #about-page .author-box .image-dot {
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 30px;
     background: #6bdf8f;
     position: absolute;
     border-radius: 50%;
     border: 6px solid var(--anzhiyu-background);
     top: 50%;
     left: 50%;
-    transform: translate(35px, 45px);
+    transform: translate(30px, 30px);
   }
   
   .author-content {
