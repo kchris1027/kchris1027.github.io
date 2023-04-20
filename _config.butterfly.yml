@@ -906,15 +906,15 @@ inject:
     #twikoo
     - <link rel="stylesheet" href="/css/twikoo_tips.css">
     # 关于页面的必要文件
-    - <script type="text/javascript" src ="/js/reward.js" ></script>
+    - <script type="text/javascript" src ="/js/about/reward.js" ></script>
     - <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.16/dist/sweetalert2.all.min.js"></script>
     # - <link rel="stylesheet" href="/xxx.css">
 
   bottom:
     #水波纹效果 对应配置文件js/ripples 文件夹下的js配置
     - <script defer src="/js/ripples/jquery.min.js"></script>
-    - <script defer data-pjax src="/js/ripples/jquery.ripples.js"></script>
-    - <script defer data-pjax src="/js/ripples/ripples.js"></script>
+    # - <script defer data-pjax src="/js/ripples/jquery.ripples.js"></script>
+    # - <script defer data-pjax src="/js/ripples/ripples.js"></script>
     #页脚养鱼
     - <script defer data-pjax src="/js/fish/addfish.js"></script>
     # - <script src="xxxx"></script>
@@ -1004,4 +1004,4 @@ CDN:
     # artalk_css:
     # busuanzi:
     # countupJS
-    countup_js: /js/countup.js
+    countup_js: /js/about/countup.js
