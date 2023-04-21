@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Watchtower的安装与使用</title>
+      <link href="/post/5301354c.html"/>
+      <url>/post/5301354c.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Watchtower是一个Docker容器，可以自动更新您的Docker映像。使用Watchtower可以确保您的容器始终运行最新版本的映像。</p><h2 id="安装Watchtower"><a href="#安装Watchtower" class="headerlink" title="安装Watchtower"></a>安装Watchtower</h2><p>您可以使用Docker命令从Docker Hub上安装Watchtower映像。在命令行中输入以下命令： </p><figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull containrrr/watchtower</span><br></pre></td></tr></table></figure><h2 id="运行Watchtower容器"><a href="#运行Watchtower容器" class="headerlink" title="运行Watchtower容器"></a>运行Watchtower容器</h2><p>要启动Watchtower容器，请在命令行中输入以下命令： </p><figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="keyword">run</span><span class="language-bash"> -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower</span></span><br></pre></td></tr></table></figure><p>这将在后台运行Watchtower容器，并将Docker守护程序的Unix套接字挂载到Watchtower容器中。</p><h2 id="设置Watchtower容器的参数"><a href="#设置Watchtower容器的参数" class="headerlink" title="设置Watchtower容器的参数"></a>设置Watchtower容器的参数</h2><p>在运行Watchtower容器之前，您可以设置一些参数来控制其行为。以下是一些常见的参数：</p><ul><li><code>--interval</code>：设置Watchtower检查更新的时间间隔，默认值为300秒。</li><li><code>--cleanup</code>：在更新容器时自动清理停止的容器和未使用的镜像。这对于释放磁盘空间很有用。  </li><li><code>--label-enable</code>: 启用基于标签的过滤器</li><li><code>--label</code>: 指定要监视的容器标签</li><li><code>--debug</code>：启用详细日志记录，以便进行故障排除。</li></ul><p>在命令行中，您可以通过以下方式设置这些参数：</p><figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="keyword">run</span><span class="language-bash"> -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --interval 60 --cleanup --debug</span></span><br></pre></td></tr></table></figure><p>这将以每60秒检查一次更新的间隔运行Watchtower容器，并在更新容器时自动清理停止的容器和未使用的镜像。  </p><figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="keyword">run</span><span class="language-bash"> -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock -e WATCHTOWER_LABELS=my-container containrrr/watchtower</span></span><br></pre></td></tr></table></figure><p>使用标签过滤器监视名为 my-container 的容器</p><h2 id="配置要更新的容器"><a href="#配置要更新的容器" class="headerlink" title="配置要更新的容器"></a>配置要更新的容器</h2><p>Watchtower会自动监视所有正在运行的容器，并在新版本可用时自动更新它们。但是，如果您希望Watchtower只更新特定的容器，可以使用标签来指定要更新的容器。例如，以下命令将在启动容器时使用<code>com.centurylinklabs.watchtower.enable=true</code>标签：</p><figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="keyword">run</span><span class="language-bash"> --name myapp -d -p 80:80 -e <span class="string">&quot;com.centurylinklabs.watchtower.enable=true&quot;</span> myapp:latest</span></span><br></pre></td></tr></table></figure><p>这将使Watchtower仅更新使用此标签的容器。</p><h2 id="检查更新"><a href="#检查更新" class="headerlink" title="检查更新"></a>检查更新</h2><p>Watchtower将在容器的映像发生更改时自动更新它们。您可以在容器日志中查看更新记录。要查看Watchtower容器的日志，请使用以下命令：</p><figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker logs watchtower</span><br></pre></td></tr></table></figure><p>如果您看到Watchtower输出的<code>Found new running container</code>消息，则表示Watchtower已更新一个容器。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> Docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MiniGame</title>
       <link href="/post/52d239e4.html"/>
       <url>/post/52d239e4.html</url>
