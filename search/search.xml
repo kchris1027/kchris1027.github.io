@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>ChatGPT的私有化部署</title>
+      <link href="/post/c60760e2.html"/>
+      <url>/post/c60760e2.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>最近由于OpenAI对账号使用的监察收紧，只是以挂代理的方式，使用网页版GPT容易频繁掉线或是直接无权访问无法登录，能够使用的代理IP也十分局限，用着十分糟心。而以API的形式使用又涉及到付费问题，国内信用卡无法直接使用。所以在此基础上想着能否找到一个私有化部署Web版GPT的解决方案。</p></blockquote><h2 id="Pandora"><a href="#Pandora" class="headerlink" title="Pandora"></a>Pandora</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><a href="https://github.com/pengzhile/pandora">潘多拉 (Pandora)</a>，一个不只是命令行的 ChatGPT。</p><p>潘多拉实现了网页版 ChatGPT 的主要操作。后端优化，绕过 Cloudflare，速度喜人。</p><p>优点：</p><ul><li>高峰期能绕过官方限制，继续使用。</li><li>应答速度直逼<code>PLUS</code>，白嫖用户的福音。</li><li>官方故障的时候，它可能还是能跑。</li><li>多模式：网页&#x2F;命令行&#x2F;API，私有化部署。</li><li>不会像官方那样无故断线、报错。</li></ul><h3 id="安装与运行"><a href="#安装与运行" class="headerlink" title="安装与运行"></a>安装与运行</h3><p>如果你恰好有一台国外的服务器，那么直接docker运行：</p><figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker pull pengzhile/pandora</span><br><span class="line">docker <span class="keyword">run</span><span class="language-bash"> -it --<span class="built_in">rm</span> -p 2333:2333 -e PANDORA_SERVER=0.0.0.0:2333 pengzhile/pandora </span></span><br></pre></td></tr></table></figure><p>其中关于<code>-e</code>的环境变量参考官方说明进行使用配置</p><ul><li><code>PANDORA_ACCESS_TOKEN</code> 指定<code>Access Token</code>字符串。</li><li><code>PANDORA_TOKENS_FILE</code> 指定一个存放多<code>Access Token</code>的文件路径。</li><li><code>PANDORA_PROXY</code> 指定代理，格式：<code>protocol://user:pass@ip:port</code>。</li><li><code>PANDORA_SERVER</code> 以<code>http</code>服务方式启动，格式：<code>ip:port</code>。</li><li><code>PANDORA_API</code> 使用<code>gpt-3.5-turboAPI</code>请求，你可能需要向OpenAI支付费用。</li><li><code>PANDORA_SENTRY</code> 启用<code>sentry</code>框架来发送错误报告供作者查错，敏感信息不会被发送。</li><li><code>PANDORA_VERBOSE</code> 显示调试信息，且出错时打印异常堆栈信息，供查错使用。</li></ul><p>安装完成后，就可以用过你指定的<code>http://ip:port</code>来访问一个极简版的 ChatGPT 了。因为是国外的服务器，所以也无需代理了。</p><h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>个人在自己的服务器进行配置的时候遇到一个问题：安装运行完成后，无法直接通过<code>ip:端口</code>的形式进行访问，而通过Nginx以域名的形式进行反向代理后可以正常访问。推测是和容器<code>http</code>服务形式有关，暂未细察，先留个坑。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> AI工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ChatGPT </tag>
+            
+            <tag> Docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Watchtower的安装与使用</title>
       <link href="/post/5301354c.html"/>
       <url>/post/5301354c.html</url>
@@ -20,9 +47,9 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> Docker </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
       
@@ -31,7 +58,7 @@
     
     
     <entry>
-      <title>MiniGame</title>
+      <title>MiniGames</title>
       <link href="/post/52d239e4.html"/>
       <url>/post/52d239e4.html</url>
       
@@ -53,7 +80,7 @@
       
       <categories>
           
-          <category> GitHub </category>
+          <category> Hexo </category>
           
       </categories>
       
@@ -87,9 +114,9 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> Docker </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
       
