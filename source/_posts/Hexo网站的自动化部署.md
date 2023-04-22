@@ -4,7 +4,7 @@ tags:
   - Hexo
   - GitHub
 categories:
-  - GitHub
+  - Hexo
 description: 自动构建、自动部署
 abbrlink: 65c2dc85
 date: 2023-04-17 17:48:15

@@ -1,5 +1,5 @@
 ---
-title: MiniGame
+title: MiniGames
 abbrlink: 52d239e4
 date: 2023-04-20 17:46:21
 tags:
