@@ -97,7 +97,7 @@
     z-index: 3;
   }
   
-  ::selection {
+  /* ::selection {
     color: #fff;
     background: #2128bd;
-  }
+  } */

@@ -7,7 +7,7 @@ categories: AI工具
 abbrlink: c60760e2
 date: 2023-04-22 11:52:33
 description:
-cover:
+cover: /img/ChatGPT的私有化部署/cover.png
 ---
 
 >最近由于OpenAI对账号使用的监察收紧，只是以挂代理的方式，使用网页版GPT容易频繁掉线或是直接无权访问无法登录，能够使用的代理IP也十分局限，用着十分糟心。而以API的形式使用又涉及到付费问题，国内信用卡无法直接使用。所以在此基础上想着能否找到一个私有化部署Web版GPT的解决方案。
