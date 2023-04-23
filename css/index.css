@@ -7776,10 +7776,10 @@ blockquote.pullquote.right {
     z-index: 3;
   }
   
-  ::selection {
+  /* ::selection {
     color: #fff;
     background: #2128bd;
-  }
+  } */
 .site-card-group .site-card .info {
     margin-top: 0;
   }
