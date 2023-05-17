@@ -162,7 +162,7 @@ douban:
 
 # steam games page
 steam:
-  enable: true
+  enable: false
   steamId: '76561198326647546' #steam 64位Id
   apiKey: '1BA71B251A1422263CFB5BDB8BB4C0AA' #steam api key
   steamInfos: # 多账号配置

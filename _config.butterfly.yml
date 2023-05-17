@@ -13,7 +13,7 @@ menu:
    娱乐||fas fa-headphones||hide:
      Music: /music/ || fas fa-music
      Movie: /movies/ || fas fa-video
-     Game: /steamgames/ || fas fa-gamepad
+    # Game: /steamgames/ || fas fa-gamepad
     # iamges: /movies/ || fas fa-images
    工具: /link/ || fas fa-compass
    留言板: /message/ || fas fa-comment-dots
