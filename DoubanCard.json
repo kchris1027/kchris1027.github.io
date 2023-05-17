@@ -1,0 +1,24 @@
+{
+  "movie": [],
+  "book": [
+    {
+      "status": "见字如晤",
+      "title": "一个人生活",
+      "author": "[日]谷川俊太郎",
+      "publishDate": "2019-3",
+      "rate": "7.0",
+      "img": "https://images.weserv.nl/?url=https://img1.doubanio.com/view/subject/s/public/s30015279.jpg",
+      "url": "https://book.douban.com/subject/30376420"
+    },
+    {
+      "status": "见字如晤",
+      "title": "妙趣横生的游戏制作之旅",
+      "author": "[美]RichardLemarchand",
+      "publishDate": "2022-9",
+      "rate": "9.6",
+      "img": "https://images.weserv.nl/?url=https://img1.doubanio.com/view/subject/s/public/s34314229.jpg",
+      "url": "https://book.douban.com/subject/36078032"
+    }
+  ],
+  "music": []
+}
