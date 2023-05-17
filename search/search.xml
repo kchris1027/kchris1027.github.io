@@ -11,6 +11,18 @@
         <content type="html"><![CDATA[<blockquote><p>2022年度最佳游戏！</p></blockquote><iframe src="https://store.steampowered.com/widget/1245620/" frameborder="0" width="100%" height="190"></iframe><p><code>填坑中...🚀</code></p>]]></content>
       
       
+      <categories>
+          
+          <category> 游戏解析 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 游戏 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -61,6 +73,31 @@
         <tags>
             
             <tag> 数码产品 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2022年度个人总结</title>
+      <link href="/post/87fa10bf.html"/>
+      <url>/post/87fa10bf.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>无所作为，则人生太长；欲有所为，则人生太短。</p></blockquote><h2 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h2><p>填坑中…🚀</p><h2 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h2><p>填坑中…🚀</p><h2 id="2023年目标"><a href="#2023年目标" class="headerlink" title="2023年目标"></a>2023年目标</h2><ul><li><input disabled="" type="checkbox"> 读完至少<code>两本</code>游戏设计相关<code>书籍</code>，并记录相关笔记</li><li><input disabled="" type="checkbox"> 完整拆解至少<code>一款</code>游戏的玩法<code>设计</code>，包含年度最佳游戏</li><li><input disabled="" type="checkbox"> 掌握UE5，并至少做出<code>一个玩法原型</code></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 年度总结 </tag>
             
         </tags>
       
