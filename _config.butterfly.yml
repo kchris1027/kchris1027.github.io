@@ -10,9 +10,10 @@ menu:
     分类: /categories/ || fas fa-folder-open
   # 手账: /artitalk/ || fas fa-pen-to-square
   # 说说: /artitalk/ || fab fa-stack-overflow
-   影音||fas fa-headphones||hide:
+   娱乐||fas fa-headphones||hide:
      Music: /music/ || fas fa-music
      Movie: /movies/ || fas fa-video
+     Game: /steamgames/ || fas fa-gamepad
     # iamges: /movies/ || fas fa-images
    工具: /link/ || fas fa-compass
    留言板: /message/ || fas fa-comment-dots
