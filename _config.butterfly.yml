@@ -226,9 +226,9 @@ reward:
      - img: /img/base/pay_wechat.png
        link:
        text: wechat
-    # - img: /img/alipay.jpg
-    #   link:
-    #   text: alipay
+     - img: /img/base/Alipay.jpg
+       link:
+       text: alipay
 
 # Post edit
 # Easily browse and edit blog source code online.
