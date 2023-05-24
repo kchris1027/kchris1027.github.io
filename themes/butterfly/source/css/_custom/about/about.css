@@ -915,13 +915,13 @@
   .post-reward .reward-main {
     position: absolute;
     bottom: 40px;
-    left: -23%;
+    left: 0;
     z-index: 100;
     display: none;
     padding: 0 0 15px;
   }
 
-  .post-reward .reward-main .reward-all {
+  /* .post-reward .reward-main .reward-all {
     display: -webkit-box;
     display: -moz-box;
     display: -webkit-flex;
@@ -932,7 +932,7 @@
     padding: 20px 10px;
     border-radius: 4px;
     background: var(--reward-pop);
-  }
+  } */
 
   .post-reward .reward-main .reward-all:before {
     position: absolute;
