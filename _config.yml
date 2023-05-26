@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: GameDesign
+title: InAction
 subtitle: ''
 description: '接纳一切新鲜有趣的事物'
 keywords:
@@ -14,7 +14,7 @@ email: 1098158356@qq.com
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://cn.kongcai.tech
+url: http://kongcai.tech
 #permalink: :year/:month/:day/:title/
 #利用hexo-abbrink插件，生成文章唯一链接
 permalink: post/:abbrlink.html
