@@ -106,6 +106,49 @@
       "rate": "",
       "img": "https://images.weserv.nl/?url=https://img9.doubanio.com/view/subject/s/public/s31800026.jpg",
       "url": "https://book.douban.com/subject/32909781"
+    },
+    {
+      "status": "见字如晤",
+      "title": "游戏设计要则探秘（全彩）",
+      "author": "【美】AnnaAnthropy(安娜.安托弗),NaomiClark（娜奥米.克拉克）",
+      "publishDate": "2015-1",
+      "rate": "7.6",
+      "img": "https://images.weserv.nl/?url=https://img9.doubanio.com/view/subject/s/public/s27999386.jpg",
+      "url": "https://book.douban.com/subject/26317407"
+    },
+    {
+      "status": "见字如晤",
+      "title": "游戏设计基础",
+      "author": "ErnestAdams",
+      "publishDate": "2009-1",
+      "rate": "7.3",
+      "img": "https://images.weserv.nl/?url=https://img2.doubanio.com/view/subject/s/public/s3792252.jpg",
+      "url": "https://book.douban.com/subject/3529767"
+    },
+    {
+      "status": "见字如晤",
+      "title": "以眼说话",
+      "author": "［美］布鲁斯·布洛克（BruceA.Block）",
+      "publishDate": "2019-6",
+      "rate": "8.7",
+      "img": "https://images.weserv.nl/?url=https://img1.doubanio.com/view/subject/s/public/s32306857.jpg",
+      "url": "https://book.douban.com/subject/30281412"
+    },
+    {
+      "status": "见字如晤",
+      "title": "游戏设计、原型与开发：基于Unity与C#从构思到实现（第2版）",
+      "author": "【美】JeremyGibsonBond",
+      "publishDate": "2020-6",
+      "rate": "8.1",
+      "img": "https://images.weserv.nl/?url=https://img1.doubanio.com/view/subject/s/public/s33667777.jpg",
+      "url": "https://book.douban.com/subject/35100086"
+    },
+    {
+      "status": "见字如晤",
+      "title": "游戏项目管理与敏捷方法（第2版）",
+      "rate": "",
+      "img": "https://images.weserv.nl/?url=https://img2.doubanio.com/view/subject/s/public/s33989642.jpg",
+      "url": "https://book.douban.com/subject/35484923"
     }
   ],
   "music": []
