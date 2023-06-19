@@ -149,6 +149,24 @@
       "rate": "",
       "img": "https://images.weserv.nl/?url=https://img2.doubanio.com/view/subject/s/public/s33989642.jpg",
       "url": "https://book.douban.com/subject/35484923"
+    },
+    {
+      "status": "见字如晤",
+      "title": "游戏感：游戏操控感和体验设计指南",
+      "author": "SteveSwink（史蒂夫·斯温克）",
+      "publishDate": "2020-4",
+      "rate": "6.6",
+      "img": "https://images.weserv.nl/?url=https://img9.doubanio.com/view/subject/s/public/s33602314.jpg",
+      "url": "https://book.douban.com/subject/35006358"
+    },
+    {
+      "status": "见字如晤",
+      "title": "游戏设计艺术（第3版）",
+      "author": "[美]JesseSchell",
+      "publishDate": "2021-5-7",
+      "rate": "9.1",
+      "img": "https://images.weserv.nl/?url=https://img9.doubanio.com/view/subject/s/public/s33895655.jpg",
+      "url": "https://book.douban.com/subject/35460994"
     }
   ],
   "music": []
