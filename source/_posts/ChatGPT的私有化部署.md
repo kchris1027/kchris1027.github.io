@@ -32,7 +32,7 @@ cover: /img/ChatGPT的私有化部署/cover.png
 
 ```docker
 docker pull pengzhile/pandora
-docker run -it --rm -p 2333:2333 -e PANDORA_SERVER=0.0.0.0:2333 pengzhile/pandora 
+docker run -it --rm --name pandora -p 6000:6000 -e PANDORA_SERVER=0.0.0.0:6000 pengzhile/pandora 
 ```
 
 其中关于`-e`的环境变量参考官方说明进行使用配置
