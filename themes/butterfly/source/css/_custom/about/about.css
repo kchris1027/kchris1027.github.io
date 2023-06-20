@@ -647,7 +647,7 @@
     transition: 2s ease-in-out;
   }
   .author-content-item.game-yuanshen {
-    background: url(/img/about/tianyu.png) no-repeat top;
+    background: url(/img/about/blue-protocol02.png) no-repeat top;
     background-size: cover;
     min-height: 300px;
     overflow: hidden;
@@ -674,7 +674,7 @@
     background: url(https://img02.anzhiy.cn/adminuploads/1/2022/09/25/632fb9cecfc8c.png);
   }
   .author-content-item.game-yuanshen::after {
-    box-shadow: 0 -69px 203px 11px #2d45c9 inset;
+    box-shadow: 0 -69px 203px 11px #2d44c986 inset;
     position: absolute;
     content: "";
     width: 100%;
