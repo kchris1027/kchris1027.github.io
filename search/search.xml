@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Roll,Pitch,and Yaw</title>
+      <link href="/post/547f226e.html"/>
+      <url>/post/547f226e.html</url>
+      
+        <content type="html"><![CDATA[<p>“Roll”、”Pitch” 和 “Yaw” 是航空航天和机器人领域中用于描述物体或飞行器在三个不同轴上的旋转运动。</p><div class="gallery">    <div class="fj-gallery  data" data-rowHeight="220" data-limit="10">    <span class="gallery-data">[{"url":"../img/Roll-Pitch-and-Yaw/1688033142329.png","alt":"Alt text"},{"url":"../img/Roll-Pitch-and-Yaw/1688032592262.png","alt":"Alt text"}]</span>    </div>    <button class="gallery-load-more"><span>加载更多</span><i class="fa-solid fa-arrow-down"></i></button>    </div><ul><li><p><code>&quot;Roll&quot;（翻滚）</code>是绕物体的纵轴（前后轴）旋转，使其绕横向轴产生旋转运动。类比于飞行器，翻滚是指飞机绕其纵轴（从头到尾的轴线）进行的旋转运动，即向左或向右倾斜。<br><img src="/../img/Roll-Pitch-and-Yaw/roll.gif" alt="Roll"></p></li><li><p><code>&quot;Pitch&quot;（俯仰）</code>是绕物体的横轴（侧向轴）旋转，使其绕纵向轴产生旋转运动。在飞行器的背后，俯仰是指飞机绕其横轴（从一侧到另一侧的轴线）进行的旋转运动，即向上或向下倾斜。<br><img src="/../img/Roll-Pitch-and-Yaw/pitch.gif" alt="Pitch"></p></li><li><p><code>&quot;Yaw&quot;（偏航）</code>是绕物体的垂直轴（竖直轴）旋转，使其绕垂直轴产生旋转运动。对于飞行器，偏航是指飞机绕其垂直轴（通过飞机重心向上的轴线）进行的旋转运动，即左右转向。<br><img src="/../img/Roll-Pitch-and-Yaw/yaw2.gif" alt="Yaw"></p></li></ul><p>这三个名词在Unreal蓝图三维向量节点中经常会出现：<br><img src="/../img/Roll-Pitch-and-Yaw/1688033955639.png" alt="Alt text"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Unreal </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Unreal </tag>
+            
+            <tag> 名词注释 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Enhanced Input</title>
       <link href="/post/b32ee82a.html"/>
       <url>/post/b32ee82a.html</url>
