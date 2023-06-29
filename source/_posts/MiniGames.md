@@ -32,7 +32,7 @@ swiper_cover: /img/MiniGame/cover.png
 <!-- tab Catch Cat -->
 {% raw %}
 <div class="aspect-ratio" >
-    <iframe src="https://game.guole.fun/cat/index.html" scrolling="no" border="0" frameborder="0" framespacing="0" high_quality="1" danmaku="1" allowfullscreen=""></iframe>
+    <iframe src="https://ganlvtech.github.io/phaser-catch-the-cat/" scrolling="no" border="0" frameborder="0" framespacing="0" high_quality="1" danmaku="1" allowfullscreen=""></iframe>
 </div>
 
 <style>
