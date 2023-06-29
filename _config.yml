@@ -160,26 +160,6 @@ douban:
   #  option:
   timeout: 10000 
 
-# steam games page
-steam:
-  enable: false
-  steamId: '76561198326647546' #steam 64位Id
-  apiKey: '1BA71B251A1422263CFB5BDB8BB4C0AA' #steam api key
-  steamInfos: # 多账号配置
-    - id: '76561198326647546' #steam 64位Id
-      path: # 为每个帐号游戏库单独配置页面路径，默认`steamgames/{steamId}/index.html`
-  freeGames: true
-  path:
-  title: Steam游戏库
-  quote: '游戏人生'
-  tab: all
-  length: 1000
-  imgUrl: 'https://www.steamsignature.com/profile/default/76561198326647546.png'
-  proxy:
-    host:
-    port:
-  extra_options:
-    key: value
 
 # 图表插件
 # 统计图表，支持发布文章统计、发布日历、Top标签统计、分类统计、分类雷达。
