@@ -1,0 +1,20 @@
+#game
+  if site.data.game
+    each i in site.data.game
+      .game-item
+        h2.game-item-title= i.class_name
+        .game-item-description= i.description
+        .game-item-content
+          each item, index in i.game_list
+            .game-item-content-item
+              .game-item-content-item-cover
+                img.game-item-content-item-image(data-lazy-src=url_for(item.image) onerror=`this.onerror=null;this.src='` + url_for(theme.error_img.flink) + `'` alt=item.name)
+              .game-item-content-item-info
+                .game-item-content-item-name= item.name
+                .game-item-content-item-specification= item.specification
+                .game-item-content-item-description= item.description
+                .game-item-content-item-toolbar
+                  if item.link.includes('https://') || item.link.includes('http://')
+                    a.game-item-content-item-link(href= item.link, target='_blank') 详情
+                  else
+                    a.game-item-content-item-link(href= item.link, target='_blank') 查看文章

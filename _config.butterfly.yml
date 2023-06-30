@@ -13,7 +13,7 @@ menu:
    娱乐||fas fa-headphones||hide:
      Music: /music/ || fas fa-music
      Movie: /movies/ || fas fa-video
-    # Game: /steamgames/ || fas fa-gamepad
+     Game: /game/ || fas fa-gamepad
     # iamges: /movies/ || fas fa-images
    工具: /link/ || fas fa-compass
    留言板: /message/ || fas fa-comment-dots
@@ -864,10 +864,10 @@ pangu:
 # Lazyload (圖片懶加載)
 # https://github.com/verlok/vanilla-lazyload
 lazyload:
-  enable: false
+  enable: true
   field: site # site/post
   placeholder:
-  blur: false
+  blur: true
 
 # PWA
 # See https://github.com/JLHwung/hexo-offline
@@ -907,10 +907,11 @@ inject:
     - <link rel="stylesheet" href="/css/progress_bar.css">
     #twikoo
     - <link rel="stylesheet" href="/css/twikoo_tips.css">
-    # 关于页面的必要文件
-    - <script type="text/javascript" src ="/js/about/reward.js" ></script>
-    - <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.16/dist/sweetalert2.all.min.js"></script>
+    # game页面css引入
+    - <link rel="stylesheet" href="/css/game_page.css">
     # - <link rel="stylesheet" href="/xxx.css">
+
+
 
   bottom:
     #水波纹效果 对应配置文件js/ripples 文件夹下的js配置
@@ -922,6 +923,9 @@ inject:
     # - <script src="xxxx"></script>
     #全局音乐播放器
     #- <div class="aplayer no-destroy" data-id="7199616451&userid=96116466" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-autoplay="true" data-lrctype="0"> </div>
+    # 关于页面的必要文件
+    - <script type="text/javascript" src ="/js/about/reward.js" ></script>
+    - <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.16/dist/sweetalert2.all.min.js"></script>
     # 网站统计数据
     - <script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script>
     - <script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>

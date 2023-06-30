@@ -1,0 +1,52 @@
+- class_name: 已体验
+  description: 以下游戏是真的好玩~
+  game_list:
+    - name: 《塞尔达传说之王国之泪》
+      specification: 游戏时长：300h
+      description: 任天堂开放世界的进一步探索，预定2023年度最佳游戏！
+      image: https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.0/c_scale,w_1700/ncom/software/switch/70010000063714/276a412988e07c4d55a2996c6d38abb408b464413b2dfeb44d2aa460b9f622e1
+      link: https://www.nintendo.com/store/products/the-legend-of-zelda-tears-of-the-kingdom-switch/
+    - name: 《卧龙》
+      specification: 游戏时长：100h
+      description: 钱花在刀刃上的动作游戏
+      image: https://cdn.akamai.steamstatic.com/steam/apps/1448440/header.jpg?t=1688022125
+      link: https://store.steampowered.com/app/1448440/Wo_Long_Fallen_Dynasty/
+    - name: 《艾尔登法环》
+      specification: 游戏时长：100h
+      description: 艺术设定点赞
+      image: https://cdn.akamai.steamstatic.com/steam/apps/1245620/header.jpg?t=1683618443
+      link: https://cn.kongcai.tech/post/41b229dc.html
+    - name: 《异度之刃3》
+      specification: 游戏时长：100h
+      description: 故事、音乐依旧动人
+      image: https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.0/c_scale,w_1700/ncom/software/switch/70010000053336/e933b48650b33b355e9cf2583da5c94b77180e40fb02d050041083dd62f4df39
+      link: https://www.nintendo.com/store/products/xenoblade-chronicles-3-switch/
+    - name: 《猎天使魔女》
+      specification: 游戏时长：100h
+      description: 终于等到贝姐，感谢任天堂
+      image: https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_656/b_white/f_auto/q_auto/ncom/software/switch/70010000046400/0c47748b3a6f1b3a9fce87886c3dae2680f9990e27b2b6c8b029b6133f072477
+      link: https://www.nintendo.com/store/products/bayonetta-3-switch/
+    - name: 《Stray》
+      specification: 游戏时长：6h
+      description: 我家猫说真好玩
+      image: https://cdn.cloudflare.steamstatic.com/steam/apps/1332010/header.jpg?t=1687371935
+      link: https://store.steampowered.com/app/1332010/Stray/
+    - name: 《HELLDIVERS™》
+      specification: 游戏时长：587h
+      description: 好玩，缺个朋友
+      image: https://cdn.akamai.steamstatic.com/steam/apps/394510/header.jpg?t=1687285580
+      link: https://store.steampowered.com/app/394510/HELLDIVERS_Dive_Harder_Edition/
+
+- class_name: 待体验
+  description: 小手搓搓，期待一波
+  game_list:
+    - name: 《末光》
+      specification: 游戏启动中
+      description: 战斗看起来不错，准备试试手感
+      image: https://cdn.akamai.steamstatic.com/steam/apps/2162020/header_schinese.jpg?t=1687883214
+      link: https://store.steampowered.com/app/2162020/_/
+    - name: 《Planet of Lana》
+      specification: 游戏启动中
+      description: 画面看起来真的挺舒服
+      image: https://cdn.akamai.steamstatic.com/steam/apps/1608230/header.jpg?t=1688045807
+      link: https://store.steampowered.com/app/1608230/Planet_of_Lana/
