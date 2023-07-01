@@ -1,52 +1,313 @@
-- class_name: 已体验
-  description: 以下游戏是真的好玩~
-  game_list:
-    - name: 《塞尔达传说之王国之泪》
-      specification: 游戏时长：300h
-      description: 任天堂开放世界的进一步探索，预定2023年度最佳游戏！
-      image: https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.0/c_scale,w_1700/ncom/software/switch/70010000063714/276a412988e07c4d55a2996c6d38abb408b464413b2dfeb44d2aa460b9f622e1
-      link: https://www.nintendo.com/store/products/the-legend-of-zelda-tears-of-the-kingdom-switch/
-    - name: 《卧龙》
-      specification: 游戏时长：100h
-      description: 钱花在刀刃上的动作游戏
-      image: https://cdn.akamai.steamstatic.com/steam/apps/1448440/header.jpg?t=1688022125
-      link: https://store.steampowered.com/app/1448440/Wo_Long_Fallen_Dynasty/
-    - name: 《艾尔登法环》
-      specification: 游戏时长：100h
-      description: 艺术设定点赞
-      image: https://cdn.akamai.steamstatic.com/steam/apps/1245620/header.jpg?t=1683618443
-      link: https://cn.kongcai.tech/post/41b229dc.html
-    - name: 《异度之刃3》
-      specification: 游戏时长：100h
-      description: 故事、音乐依旧动人
-      image: https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.0/c_scale,w_1700/ncom/software/switch/70010000053336/e933b48650b33b355e9cf2583da5c94b77180e40fb02d050041083dd62f4df39
-      link: https://www.nintendo.com/store/products/xenoblade-chronicles-3-switch/
-    - name: 《猎天使魔女》
-      specification: 游戏时长：100h
-      description: 终于等到贝姐，感谢任天堂
-      image: https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_656/b_white/f_auto/q_auto/ncom/software/switch/70010000046400/0c47748b3a6f1b3a9fce87886c3dae2680f9990e27b2b6c8b029b6133f072477
-      link: https://www.nintendo.com/store/products/bayonetta-3-switch/
-    - name: 《Stray》
-      specification: 游戏时长：6h
-      description: 我家猫说真好玩
-      image: https://cdn.cloudflare.steamstatic.com/steam/apps/1332010/header.jpg?t=1687371935
-      link: https://store.steampowered.com/app/1332010/Stray/
-    - name: 《HELLDIVERS™》
-      specification: 游戏时长：587h
-      description: 好玩，缺个朋友
-      image: https://cdn.akamai.steamstatic.com/steam/apps/394510/header.jpg?t=1687285580
-      link: https://store.steampowered.com/app/394510/HELLDIVERS_Dive_Harder_Edition/
-
 - class_name: 待体验
   description: 小手搓搓，期待一波
   game_list:
-    - name: 《末光》
+    - name: 最终幻想16
+      specification: 游戏启动中
+      description: SE的年度大作，各项设定都挺吸引人!
+      image: https://image.api.playstation.com/vulcan/ap/rnd/202211/1009/oehAww2ytCqKnxk12h74Hx7y.jpg?w=780&thumb=false
+      link: https://www.playstation.com/en-us/games/final-fantasy-xvi/
+    - name: 末光
       specification: 游戏启动中
       description: 战斗看起来不错，准备试试手感
       image: https://cdn.akamai.steamstatic.com/steam/apps/2162020/header_schinese.jpg?t=1687883214
       link: https://store.steampowered.com/app/2162020/_/
-    - name: 《Planet of Lana》
+    - name: Planet of Lana
       specification: 游戏启动中
-      description: 画面看起来真的挺舒服
+      description: 是我喜欢的画风~
       image: https://cdn.akamai.steamstatic.com/steam/apps/1608230/header.jpg?t=1688045807
       link: https://store.steampowered.com/app/1608230/Planet_of_Lana/
+    - name: 战神：诸神黄昏
+      specification: 游戏启动中
+      description: 战神4真的太棒了，5想必也不差。
+      image: https://image.api.playstation.com/vulcan/ap/rnd/202207/1210/aqZdSwWyy9JcQ66BxHDKrky6.jpg?w=780&thumb=false
+      link: https://www.playstation.com/en-hk/games/god-of-war-ragnarok/
+
+- class_name: 2023
+  description: 那个男人，他终于回来了！
+  game_list:
+    - name: 塞尔达传说之王国之泪
+      specification: 游戏时长：105h
+      description: 任天堂对开放世界的进一步探索与想象，预定2023年度最佳游戏！
+      image: https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.0/c_scale,w_1700/ncom/software/switch/70010000063714/276a412988e07c4d55a2996c6d38abb408b464413b2dfeb44d2aa460b9f622e1
+      link: https://www.nintendo.com/store/products/the-legend-of-zelda-tears-of-the-kingdom-switch/
+    - name: 卧龙
+      specification: 游戏时长：60h
+      description: 钱花在刀刃上的动作游戏，三国题材很赞！
+      image: https://cdn.akamai.steamstatic.com/steam/apps/1448440/header.jpg?t=1688022125
+      link: https://store.steampowered.com/app/1448440/Wo_Long_Fallen_Dynasty/
+
+- class_name: 2022
+  description: 今年得我心的游戏是真的多，只是玩游戏的时间是真的少。
+  game_list:
+    - name: 艾尔登法环
+      specification: 游戏时长：79h
+      description: 2022年度最佳游戏！开放世界的设计不算优秀，但装备・技能・道具的战斗乘法组合，使得玩法方式千变万化，内容大有可玩～故事和美术设定也十分出彩。
+      image: https://cdn.akamai.steamstatic.com/steam/apps/1245620/header.jpg?t=1683618443
+      link: https://cn.kongcai.tech/post/41b229dc.html
+    - name: HELLDIVERS™
+      specification: 游戏时长：587h
+      description: 工作需要，也确实好玩，但门槛很高，需要朋友。
+      image: https://cdn.akamai.steamstatic.com/steam/apps/394510/header.jpg?t=1687285580
+      link: https://store.steampowered.com/app/394510/HELLDIVERS_Dive_Harder_Edition/
+    - name: Nintendo Switch 运动
+      specification: 游戏时长：60h
+      description: 疫情3个月封闭在家锻炼的唯二渠道！给咪普利老师留一个名额。
+      image: https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.0/c_scale,w_1700/ncom/software/switch/70010000049931/cf8adb2c74522b91412eb40b9d77216e8f8436fc4e63731e0dc262e6666930eb
+      link: https://www.nintendo.com/store/products/nintendo-switch-sports-switch/
+    - name: 异度之刃3
+      specification: 游戏时长：50h
+      description: 完全是冲着 2 代的情怀买的，听说故事和音乐一如既往的很棒，但是前期节奏比较拖沓（也许是我比较沉不下心去享受），且角色设定也没有 2 代那么吸引人，放下就很难再拿起来玩了。
+      image: https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.0/c_scale,w_1700/ncom/software/switch/70010000053336/e933b48650b33b355e9cf2583da5c94b77180e40fb02d050041083dd62f4df39
+      link: https://www.nintendo.com/store/products/xenoblade-chronicles-3-switch/
+    - name: 猎天使魔女3
+      specification: 游戏时长：30h
+      description: 依旧是酣畅淋漓的爽感动作游戏，只是连续高强度的战斗操作还是会让人有些吃不消，抽个空补完。
+      image: https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_656/b_white/f_auto/q_auto/ncom/software/switch/70010000046400/0c47748b3a6f1b3a9fce87886c3dae2680f9990e27b2b6c8b029b6133f072477
+      link: https://www.nintendo.com/store/products/bayonetta-3-switch/
+    - name: Stray
+      specification: 游戏时长：6h
+      description: 我家猫说真好玩！！
+      image: https://cdn.cloudflare.steamstatic.com/steam/apps/1332010/header.jpg?t=1687371935
+      link: https://store.steampowered.com/app/1332010/Stray/
+    - name: MONSTER HUNTER RISE
+      specification: 游戏时长：30h
+      description: 为了拉朋友加入ns家庭会员入的，卡普空的经典动作游戏，好玩程度毋庸置疑。
+      image: https://cdn.cloudflare.steamstatic.com/steam/apps/1446780/header.jpg?t=1687140511
+      link: https://store.steampowered.com/app/1446780/MONSTER_HUNTER_RISE/
+    - name: 'There Is No Game: Wrong Dimension'
+      specification: 游戏时长：7h
+      description: 真的真的是很有创意和想法的设计，是我疯狂向朋友安利的游戏。
+      image: https://cdn.akamai.steamstatic.com/steam/apps/1240210/header.jpg?t=1640122958
+      link: https://store.steampowered.com/app/1240210/There_Is_No_Game_Wrong_Dimension/
+    - name: Neon White
+      specification: 游戏时长：30h
+      description: 跑酷+动作+卡牌，很有意思的玩法设计。
+      image: https://cdn.cloudflare.steamstatic.com/steam/apps/1533420/header.jpg?t=1687369837
+      link: https://store.steampowered.com/app/1533420/Neon_White/
+    - name: Tunic
+      specification: 游戏时长：30h
+      description: 仿佛看到了塞尔达传说系列的身影
+      image: https://cdn.cloudflare.steamstatic.com/steam/apps/553420/header.jpg?t=1649107473
+      link: https://store.steampowered.com/app/553420/TUNIC/
+    - name: 星之卡比：探索发现
+      specification: 游戏时长：30h
+      description: 虽然操作简单，但就真的很有意思。老任的作品就是有让人开怀大笑的魅力
+      image: https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.0/c_scale,w_1700/ncom/software/switch/70010000046405/d1cf83dea46094b85247f40ca30ea4557730a319be0bfe544a4fa929144cf6c2
+      link: https://www.nintendo.com/store/products/kirby-and-the-forgotten-land-switch/
+    - name: 卡比的美食节
+      specification: 游戏时长：30h
+      description: 吃货卡比，可可爱爱
+      image: https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.0/c_scale,w_1700/ncom/en_US/games/switch/k/kirbys-dream-buffet-switch/hero
+      link: https://www.nintendo.com/store/products/kirbys-dream-buffet-switch/
+    - name: Outer Wilds
+      specification: 游戏时长：20h
+      description: 朋友推荐的作品，一款宇宙题材的开放世界探索游戏。That's here, that's home, that's us.
+      image: https://cdn.akamai.steamstatic.com/steam/apps/753640/header.jpg?t=1687369978
+      link: https://store.steampowered.com/app/753640/Outer_Wilds/
+    - name: Deadlink
+      specification: 游戏时长：25h
+      description: 一个射击手感超棒的rougelike
+      image: https://cdn.akamai.steamstatic.com/steam/apps/1676130/header.jpg?t=1688130763
+      link: https://store.steampowered.com/app/1676130/Deadlink/
+- class_name: 2021
+  description: 今年因为游戏，收获了很多
+  game_list:
+    - name: 双人成行
+      specification: 游戏时长：30h
+      description: 2021年度最佳游戏！真的很有趣的双人合作，有玩法，有叙事，有欢笑，有泪水，就真的是会让人发自内心感动的一款艺术作品。
+      image: https://cdn.akamai.steamstatic.com/steam/apps/1426210/header_schinese.jpg?t=1679951279
+      link: https://store.steampowered.com/app/1426210/_/
+    - name: 凯娜：精神之桥
+      specification: 游戏时长：20h
+      description: 画面真的太赞了，有种置身于动画电影中的沉静感，故事和玩法也在及格线，个人真的十分喜欢的一部作品
+      image: https://cdn.akamai.steamstatic.com/steam/apps/1954200/header.jpg?t=1664298117
+      link: https://store.steampowered.com/app/1954200/Kena_Bridge_of_Spirits/
+    - name: 尼尔：人工生命
+      specification: 游戏时长：42h
+      description: NieR系列总是有种莫名的吸引力
+      image: https://cdn.akamai.steamstatic.com/steam/apps/1113560/header.jpg?t=1673963725
+      link: https://store.steampowered.com/app/1113560/NieR_Replicant_ver122474487139/
+    - name: 绯红结系
+      specification: 游戏时长：30h
+      description: 虽然万代的游戏处处透露着贫穷，但这游戏的战斗是真的不错，人设也很赞！
+      image: https://cdn.akamai.steamstatic.com/steam/apps/775500/header.jpg?t=1680224698
+      link: https://store.steampowered.com/app/775500/_/
+    - name: 马力欧派对：超级明星
+      specification: 游戏时长：10h
+      description: 与公司同事一起游玩的聚会游戏
+      image: https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.0/c_scale,w_1700/ncom/software/switch/70010000042934/ae43ce2e25afbc4c069c2920075ead01a84f02dfe55b87876268409f6ccc0304
+      link: https://www.nintendo.com/store/products/mario-party-superstars-switch/
+    - name: 超级马力欧 3D 世界 ＋ 狂怒世界
+      specification: 游戏时长：30h
+      description: 弥补个人游戏经历主机断代的缺憾，关卡设计依旧那么有趣
+      image: https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.0/c_scale,w_1700/ncom/software/switch/70010000034439/ccb69a8bf2746b2dc0a9b11a9e48c9893baa1631486326f0d681b7a36385221f
+      link: https://www.nintendo.com/store/products/super-mario-3d-world-plus-bowsers-fury-switch/
+    - name: 死亡循环
+      specification: 游戏时长：50h
+      description: 关卡设计超赞！
+      image: https://cdn.akamai.steamstatic.com/steam/apps/1252330/header.jpg?t=1685023314
+      link: https://store.steampowered.com/app/1252330/DEATHLOOP/
+    - name: 极限竞速：地平线 5
+      specification: 游戏时长：20h
+      description: 还是那么爱着赛车游戏
+      image: https://cdn.akamai.steamstatic.com/steam/apps/1551360/header.jpg?t=1683059745
+      link: https://store.steampowered.com/app/1551360/_5/
+    - name: 仁王2
+      specification: 游戏时长：28h
+      description: 仁王系列真的好难/(ㄒoㄒ)/~~
+      image: https://cdn.akamai.steamstatic.com/steam/apps/1325200/header.jpg?t=1683699499
+      link: https://store.steampowered.com/app/1325200/Nioh_2__The_Complete_Edition/
+- class_name: 2020
+  description: 动森带来的感动，持续了一整年
+  game_list:
+    - name: 集合啦！动物森友会
+      specification: 游戏时长：150h
+      description: 2020年度最佳游戏！一款让人回归纯粹与感动的作品
+      image: https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.0/c_scale,w_1700/ncom/software/switch/70010000027619/9989957eae3a6b545194c42fec2071675c34aadacd65e6b33fdfe7b3b6a86c3a
+      link: https://www.nintendo.com/store/products/animal-crossing-new-horizons-switch/
+    - name: 对马岛之魂
+      specification: 游戏时长：50h
+      description: 风景是真的赞~仿佛会呼吸的世界
+      image: https://image.api.playstation.com/vulcan/ap/rnd/202106/2322/ZSrFeb6XkqKiq2PZKWg20yfe.jpg?w=780&thumb=false
+      link: https://www.playstation.com/en-hk/games/ghost-of-tsushima/
+    - name: 最终幻想 7 重制版
+      specification: 游戏时长：35h
+      description: 最终幻想系列作品的经典重置制作！
+      image: https://image.api.playstation.com/vulcan/img/rnd/202102/2409/nYvV3HhJxSNaj9lwF2gYPQto.jpg?w=780&thumb=false
+      link: https://www.playstation.com/en-hk/games/final-fantasy-vii-remake/
+    - name: 天穗之咲稻姬
+      specification: 游戏时长：70h
+      description: 种田战斗两不误
+      image: https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_656/b_white/f_auto/q_auto/ncom/en_US/games/switch/s/sakuna-of-rice-and-ruin-switch/hero
+      link: https://www.nintendo.com/store/products/sakuna-of-rice-and-ruin-switch/
+    - name: 黑帝斯
+      specification: 游戏时长：30h
+      description: 一款好玩的rougelike，画风还吸引人
+      image: https://cdn.akamai.steamstatic.com/steam/apps/1145360/header.jpg?t=1680293801
+      link: https://store.steampowered.com/app/1145360/Hades/
+    - name: 'Granblue Fantasy: Versus'
+      specification: 游戏时长：20h
+      description: 技能动作、特效以及战斗演出效果超赞
+      image: https://cdn.akamai.steamstatic.com/steam/apps/1090630/header.jpg?t=1667853691
+      link: https://store.steampowered.com/app/1090630/Granblue_Fantasy_Versus/
+    - name: 'KurtzPel'
+      specification: 游戏时长：15h
+      description: 真的是一款画面很棒的二次元动作游戏，只可惜核心玩法在PVP与PVE间反复变动，最后是两边都没做好。
+      image: https://cdn.akamai.steamstatic.com/steam/apps/844870/header.jpg?t=1685588363
+      link: https://store.steampowered.com/app/844870/KurtzPel/
+    - name: 'Elli'
+      specification: 游戏时长：10h
+      description: 关卡设计有意思的可爱卡通风格游戏，可惜还没通关存档就丢了，55555...
+      image: https://cdn.akamai.steamstatic.com/steam/apps/1346600/header.jpg?t=1594655603
+      link: https://store.steampowered.com/app/1346600/Elli/
+
+- class_name: 2019
+  description: 动作游戏爱好者的欢喜之年
+  game_list:
+    - name: 只狼：影逝二度
+      specification: 游戏时长：50h
+      description: 2019年度最佳游戏！宫崎英高走上神坛。
+      image: https://cdn.akamai.steamstatic.com/steam/apps/814380/header.jpg?t=1678991267
+      link: https://store.steampowered.com/app/814380/Sekiro_Shadows_Die_Twice__GOTY_Edition/
+    - name: 鬼泣 5
+      specification: 游戏时长：20h
+      description: 2019最佳动作游戏！卡普空经典IP力作。
+      image: https://cdn.akamai.steamstatic.com/steam/apps/601150/header.jpg?t=1675151951
+      link: https://store.steampowered.com/app/601150/Devil_May_Cry_5/
+    - name: 死亡搁浅
+      specification: 游戏时长：30h
+      description: 小岛秀夫永远的神！
+      image: https://gmedia.playstation.com/is/image/SIEPDC/death-stranding-huge-hero-mobile-01-ps4-eu-22jul19?$1600px$
+      link: https://www.playstation.com/en-hk/games/death-stranding/
+    - name: 健身环大冒险
+      specification: 游戏时长：35h
+      description: 游戏给了我运动的动力
+      image: https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_656/b_white/f_auto/q_auto/ncom/en_US/products/games/switch/ring-fit-adventure/110583-switch-ring-fit-adventure-1200x675
+      link: https://www.nintendo.com/store/products/ring-fit-adventure-switch/
+    - name: Baba Is You
+      specification: 游戏时长：15h
+      description: 这游戏极其烧脑
+      image: https://cdn.akamai.steamstatic.com/steam/apps/736260/header.jpg?t=1656225237
+      link: https://store.steampowered.com/app/736260/Baba_Is_You/
+    - name: Sky
+      specification: 游戏时长：50h
+      description: “光是遇见，就很美好。”，个人心中年度最佳！
+      image: https://gametc.fp.ps.netease.com/file/63c11c0e9de9f63a50d5ccdemQUlSygE04?fop=imageView/0/w/285/h/160
+      link: https://sky.163.com/index.html
+
+- class_name: 2018
+  description: 
+  game_list:
+    - name: 战神4
+      specification: 游戏时长：68h
+      description: 2018年度最佳游戏！
+      image: https://image.api.playstation.com/vulcan/img/rnd/202010/2217/LsaRVLF2IU2L1FNtu9d3MKLq.jpg?w=780&thumb=false
+      link: https://www.playstation.com/en-hk/games/god-of-war/
+    - name: 荒野大镖客2
+      specification: 游戏时长：30h
+      description: R星年度巨作
+      image: https://cdn.akamai.steamstatic.com/steam/apps/1174180/header.jpg?t=1671485009
+      link: https://www.playstation.com/en-hk/games/red-dead-redemption-2/
+    - name: 任天堂明星大乱斗：特别版
+      specification: 游戏时长：20h
+      description: 大乱斗的巅峰之作！
+      image: https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.0/c_scale,w_1700/ncom/software/switch/70010000012332/ac4d1fc9824876ce756406f0525d50c57ded4b2a666f6dfe40a6ac5c3563fad9
+      link: https://www.nintendo.com/store/products/super-smash-bros-ultimate-switch/
+    - name: GRIS
+      specification: 游戏时长：8h
+      description: 是独立游戏，也是艺术品。
+      image: https://cdn.akamai.steamstatic.com/steam/apps/683320/header.jpg?t=1686261902
+      link: https://store.steampowered.com/app/683320/GRIS/
+    - name: 死亡细胞
+      specification: 游戏时长：60h
+      description: 像素动作rougelike，操作手感尤其出彩
+      image: https://cdn.akamai.steamstatic.com/steam/apps/588650/header.jpg?t=1678188017
+      link: https://store.steampowered.com/app/588650/Dead_Cells/
+    - name: 胡闹厨房2
+      specification: 游戏时长：20h
+      description: 关卡设计元素丰富，多人合作乐趣多多
+      image: https://cdn.akamai.steamstatic.com/steam/apps/728880/header_schinese.jpg?t=1670442579
+      link: https://store.steampowered.com/app/728880/Overcooked_2/
+    - name: 超级马里奥派对
+      specification: 游戏时长：30h
+      description: 仿佛回到儿时的聚会游戏
+      image: https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_656/b_white/f_auto/q_auto/ncom/software/switch/70010000014158/0ca41128bf40b7e0dc32a046a659ecdc69e4d7cc7a3257d6280be665d2f795b5
+      link: https://www.nintendo.com/store/products/super-mario-party-switch/
+    - name: 蔚蓝
+      specification: 游戏时长：50h
+      description: 循此苦旅，终抵繁星。
+      image: https://cdn.akamai.steamstatic.com/steam/apps/504230/header.jpg?t=1684953953
+      link: https://store.steampowered.com/app/504230/Celeste/
+- class_name: 2017
+  description: 热爱游戏，以及与它有关的一切；这一年，游戏带给了我太多的感动。
+  game_list:
+    - name: 塞尔达传说之旷野之息
+      specification: 游戏时长：110h
+      description: 2017年度最佳游戏！教科书级别的开放世界设计。
+      image: https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_656/b_white/f_auto/q_auto/ncom/software/switch/70010000000025/7137262b5a64d921e193653f8aa0b722925abc5680380ca0e18a5cfd91697f58
+      link: https://www.nintendo.com/store/products/the-legend-of-zelda-breath-of-the-wild-switch/
+    - name: 尼尔：机械纪元
+      specification: 游戏时长：60h
+      description: 谁会不喜欢2B小姐姐呢
+      image: https://cdn.akamai.steamstatic.com/steam/apps/524220/header.jpg?t=1682534695
+      link: https://store.steampowered.com/app/524220/NieRAutomata/
+    - name: 异度之刃2
+      specification: 游戏时长：95h
+      description: 承载了JRPG的幻想与浪漫
+      image: https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_656/b_white/f_auto/q_auto/ncom/software/switch/70010000000707/4cd12c9f2233dc671d0ac2bc208f8551d1d0b62c956d6d477585bb42c1ef09ea
+      link: https://www.nintendo.com/store/products/xenoblade-chronicles-2-switch/
+    - name: 超级马力欧奥德赛
+      specification: 游戏时长：30h
+      description: 任天堂永远的经典！
+      image: https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_656/b_white/f_auto/q_auto/ncom/software/switch/70010000001130/c42553b4fd0312c31e70ec7468c6c9bccd739f340152925b9600631f2d29f8b5
+      link: https://www.nintendo.com/store/products/super-mario-odyssey-switch/
+    - name: 马里奥赛车8
+      specification: 游戏时长：10h
+      description: 最好玩的赛车游戏！
+      image: https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_656/b_white/f_auto/q_auto/ncom/software/switch/70010000000153/de697f487a36d802dd9a5ff0341f717c8486221f2f1219b675af37aca63bc453
+      link: https://www.nintendo.com/store/products/mario-kart-8-deluxe-switch/
+    - name: 艾迪芬奇的记忆
+      specification: 游戏时长：10h
+      description: 最佳互动叙事
+      image: https://cdn.akamai.steamstatic.com/steam/apps/501300/header.jpg?t=1687376330
+      link: https://store.steampowered.com/app/501300/What_Remains_of_Edith_Finch/?l=schinese&curator_clanid=29227165
