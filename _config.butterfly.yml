@@ -451,7 +451,7 @@ messenger:
 footer:
   owner:
     enable: true
-    since: 2020
+    since: 2023
   custom_text: 前路漫漫，愿君莫笑岁月荒唐
   copyright: true # Copyright of theme and framework
 

@@ -18,6 +18,12 @@
       descr: 游戏开发者大会
       siteshot: /img/link/GDC.png
 
+    - name: itch.io
+      link: https://itch.io/
+      avatar: /img/link/itch.png
+      descr: 独立游戏作品集
+      siteshot: /img/link/1688211943157.png
+  
     - name: Epic Learing
       link: https://dev.epicgames.com/community/unreal-engine/getting-started/games
       avatar: /img/link/unreal_icon.jfif
@@ -29,7 +35,12 @@
       avatar: /img/link/Gamma_icon.gif
       descr: AI文档制作
       siteshot:
-    
+
+    - name: Interfaceingame
+      link: https://interfaceingame.com/
+      avatar: /img/link/interfaceingame.png
+      descr: 游戏UI素材库
+      siteshot: /img/link/1688211881754.png
 
 
 
