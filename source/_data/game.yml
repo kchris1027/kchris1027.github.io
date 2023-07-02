@@ -26,7 +26,7 @@
   description: 那个男人，他终于回来了！
   game_list:
     - name: 塞尔达传说之王国之泪
-      specification: 游戏时长：105h
+      specification: 游戏时长：150h
       description: 任天堂对开放世界的进一步探索与想象，预定2023年度最佳游戏！
       image: https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.0/c_scale,w_1700/ncom/software/switch/70010000063714/276a412988e07c4d55a2996c6d38abb408b464413b2dfeb44d2aa460b9f622e1
       link: https://www.nintendo.com/store/products/the-legend-of-zelda-tears-of-the-kingdom-switch/
@@ -153,10 +153,16 @@
       image: https://cdn.akamai.steamstatic.com/steam/apps/1551360/header.jpg?t=1683059745
       link: https://store.steampowered.com/app/1551360/_5/
     - name: 仁王2
-      specification: 游戏时长：28h
+      specification: 游戏时长：58h
       description: 仁王系列真的好难/(ㄒoㄒ)/~~
       image: https://cdn.akamai.steamstatic.com/steam/apps/1325200/header.jpg?t=1683699499
       link: https://store.steampowered.com/app/1325200/Nioh_2__The_Complete_Edition/
+    - name: 96号公路
+      specification: 游戏时长：13h
+      description: 肉鸽的叙事方式，深刻的故事结局
+      image: https://cdn.akamai.steamstatic.com/steam/apps/1466640/header.jpg?t=1687422807
+      link: https://store.steampowered.com/app/1466640/_/
+
 - class_name: 2020
   description: 动森带来的感动，持续了一整年
   game_list:
@@ -200,6 +206,11 @@
       description: 关卡设计有意思的可爱卡通风格游戏，可惜还没通关存档就丢了，55555...
       image: https://cdn.akamai.steamstatic.com/steam/apps/1346600/header.jpg?t=1594655603
       link: https://store.steampowered.com/app/1346600/Elli/
+    - name: '幽灵行者'
+      specification: 游戏时长：10h
+      description: 这个跑酷游戏是真的酷，关卡设计颇有难度，需勤加练习。
+      image: https://cdn.akamai.steamstatic.com/steam/apps/1139900/header.jpg?t=1685030714
+      link: https://store.steampowered.com/app/1139900/Ghostrunner/
 
 - class_name: 2019
   description: 动作游戏爱好者的欢喜之年
@@ -234,6 +245,11 @@
       description: “光是遇见，就很美好。”，个人心中年度最佳！
       image: https://gametc.fp.ps.netease.com/file/63c11c0e9de9f63a50d5ccdemQUlSygE04?fop=imageView/0/w/285/h/160
       link: https://sky.163.com/index.html
+    - name: 勇者斗恶龙 创世小玩家2
+      specification: 游戏时长：120h
+      description: 自由度超高的沙盒游戏
+      image: https://cdn.akamai.steamstatic.com/steam/apps/1072420/header_schinese.jpg?t=1661972322
+      link: https://store.steampowered.com/app/1072420/_2/
 
 - class_name: 2018
   description: 
@@ -278,6 +294,32 @@
       description: 循此苦旅，终抵繁星。
       image: https://cdn.akamai.steamstatic.com/steam/apps/504230/header.jpg?t=1684953953
       link: https://store.steampowered.com/app/504230/Celeste/
+    - name: 以撒的结合
+      specification: 游戏时长：200h
+      description: 道具丰富，经典耐玩的肉鸽
+      image: https://cdn.akamai.steamstatic.com/steam/apps/250900/header.jpg?t=1617174663
+      link: https://store.steampowered.com/app/250900/The_Binding_of_Isaac_Rebirth/
+    - name: 泰坦天降2
+      specification: 游戏时长：15h
+      description: 超酷炫的机甲战斗，以及超爽快的射击手感
+      image: https://cdn.akamai.steamstatic.com/steam/apps/1237970/header.jpg?t=1668565264
+      link: https://store.steampowered.com/app/1237970/Titanfall_2/
+    - name: Assault Spy
+      specification: 游戏时长：10h
+      description: 独立游戏能做到这种程度，是真的nb，不愧出自卡普空开发部，值得学习的对象
+      image: https://cdn.akamai.steamstatic.com/steam/apps/767930/header.jpg?t=1668468891
+      link: https://store.steampowered.com/app/767930/Assault_Spy/
+    - name: Hob
+      specification: 游戏时长：15h
+      description: 画风不错，关卡机关设计有点意思
+      image: https://cdn.akamai.steamstatic.com/steam/apps/404680/header.jpg?t=1670453857
+      link: https://store.steampowered.com/app/404680/Hob/
+    - name: 'Ori and the Blind Forest'
+      specification: 游戏时长：35h
+      description: 超赞的2D美术效果
+      image: https://cdn.akamai.steamstatic.com/steam/apps/261570/header.jpg?t=1667504148
+      link: https://store.steampowered.com/app/261570/Ori_and_the_Blind_Forest/
+
 - class_name: 2017
   description: 热爱游戏，以及与它有关的一切；这一年，游戏带给了我太多的感动。
   game_list:
