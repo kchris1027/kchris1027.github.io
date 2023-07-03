@@ -1,4 +1,4 @@
-- class_name: 待体验
+- class_name: ✨ 待体验
   description: 小手搓搓，期待一波
   game_list:
     - name: 最终幻想16
@@ -22,7 +22,26 @@
       image: https://image.api.playstation.com/vulcan/ap/rnd/202207/1210/aqZdSwWyy9JcQ66BxHDKrky6.jpg?w=780&thumb=false
       link: https://www.playstation.com/en-hk/games/god-of-war-ragnarok/
 
-- class_name: 2023
+- class_name: 🚀 持续体验中
+  description: 小手搓搓，期待一波
+  game_list:
+    - name: 蓝色协议
+      specification: 游戏运行中
+      description: 期待了几年的MMO新作！！
+      image: https://blue-protocol.com/assets/img/top-release/story_visual2_pc.jpg
+      link: https://blue-protocol.com/
+    - name: 崩坏3
+      specification: 游戏运行中
+      description: 从开服一直玩到现在，目前佛系游玩中......
+      image: https://uploadstatic.mihoyo.com/contentweb/20211023/2021102319505169569.png
+      link: https://www.taptap.cn/app/10056
+    - name: 逆水寒
+      specification: 游戏运行中
+      description: 当初端游真的让人很惊艳，可惜后期运营过于窒息。抱着好奇心想看看网易能把手游做成什么样子。
+      image: /img/game/1688366064098.png
+      link: https://www.taptap.cn/app/191385
+
+- class_name: 📌 2023
   description: 那个男人，他终于回来了！
   game_list:
     - name: 塞尔达传说之王国之泪
@@ -36,7 +55,7 @@
       image: https://cdn.akamai.steamstatic.com/steam/apps/1448440/header.jpg?t=1688022125
       link: https://store.steampowered.com/app/1448440/Wo_Long_Fallen_Dynasty/
 
-- class_name: 2022
+- class_name: 📌 2022
   description: 今年得我心的游戏是真的多，只是玩游戏的时间是真的少。
   game_list:
     - name: 艾尔登法环
@@ -109,7 +128,7 @@
       description: 一个射击手感超棒的rougelike
       image: https://cdn.akamai.steamstatic.com/steam/apps/1676130/header.jpg?t=1688130763
       link: https://store.steampowered.com/app/1676130/Deadlink/
-- class_name: 2021
+- class_name: 📌 2021
   description: 今年因为游戏，收获了很多
   game_list:
     - name: 双人成行
@@ -163,7 +182,7 @@
       image: https://cdn.akamai.steamstatic.com/steam/apps/1466640/header.jpg?t=1687422807
       link: https://store.steampowered.com/app/1466640/_/
 
-- class_name: 2020
+- class_name: 📌 2020
   description: 动森带来的感动，持续了一整年
   game_list:
     - name: 集合啦！动物森友会
@@ -212,7 +231,7 @@
       image: https://cdn.akamai.steamstatic.com/steam/apps/1139900/header.jpg?t=1685030714
       link: https://store.steampowered.com/app/1139900/Ghostrunner/
 
-- class_name: 2019
+- class_name: 📌 2019
   description: 动作游戏爱好者的欢喜之年
   game_list:
     - name: 只狼：影逝二度
@@ -251,7 +270,7 @@
       image: https://cdn.akamai.steamstatic.com/steam/apps/1072420/header_schinese.jpg?t=1661972322
       link: https://store.steampowered.com/app/1072420/_2/
 
-- class_name: 2018
+- class_name: 📌 2018
   description: 
   game_list:
     - name: 战神4
@@ -320,7 +339,7 @@
       image: https://cdn.akamai.steamstatic.com/steam/apps/261570/header.jpg?t=1667504148
       link: https://store.steampowered.com/app/261570/Ori_and_the_Blind_Forest/
 
-- class_name: 2017
+- class_name: 📌 2017
   description: 热爱游戏，以及与它有关的一切；这一年，游戏带给了我太多的感动。
   game_list:
     - name: 塞尔达传说之旷野之息
