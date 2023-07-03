@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>关卡设计之创意玩法(神角技巧)</title>
+      <link href="/post/e184f650.html"/>
+      <url>/post/e184f650.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>此为还在神角技巧项目组是的一些设计灵感文档整理，大部分已经落地到游戏中，作为开放世界小玩法的关卡内容。</p></blockquote><h2 id="通用场景玩法设计"><a href="#通用场景玩法设计" class="headerlink" title="通用场景玩法设计"></a>通用场景玩法设计</h2><p>点击查看大图</p><div class="gallery">    <div class="fj-gallery  data" data-rowHeight="220" data-limit="10">    <span class="gallery-data">[{"url":"../img/%E5%85%B3%E5%8D%A1%E8%AE%BE%E8%AE%A1%E4%B9%8B%E5%88%9B%E6%84%8F%E7%8E%A9%E6%B3%95-%E7%A5%9E%E8%A7%92%E6%8A%80%E5%B7%A7/1688357523322.png","alt":"Alt text"},{"url":"../img/%E5%85%B3%E5%8D%A1%E8%AE%BE%E8%AE%A1%E4%B9%8B%E5%88%9B%E6%84%8F%E7%8E%A9%E6%B3%95-%E7%A5%9E%E8%A7%92%E6%8A%80%E5%B7%A7/1688357554944.png","alt":"Alt text"},{"url":"../img/%E5%85%B3%E5%8D%A1%E8%AE%BE%E8%AE%A1%E4%B9%8B%E5%88%9B%E6%84%8F%E7%8E%A9%E6%B3%95-%E7%A5%9E%E8%A7%92%E6%8A%80%E5%B7%A7/1688357569557.png","alt":"Alt text"},{"url":"../img/%E5%85%B3%E5%8D%A1%E8%AE%BE%E8%AE%A1%E4%B9%8B%E5%88%9B%E6%84%8F%E7%8E%A9%E6%B3%95-%E7%A5%9E%E8%A7%92%E6%8A%80%E5%B7%A7/1688357582949.png","alt":"Alt text"},{"url":"../img/%E5%85%B3%E5%8D%A1%E8%AE%BE%E8%AE%A1%E4%B9%8B%E5%88%9B%E6%84%8F%E7%8E%A9%E6%B3%95-%E7%A5%9E%E8%A7%92%E6%8A%80%E5%B7%A7/1688357599229.png","alt":"Alt text"},{"url":"../img/%E5%85%B3%E5%8D%A1%E8%AE%BE%E8%AE%A1%E4%B9%8B%E5%88%9B%E6%84%8F%E7%8E%A9%E6%B3%95-%E7%A5%9E%E8%A7%92%E6%8A%80%E5%B7%A7/1688357619104.png","alt":"Alt text"},{"url":"../img/%E5%85%B3%E5%8D%A1%E8%AE%BE%E8%AE%A1%E4%B9%8B%E5%88%9B%E6%84%8F%E7%8E%A9%E6%B3%95-%E7%A5%9E%E8%A7%92%E6%8A%80%E5%B7%A7/1688357685865.png","alt":"Alt text"},{"url":"../img/%E5%85%B3%E5%8D%A1%E8%AE%BE%E8%AE%A1%E4%B9%8B%E5%88%9B%E6%84%8F%E7%8E%A9%E6%B3%95-%E7%A5%9E%E8%A7%92%E6%8A%80%E5%B7%A7/1688357730595.png","alt":"Alt text"}]</span>    </div>    <button class="gallery-load-more"><span>加载更多</span><i class="fa-solid fa-arrow-down"></i></button>    </div><h2 id="指定场景玩法"><a href="#指定场景玩法" class="headerlink" title="指定场景玩法"></a>指定场景玩法</h2><div class="gallery">    <div class="fj-gallery  data" data-rowHeight="220" data-limit="10">    <span class="gallery-data">[{"url":"../img/%E5%85%B3%E5%8D%A1%E8%AE%BE%E8%AE%A1%E4%B9%8B%E5%88%9B%E6%84%8F%E7%8E%A9%E6%B3%95-%E7%A5%9E%E8%A7%92%E6%8A%80%E5%B7%A7/1688357868067.png","alt":"Alt text"},{"url":"../img/%E5%85%B3%E5%8D%A1%E8%AE%BE%E8%AE%A1%E4%B9%8B%E5%88%9B%E6%84%8F%E7%8E%A9%E6%B3%95-%E7%A5%9E%E8%A7%92%E6%8A%80%E5%B7%A7/1688357887137.png","alt":"Alt text"},{"url":"../img/%E5%85%B3%E5%8D%A1%E8%AE%BE%E8%AE%A1%E4%B9%8B%E5%88%9B%E6%84%8F%E7%8E%A9%E6%B3%95-%E7%A5%9E%E8%A7%92%E6%8A%80%E5%B7%A7/1688357910482.png","alt":"Alt text"},{"url":"../img/%E5%85%B3%E5%8D%A1%E8%AE%BE%E8%AE%A1%E4%B9%8B%E5%88%9B%E6%84%8F%E7%8E%A9%E6%B3%95-%E7%A5%9E%E8%A7%92%E6%8A%80%E5%B7%A7/1688357943891.png","alt":"Alt text"},{"url":"../img/%E5%85%B3%E5%8D%A1%E8%AE%BE%E8%AE%A1%E4%B9%8B%E5%88%9B%E6%84%8F%E7%8E%A9%E6%B3%95-%E7%A5%9E%E8%A7%92%E6%8A%80%E5%B7%A7/1688357962655.png","alt":"Alt text"},{"url":"../img/%E5%85%B3%E5%8D%A1%E8%AE%BE%E8%AE%A1%E4%B9%8B%E5%88%9B%E6%84%8F%E7%8E%A9%E6%B3%95-%E7%A5%9E%E8%A7%92%E6%8A%80%E5%B7%A7/1688357983481.png","alt":"Alt text"}]</span>    </div>    <button class="gallery-load-more"><span>加载更多</span><i class="fa-solid fa-arrow-down"></i></button>    </div><p>以上玩法作为本人很早期的设计作品，还有许多优化空间，仅作为思路整理，仅供参考。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 游戏设计 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 关卡设计 </tag>
+            
+            <tag> 创意玩法 </tag>
+            
+            <tag> 神角技巧 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>基于关卡的体验设计(Dawn)</title>
       <link href="/post/80fc2ac6.html"/>
       <url>/post/80fc2ac6.html</url>
