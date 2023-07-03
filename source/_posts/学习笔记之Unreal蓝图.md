@@ -60,3 +60,21 @@ date: 2023-06-25 20:37:57
 事件分发器非常有用，尤其是想让物品管理好自己的时候，而不是在一个地方处理所有事情
 
 
+
+## [Demonstrating Animation Blueprints and AI for Gameplay Designers](https://dev.epicgames.com/community/learning/courses/pl2/unreal-engine-demonstrating-animation-blueprints-and-ai-for-gameplay-designers/GxBZ/unreal-engine-demonstrating-animation-blueprints-and-ai-for-gameplay-designers-introduction)
+
+### layered blend per bone
+
+可以以骨骼名称作为分层边界
+
+### Save Cached Pose
+
+将动画蓝图中的输出的姿势进行缓存，用于后续调用；有点像蓝图提升为变量一样，可以在其他地方使用此变量值。
+
+### Anim Slot
+
+给蒙太奇动画指定插槽，然后在动画蓝图中引用插槽进行动画输出。即蒙太奇动画只能通过插槽的方式参与角色动画蓝图
+
+### PawnSendsing
+
+AI感应组件中的一种，用于搜寻敌人
