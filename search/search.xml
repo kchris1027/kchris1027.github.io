@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>DataRegistry（数据注册表）</title>
+      <link href="/post/33896216.html"/>
+      <url>/post/33896216.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>Data Registry（简称DR）是一种高效的全局存储空间，用于存储带有<code>USTRUCT</code>标记的数据结构。数据注册表支持同步和异步的数据访问，以及用户定义的缓存行为。数据注册表主要用于常见的只读数据。</p></blockquote><p>关于该新特性的官方介绍视频：</p><div calss='anzhiyu-tag-link'><a class="tag-Link" target="_blank" href="https://www.bilibili.com/video/BV1qq4y1W7Ka">    <div class="tag-link-tips">引用站外地址</div>    <div class="tag-link-bottom">        <div class="tag-link-left" style="background-image: url(https://api.iowen.cn/favicon/www.bilibili.com/video/BV1qq4y1W7Ka.png);"></div>        <div class="tag-link-right">            <div class="tag-link-title">DataRegistry：一种统领全局的新数据配置工具 | Epic 大钊</div>            <div class="tag-link-sitename">bilibili</div>        </div>        <i class="fa-solid fa-angle-right"></i>    </div>    </a></div>  <h2 id="特性由来"><a href="#特性由来" class="headerlink" title="特性由来"></a>特性由来</h2><h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>数据驱动开发带来的好处以及当前主流的数据配置方式：</p><div class="gallery">    <div class="fj-gallery  data" data-rowHeight="500" data-limit="10">    <span class="gallery-data">[{"url":"../img/DataRegistry%EF%BC%88%E6%95%B0%E6%8D%AE%E6%B3%A8%E5%86%8C%E8%A1%A8%EF%BC%89/1688442719480.png","alt":"数据驱动"},{"url":"../img/DataRegistry%EF%BC%88%E6%95%B0%E6%8D%AE%E6%B3%A8%E5%86%8C%E8%A1%A8%EF%BC%89/1688442884199.png","alt":"数据配置方式"}]</span>    </div>    <button class="gallery-load-more"><span>加载更多</span><i class="fa-solid fa-arrow-down"></i></button>    </div><p>各类数据配置方式优缺点介绍：</p><div calss='anzhiyu-tag-link'><a class="tag-Link" target="_blank" href="https://www.bilibili.com/video/BV1dk4y1r752">    <div class="tag-link-tips">引用站外地址</div>    <div class="tag-link-bottom">        <div class="tag-link-left" style="background-image: url(https://api.iowen.cn/favicon/www.bilibili.com/video/BV1dk4y1r752.png);"></div>        <div class="tag-link-right">            <div class="tag-link-title">UE4数据驱动开发 | Epic 大钊</div>            <div class="tag-link-sitename">bilibili</div>        </div>        <i class="fa-solid fa-angle-right"></i>    </div>    </a></div>  <p>鉴于每一种数据配置方式都有一套自己的数据读取方式，处理起来比较麻烦。</p><p>能不能有一种统领全局的数据配置方式，<code>可以存储、合并、读取和管理不同来源的数据</code>。</p><p>于是DataRegistry出现了。</p><h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>DR类似于<strong>复合数据表（Composite Data Tables）</strong>，但除了标准的表格数据行之外，还可以存储曲线数据。此外，它使用了一个间接层，而不是手动将多个表格合并在一起。</p><p>DR架构在DT之上，DR本身不直接配置数据，而是更好的组织数据，DT反而会变得更底层一些。DR相当于从多个表里生成临时数据，并且附带了许多优势和特点：</p><div class="gallery">    <div class="fj-gallery  data" data-rowHeight="500" data-limit="10">    <span class="gallery-data">[{"url":"../img/DataRegistry%EF%BC%88%E6%95%B0%E6%8D%AE%E6%B3%A8%E5%86%8C%E8%A1%A8%EF%BC%89/1688443913276.png","alt":"DR特性"}]</span>    </div>    <button class="gallery-load-more"><span>加载更多</span><i class="fa-solid fa-arrow-down"></i></button>    </div><p>Unreal数据管理的发展脉络可以简单理解为：<code>DataTable</code> -&gt; <code>CompositeDataTable</code> -&gt; <code>DataRegistry</code></p><p>由于其更好的扩展及缓存机制等优点，DR可能会是将来引擎里面统一的数据管理方式。目前在堡垒之夜中，已深度使用DR来管理数据。</p><h2 id="核心概念"><a href="#核心概念" class="headerlink" title="核心概念"></a>核心概念</h2><h3 id="数据源（DataSource）"><a href="#数据源（DataSource）" class="headerlink" title="数据源（DataSource）"></a>数据源（DataSource）</h3><p><img src="/../img/DataRegistry%EF%BC%88%E6%95%B0%E6%8D%AE%E6%B3%A8%E5%86%8C%E8%A1%A8%EF%BC%89/1688453007962.png" alt="数据源"></p><p>数据注册表从两种数据源类型来采集数据：<strong>数据注册表源（Data Registry Sources）</strong>和<strong>元数据注册表源（Mata Data Registry Sources）</strong></p><ul><li><code>Data Registry Sources</code>：直接拥有你在数据注册表资产内的数组中所创建和配置的数据注册表源对象。</li><li><code>Mata Data Registry Sources</code>：只用来生成数据源的数据源，定义了一套规则，从某个路径里抓来新的数据源</li></ul><p>数据源在数据注册表中的顺序很重要，如果在某个数据源中未找到特定的数据项，数据注册表会在列表后面的数据源中查找该数据项。这样可能会产生覆盖和回退行为，并使得特定于上下文的数据源覆盖通用的数据源。</p><p>DR结构图：</p><p><img src="/../img/DataRegistry%EF%BC%88%E6%95%B0%E6%8D%AE%E6%B3%A8%E5%86%8C%E8%A1%A8%EF%BC%89/1688453103439.png" alt="DR结构图"></p><ul><li>Subsystem对应多个DRA，即内存加载多个DAR都会保存在同一个Subsystem。所以说它是统一全局数据间接层。因为它有一个SubSystem可以得到所有的数据，而不像DataTable需要定义一个一个的表去做数据。</li><li>一个DRA对应多个数据源，数据源下当前有内置的DataTable、CurveTable以及对应的Meta类，Meta类通过定义规则，批量获得对应的数据源。</li></ul><h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><p>数据注册表插件使用独有的标识符来查找数据注册表以及其中包含的单个数据项。这些标识符本质上都是基于字符串的名称，不过 <code>FDataRegistryType</code>（用于数据注册表资产）和 <code>FDataRegistryId</code>（用于数据注册表中的单个数据项）结构却属于包装器（wrapper），能提供实用的编辑器内部功能。 <code>FDataRegistryType</code> 用于辨识数据注册表资产， <code>FDataRegistryId</code> 用于辨识数据注册表和其中的特定数据项。如果你需要查找数据注册表资产或从中检索单个数据项，可以使用这些标识符类型。</p><p><img src="/../img/DataRegistry%EF%BC%88%E6%95%B0%E6%8D%AE%E6%B3%A8%E5%86%8C%E8%A1%A8%EF%BC%89/1688468942222.png" alt="标识符"></p><p>每个数据注册表资产都必须在<strong>注册表类型（Registry Type）</strong>字段中具有唯一名称. 如果两个数据注册表资产在此字段中具有相同的名称，系统将仅识别和填充其中一个。类似的，如果多个数据项共用同一个标识数值（名称或Gameplay标签），注册表会读取所有项，但检索操作将仅访问数据注册表资产加载的第一个数据项.</p><h4 id="数据注册表资产标识符"><a href="#数据注册表资产标识符" class="headerlink" title="数据注册表资产标识符"></a>数据注册表资产标识符</h4><p>在设置数据注册表资产时，开发人员必须使用唯一命名来设置<code>Registry Type</code>。它是数据注册表的标识符。</p><h4 id="数据项标识符"><a href="#数据项标识符" class="headerlink" title="数据项标识符"></a>数据项标识符</h4><p>识别单个数据项时（例如数据表中的数据行），需要指定数据注册表资产和数据项本身。</p><p>如果数据注册表的ID格式使用Gameplay标签，用户界面将显示包含该Gameplay标签及其所有子项的筛选后列表。</p><p>如果数据注册表的ID格式未使用Gameplay标签，用户界面将显示一个下拉列表，其中包含数据注册表资产包含的所有已知数据行。</p><p><img src="/../img/DataRegistry%EF%BC%88%E6%95%B0%E6%8D%AE%E6%B3%A8%E5%86%8C%E8%A1%A8%EF%BC%89/1688469623555.png" alt="IDFormat"></p><h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><h3 id="开启DR插件"><a href="#开启DR插件" class="headerlink" title="开启DR插件"></a>开启DR插件</h3><p><img src="/../img/DataRegistry%EF%BC%88%E6%95%B0%E6%8D%AE%E6%B3%A8%E5%86%8C%E8%A1%A8%EF%BC%89/1688444829702.png" alt="开启DR插件"></p><h3 id="项目设置DR扫描目录"><a href="#项目设置DR扫描目录" class="headerlink" title="项目设置DR扫描目录"></a>项目设置DR扫描目录</h3><p><img src="/../img/DataRegistry%EF%BC%88%E6%95%B0%E6%8D%AE%E6%B3%A8%E5%86%8C%E8%A1%A8%EF%BC%89/1688444905873.png" alt="项目设置"></p><h3 id="创建一个DRA"><a href="#创建一个DRA" class="headerlink" title="创建一个DRA"></a>创建一个DRA</h3><ul><li>设置全局唯一的DRT名字</li><li>设置IdFormat，如果想要用GamePlayTag来作为Item Id，否则留空</li><li>设置ItemStruct类型</li><li>设置DataSource</li></ul><p>配置说明：<br><img src="/../img/DataRegistry%EF%BC%88%E6%95%B0%E6%8D%AE%E6%B3%A8%E5%86%8C%E8%A1%A8%EF%BC%89/1688452889812.png" alt="DR配置说明"></p><h3 id="点击刷新按钮来预览"><a href="#点击刷新按钮来预览" class="headerlink" title="点击刷新按钮来预览"></a>点击刷新按钮来预览</h3><p>DRA配置完成</p><h3 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a>获取数据</h3><ul><li>蓝图中获取DR数据的几种方式：<ul><li>Find Data Registry Item</li><li>Get Data Registry Item</li><li>Acquire Data Registry Item</li><li>Evaluate Data Registry Curve</li></ul></li></ul><div class="gallery">    <div class="fj-gallery  data" data-rowHeight="220" data-limit="10">    <span class="gallery-data">[{"url":"../img/DataRegistry%EF%BC%88%E6%95%B0%E6%8D%AE%E6%B3%A8%E5%86%8C%E8%A1%A8%EF%BC%89/type1.png","alt":"方式一"},{"url":"../img/DataRegistry%EF%BC%88%E6%95%B0%E6%8D%AE%E6%B3%A8%E5%86%8C%E8%A1%A8%EF%BC%89/type2.png","alt":"方式二"},{"url":"../img/DataRegistry%EF%BC%88%E6%95%B0%E6%8D%AE%E6%B3%A8%E5%86%8C%E8%A1%A8%EF%BC%89/type3.png","alt":"方式三"},{"url":"../img/DataRegistry%EF%BC%88%E6%95%B0%E6%8D%AE%E6%B3%A8%E5%86%8C%E8%A1%A8%EF%BC%89/type4.png","alt":"方式四"}]</span>    </div>    <button class="gallery-load-more"><span>加载更多</span><i class="fa-solid fa-arrow-down"></i></button>    </div><h3 id="其他补充"><a href="#其他补充" class="headerlink" title="其他补充"></a>其他补充</h3><ul><li>向DR中动态添加数据源:</li></ul><p><img src="/../img/DataRegistry%EF%BC%88%E6%95%B0%E6%8D%AE%E6%B3%A8%E5%86%8C%E8%A1%A8%EF%BC%89/1688465449709.png" alt="Alt text"></p><ul><li>手动加载Data Registry</li></ul><p><img src="/../img/DataRegistry%EF%BC%88%E6%95%B0%E6%8D%AE%E6%B3%A8%E5%86%8C%E8%A1%A8%EF%BC%89/1688465938249.png" alt="Alt text"></p><ul><li>自定义数据Id的动态解析</li></ul><p><img src="/../img/DataRegistry%EF%BC%88%E6%95%B0%E6%8D%AE%E6%B3%A8%E5%86%8C%E8%A1%A8%EF%BC%89/1688466011754.png" alt="Alt text"></p><ul><li>Cache 机制</li></ul><p><img src="/../img/DataRegistry%EF%BC%88%E6%95%B0%E6%8D%AE%E6%B3%A8%E5%86%8C%E8%A1%A8%EF%BC%89/1688467727627.png" alt="Alt text"></p><hr><p>参考资料：</p><ul><li><a href="https://docs.unrealengine.com/5.2/zh-CN/data-registries-in-unreal-engine/">数据注册表_官方文档</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Unreal </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Unreal </tag>
+            
+            <tag> UE5 </tag>
+            
+            <tag> 学习笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关卡设计之创意玩法(神角技巧)</title>
       <link href="/post/e184f650.html"/>
       <url>/post/e184f650.html</url>
@@ -107,6 +136,10 @@
             
             <tag> Unreal </tag>
             
+            <tag> UE5 </tag>
+            
+            <tag> 学习笔记 </tag>
+            
         </tags>
       
     </entry>
@@ -161,9 +194,9 @@
             
             <tag> Unreal </tag>
             
-            <tag> 蓝图 </tag>
-            
             <tag> 学习笔记 </tag>
+            
+            <tag> 蓝图 </tag>
             
         </tags>
       
