@@ -2,6 +2,8 @@
 title: Enhanced Input
 tags:
   - Unreal
+  - UE5
+  - 学习笔记
 categories:
   - Unreal
 abbrlink: b32ee82a
