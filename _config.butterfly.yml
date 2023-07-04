@@ -901,6 +901,7 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
+    # - <link rel="stylesheet" href="/xxx.css">
     #页面顶部波浪线
     - <link rel="stylesheet" href="/css/wave_style.css">
     #加载进度条
@@ -909,7 +910,11 @@ inject:
     - <link rel="stylesheet" href="/css/twikoo_tips.css">
     # game页面css引入
     - <link rel="stylesheet" href="/css/game_page.css">
-    # - <link rel="stylesheet" href="/xxx.css">
+    # 卡片式网址链接
+    - <link rel="stylesheet" href="/css/tag_link.css">
+
+
+
 
 
 
