@@ -9,7 +9,7 @@ categories:
 abbrlink: '33896216'
 date: 2023-07-04 11:27:11
 description:
-cover:
+cover: /img/DataRegistry（数据注册表）/cover.png
 ---
 
 > Data Registry（简称DR）是一种高效的全局存储空间，用于存储带有`USTRUCT`标记的数据结构。数据注册表支持同步和异步的数据访问，以及用户定义的缓存行为。数据注册表主要用于常见的只读数据。
