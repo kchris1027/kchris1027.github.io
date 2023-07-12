@@ -78,3 +78,45 @@ date: 2023-06-25 20:37:57
 ### PawnSendsing
 
 AI感应组件中的一种，用于搜寻敌人
+
+
+## [初识UMG](https://dev.epicgames.com/community/learning/courses/q3r/unreal-engine-umg/vJDR/unreal-engine-3d74bf)
+
+
+### Append
+
+能将多个字符串合并成一个字符串输出
+
+### Add to Viewport/Add to Player Screen
+
+**创建控件原则：为谁所用，就在谁的蓝图上创建**
+
+90%的情况下，创建控件显示用“Add to Viewport”,"Add to Player Screen"主要用于分屏显示，如果你的游戏和分屏显示或同屏多人显示无关，你就应该选择“Add to Viewport”。
+
+### 控件数据更新方式
+
+1. 控件的属性绑定（Binding）
+
+绑定的函数每帧都在运行，非实时更新的数据不建议，会消耗大量性能。只有计时器、倒计时、时钟，这类需要每帧精准显示的功能，才需要使用绑定功能
+
+2. 新建更新功能函数，蓝图事件调用函数执行
+
+
+### Input Mode（输入模式）
+
+- Set Input Mode UI Only（仅UI）
+
+- Set Input Mode Game Only （仅游戏）
+
+- Set Input Mode Game and UI （游戏和UI）
+
+输入模式节点（Set Input Mode）属于控制器（Get Player Controller）的功能函数
+
+默认的输入模式是“Set Input Mode Game Only”，所有来自鼠标、手柄、周边设备以及键盘的输入仅针对游戏启用。在这种模式中，通常是你的手柄或其他设备接受输入信号。也就是说，是你的游戏视口接受输入，而不是你的UI。
+
+**不要在打开关卡之后设置输入模式，因为在打开关卡后，不一定能保证执行后续逻辑。**
+
+
+### Remove from Parent 
+
+将控件从父类中移除，用于隐藏界面中某一控件。或者切换界面。
