@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>Game Ability System</title>
+      <link href="/post/a131da00.html"/>
+      <url>/post/a131da00.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="GAS插件介绍"><a href="#GAS插件介绍" class="headerlink" title="GAS插件介绍"></a>GAS插件介绍</h2><div calss='anzhiyu-tag-link'><a class="tag-Link" target="_blank" href="https://www.bilibili.com/video/BV1X5411V7jh/">    <div class="tag-link-tips">引用站外地址</div>    <div class="tag-link-bottom">        <div class="tag-link-left" style="background-image: url(https://api.iowen.cn/favicon/www.bilibili.com/video/BV1X5411V7jh/.png);"></div>        <div class="tag-link-right">            <div class="tag-link-title">GAS插件介绍（入门篇） | 伍德 大钊</div>            <div class="tag-link-sitename">bilibili</div>        </div>        <i class="fa-solid fa-angle-right"></i>    </div>    </a></div>  <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>Gameplay Ability System，简称（GAS）。是一个健壮的，高度可拓展的gameplay框架，通常用于构建RPG、MOBA等游戏的完整战斗逻辑框架。</p><p>通过GAS，可以快速地制作游戏中的主动&#x2F;被动技能、各种效果buff、计算属性伤害、处理玩家各种战斗状态逻辑。</p><p><strong>GAS提供了哪些功能？</strong></p><ol><li>实现了带有消耗和冷却功能的角色技能</li><li>处理数值属性（生命、魔法、攻击力、防御力）</li><li>应用状态效果（击飞、着火、眩晕）</li><li>应用游戏标签（GameplayTags）</li><li>生成特效和音效</li><li>完整的网络复制、预测功能</li></ol><p><strong>适合使用GAS的项目</strong></p><ol><li>C++项目，开发人员有充足的C++开发经验</li><li>使用Dedicated Server的联机游戏</li><li>项目有大量且复杂的技能逻辑设计需求</li></ol><p><strong>插件推荐</strong></p><ul><li><a href="https://marketplace-website-node-launcher-prod.ol.epicgames.com/ue/marketplace/en-US/product/able-ability-system">Able Ability System</a></li><li><a href="https://marketplace-website-node-launcher-prod.ol.epicgames.com/ue/marketplace/en-US/product/ascent-combat-framework-c-action-rpg-creator">Ascent Comba</a></li></ul><h3 id="功能概述"><a href="#功能概述" class="headerlink" title="功能概述"></a>功能概述</h3><h4 id="Ability-System-Component"><a href="#Ability-System-Component" class="headerlink" title="Ability System Component"></a>Ability System Component</h4><p>Ability System Component (ASC)是整个GAS的基础组件。</p><p>ASC本质上是一个UActorComponent，用于处理整个框架下的交互逻辑，包括<code>使用技能</code>（GameplayAbility）、包含<code>属性</code>（AttributeSet）、处理各种<code>效果</code>（GameplayEffect）。</p><p>所有需要应用GAS的对象（Actor），都必须拥有GAS组件。</p><p>拥有ASC的Actor被称为ASC的<code>OwnerActor</code>，ASC实际作用的Actor叫做<code>AvatarActor</code>。</p><p>ASC可以被赋予某个角色ASC，也可以被赋予PlayerState（可以保存死亡角色的一些数据）。</p><h2 id="深入GAS架构设计"><a href="#深入GAS架构设计" class="headerlink" title="深入GAS架构设计"></a>深入GAS架构设计</h2><div calss='anzhiyu-tag-link'><a class="tag-Link" target="_blank" href="https://www.bilibili.com/video/BV1zD4y1X77M/">    <div class="tag-link-tips">引用站外地址</div>    <div class="tag-link-bottom">        <div class="tag-link-left" style="background-image: url(https://api.iowen.cn/favicon/www.bilibili.com/video/BV1zD4y1X77M/.png);"></div>        <div class="tag-link-right">            <div class="tag-link-title">深入GAS架构设计 | EpicGames 大钊</div>            <div class="tag-link-sitename">bilibili</div>        </div>        <i class="fa-solid fa-angle-right"></i>    </div>    </a></div>  <p>🚀 待填坑…</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Unreal </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Unreal </tag>
+            
+            <tag> UE5 </tag>
+            
+            <tag> 学习笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Modular Game Features（模块化游戏功能框架）</title>
       <link href="/post/b1d6807b.html"/>
       <url>/post/b1d6807b.html</url>
