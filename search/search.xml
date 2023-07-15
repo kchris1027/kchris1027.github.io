@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Camera Framework Essentials for Games</title>
+      <link href="/post/7f3fe033.html"/>
+      <url>/post/7f3fe033.html</url>
+      
+        <content type="html"><![CDATA[<div calss='anzhiyu-tag-link'><a class="tag-Link" target="_blank" href="https://dev.epicgames.com/community/learning/courses/RRr/unreal-engine-camera-framework-essentials-for-games">    <div class="tag-link-tips">引用站外地址</div>    <div class="tag-link-bottom">        <div class="tag-link-left" style="background-image: url(https://api.iowen.cn/favicon/dev.epicgames.com/community/learning/courses/RRr/unreal-engine-camera-framework-essentials-for-games.png);"></div>        <div class="tag-link-right">            <div class="tag-link-title">Camera Framework Essentials for Games</div>            <div class="tag-link-sitename">Epic</div>        </div>        <i class="fa-solid fa-angle-right"></i>    </div>    </a></div>  <h2 id="Understanding-Camera-Actors"><a href="#Understanding-Camera-Actors" class="headerlink" title="Understanding Camera Actors"></a>Understanding Camera Actors</h2><ul><li>Camera Component</li></ul><p>摄像机组件属于摄像机Actor类</p><ul><li>Camera Actor</li></ul><p>摄像机Actor是摄像机组件的封装类，这使得它们可以直接放入世界中。</p><p>视图窗口 <code>Show-&gt;Advanced-&gt;Camera Frustums</code> 可打开场景中的摄像机视锥范围显示</p><ul><li>Camera Responsibility Chain 摄像机责任链</li></ul><p>重要程度或管理顺序依次为：</p><p>Camera Component -&gt; Actor or Player Controller -&gt; Player Controller Manager</p><h2 id="Static-Dynamic-and-Active-Cameras"><a href="#Static-Dynamic-and-Active-Cameras" class="headerlink" title="Static,Dynamic,and Active Cameras"></a>Static,Dynamic,and Active Cameras</h2><p>Types of Camera:</p><ul><li>Static&#x2F;Fixed 静态或固定摄像机</li><li>Dynamic 动态摄像机</li><li>Active 激活的摄像机</li></ul><h2 id="Using-Spring-Arms"><a href="#Using-Spring-Arms" class="headerlink" title="Using Spring Arms"></a>Using Spring Arms</h2><p>创建组件 SpringArmsComponent，然后将Camera组件放在它的下一层级</p><h2 id="Common-Spring-Arm-Features"><a href="#Common-Spring-Arm-Features" class="headerlink" title="Common Spring Arm Features"></a>Common Spring Arm Features</h2><ul><li><p>Socket Offset<br>插槽偏移</p></li><li><p>Target Offset<br>目标偏移</p></li><li><p>Camera Collision<br>摄像机碰撞</p></li><li><p>Use Pawn Control Rotation<br>使用控制器的旋转控制摄像机旋转</p></li><li><p>lag<br>滞后、延迟</p><ul><li>Camera Lag<br>  摄像机延迟</li><li>Camera Rotation Lag<br>  旋转延迟</li><li>Camera Lag Speed<br>  延迟速度。数值越高，延迟越低。</li></ul></li></ul><h2 id="Types-of-Camera-Shake"><a href="#Types-of-Camera-Shake" class="headerlink" title="Types of Camera Shake"></a>Types of Camera Shake</h2><p>新建类-&gt; ALL ClASSES 中搜索 <code>Camera Shake</code>:</p><ul><li><code>CameraShakeBase</code><ul><li><code>DefaultCameraShakeBase</code> 和CameraShakeBase的唯一区别是会默认使用柏林噪声</li><li><code>MatineeCameraShake</code> 旧版摄像机抖动</li></ul></li></ul><h2 id="Single-Shot-Shake-Landing-Impact"><a href="#Single-Shot-Shake-Landing-Impact" class="headerlink" title="Single Shot Shake - Landing Impact"></a>Single Shot Shake - Landing Impact</h2><p>蓝图节点 <code>Play World Camera Shake</code></p><div class="gallery">    <div class="fj-gallery  data" data-rowHeight="300" data-limit="10">    <span class="gallery-data">[{"url":"../img/Camera-Framework-Essentials-for-Games/1689424038814.png","alt":"Play World Camera Shake"}]</span>    </div>    <button class="gallery-load-more"><span>加载更多</span><i class="fa-solid fa-arrow-down"></i></button>    </div><ul><li>Shake 选取CameraShake类的预设</li><li>Epicenter 震中，即抖动输入的位置，代表抖动开始的位置</li><li>Inner Radius 内径，晃动最剧烈的区域</li><li>Outer Radius 外径，影响最远的区域</li></ul><p>摄像机是否能够看到震动，与玩家位置无关，取决于摄像机与震中的距离。</p><p>在场景中实时测试并查看抖动效果:</p><ol><li>确保视口菜单中的 <code>Realtime</code> 已开启</li><li>在场景中添加一<code>CameraShakeSourceActor</code></li><li>在视口菜单中勾选 <code>Allow Camera Shakes</code></li><li>菜单栏打开 <code>Window-&gt;Cinematics-&gt;Camera Shake Previewer</code></li><li>视口靠近抖动源，点击<code>Play</code>后即可看到抖动效果</li></ol><h2 id="Continuous-Camera-Shake-Sprinting"><a href="#Continuous-Camera-Shake-Sprinting" class="headerlink" title="Continuous Camera Shake - Sprinting"></a>Continuous Camera Shake - Sprinting</h2><p>编辑器中 <code>Shit + 鼠标左键</code> 可展开折叠栏下的所有折叠项</p><p><img src="/../img/Camera-Framework-Essentials-for-Games/1689420425301.png" alt="蓝图实现冲刺抖动示例"></p><h2 id="Switching-Cameras-with-View-Target-Blend-Method-1"><a href="#Switching-Cameras-with-View-Target-Blend-Method-1" class="headerlink" title="Switching Cameras with View Target Blend - Method 1"></a>Switching Cameras with View Target Blend - Method 1</h2><p>蓝图节点 <code>Set View Target with Blend</code></p><div class="gallery">    <div class="fj-gallery  data" data-rowHeight="220" data-limit="10">    <span class="gallery-data">[{"url":"../img/Camera-Framework-Essentials-for-Games/1689424362620.png","alt":"Alt text"}]</span>    </div>    <button class="gallery-load-more"><span>加载更多</span><i class="fa-solid fa-arrow-down"></i></button>    </div><p>它会使用“设置混合”函数，随着时间的推移是视图目标过渡到新的Actor</p><h2 id="Switching-Cameras-with-View-Target-Blend-Method-2"><a href="#Switching-Cameras-with-View-Target-Blend-Method-2" class="headerlink" title="Switching Cameras with View Target Blend - Method 2"></a>Switching Cameras with View Target Blend - Method 2</h2><p>C++的实现方式</p><h2 id="Conclusion-to-Cameras-Framework-Essentials-for-Games"><a href="#Conclusion-to-Cameras-Framework-Essentials-for-Games" class="headerlink" title="Conclusion to Cameras Framework Essentials for Games"></a>Conclusion to Cameras Framework Essentials for Games</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> Unreal </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Unreal </tag>
+            
+            <tag> 学习笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Game Ability System</title>
       <link href="/post/a131da00.html"/>
       <url>/post/a131da00.html</url>
@@ -22,9 +49,9 @@
             
             <tag> Unreal </tag>
             
-            <tag> UE5 </tag>
-            
             <tag> 学习笔记 </tag>
+            
+            <tag> UE5 </tag>
             
         </tags>
       
@@ -51,9 +78,9 @@
             
             <tag> Unreal </tag>
             
-            <tag> UE5 </tag>
-            
             <tag> 学习笔记 </tag>
+            
+            <tag> UE5 </tag>
             
         </tags>
       
@@ -80,9 +107,9 @@
             
             <tag> Unreal </tag>
             
-            <tag> UE5 </tag>
-            
             <tag> 学习笔记 </tag>
+            
+            <tag> UE5 </tag>
             
         </tags>
       
@@ -194,9 +221,9 @@
             
             <tag> Unreal </tag>
             
-            <tag> UE5 </tag>
-            
             <tag> 学习笔记 </tag>
+            
+            <tag> UE5 </tag>
             
         </tags>
       
