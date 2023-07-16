@@ -858,7 +858,7 @@ instantpage: true
 # https://github.com/vinta/pangu.js
 # Insert a space between Chinese character and English character (中英文之間添加空格)
 pangu:
-  enable: true
+  enable: false
   field: site # site/post
 
 # Lazyload (圖片懶加載)
@@ -912,8 +912,10 @@ inject:
     - <link rel="stylesheet" href="/css/game_page.css">
     # 卡片式网址链接
     - <link rel="stylesheet" href="/css/tag_link.css">
-
-
+    # 页面跳转按钮
+    - <link rel="stylesheet" href="/css/pagination.css">    
+    # 标签显示
+    - <link rel="stylesheet" href="/css/tag_page.css">
 
 
 
@@ -936,6 +938,8 @@ inject:
     - <script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>
     - <script> LA.init({id:"K2NNRDxRALSyQWuV",ck:"K2NNRDxRALSyQWuV"})</script>
     - <script>new LingQue.Monitor().init({id:"K2NNRDxRALSyQWuV",sendSuspicious:true});</script>
+    # 自定义跳转按钮
+    - <script defer data-pjax src="/js/pagination.js"></script>
 
 
 # CDN

@@ -15,7 +15,7 @@
     border-radius: 16px;
   }
   .author-content-item.careers .careers-item .name {
-    color: var(--anzhiyu-secondtext);
+    color: var(--kchris-secondtext);
   }
   .author-content-item.careers .careers-item {
     display: flex;
@@ -28,7 +28,7 @@
     border-radius: 16px;
   }
   .author-content-item.careers .careers-item .name {
-    color: var(--anzhiyu-secondtext);
+    color: var(--kchris-secondtext);
   }
   .author-content-item.careers img {
     position: absolute;

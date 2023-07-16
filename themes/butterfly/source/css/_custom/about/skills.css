@@ -32,7 +32,7 @@
     color: #fff;
     font-size: 66px;
     font-weight: 700;
-    box-shadow: var(--anzhiyu-shadow-blackdeep);
+    box-shadow: var(--kchris-shadow-blackdeep);
     width: 120px;
     height: 120px;
     border-radius: 30px;
@@ -62,11 +62,11 @@
     align-items: center;
     margin-right: 10px;
     margin-top: 10px;
-    background: var(--anzhiyu-background);
+    background: var(--kchris-background);
     border-radius: 40px;
     padding: 4px 12px 4px 8px;
     border: var(--style-border);
-    box-shadow: var(--anzhiyu-shadow-border);
+    box-shadow: var(--kchris-shadow-border);
   }
   .author-content-item.skills .skill-icon {
     width: 32px;

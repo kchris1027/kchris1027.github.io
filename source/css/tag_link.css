@@ -1,5 +1,5 @@
 .tag-Link {
-    background: var(--anzhiyu-secondbg);
+    background: var(--kchris-secondbg);
     border-radius: 8px!important;
     display: flex;
     border: var(--style-border);
@@ -17,7 +17,7 @@
     border-bottom: var(--style-border);
     padding-bottom: 4px;
     font-size: 0.6rem;
-    color: var(--anzhiyu-gray);
+    color: var(--kchris-gray);
     font-weight: normal;
   }
   
@@ -50,7 +50,7 @@
   
   .tag-Link .tag-link-bottom .tag-link-right .tag-link-sitename {
     font-size: 0.7rem;
-    color: var(--anzhiyu-gray);
+    color: var(--kchris-gray);
     font-weight: normal;
     margin-top: 4px;
   }

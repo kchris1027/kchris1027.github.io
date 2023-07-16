@@ -1,9 +1,9 @@
 #gitcalendar {
     margin: 0 auto;
     border-radius: 24px;
-    background: var(--anzhiyu-card-bg);
+    background: var(--kchris-card-bg);
     border: var(--style-border-always);
-    box-shadow: var(--anzhiyu-shadow-border);
+    box-shadow: var(--kchris-shadow-border);
     position: relative;
     padding: 1rem 2rem;
     overflow: hidden;
@@ -55,7 +55,7 @@
     background: #6bdf8f;
     position: absolute;
     border-radius: 50%;
-    border: 6px solid var(--anzhiyu-background);
+    border: 6px solid var(--kchris-background);
     top: 50%;
     left: 50%;
     transform: translate(30px, 30px);
@@ -73,7 +73,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: var(--anzhiyu-white);
+    color: var(--kchris-white);
     background: linear-gradient(120deg, #5b27ff 0, #00d4ff 100%);
     background-size: 200%;
     animation: gradient 15s ease infinite;
@@ -84,9 +84,9 @@
     width: 49%;
     /* 全局radius参数修改 */
     border-radius: 12px;
-    background: var(--anzhiyu-card-bg);
-    border: var(--anzhiyu-transparent-border);
-    box-shadow: var(--anzhiyu-shadow-border);
+    background: var(--kchris-card-bg);
+    border: var(--kchris-transparent-border);
+    box-shadow: var(--kchris-shadow-border);
     position: relative;
     padding: 1rem 2rem;
     overflow: hidden;
@@ -179,7 +179,7 @@
     width: 39%;
     background: url(/img/about/preview.jpg) no-repeat top;
     background-size: cover;
-    color: var(--anzhiyu-white);
+    color: var(--kchris-white);
     overflow: hidden;
   }
   #about-page .about-statistic::after {
@@ -215,7 +215,7 @@
     font-size: 16px;
     border-radius: 15px;
     width: 100%;
-    color: var(--anzhiyu-white);
+    color: var(--kchris-white);
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -242,14 +242,14 @@
   }
   
   .post-tips {
-    color: var(--anzhiyu-gray);
+    color: var(--kchris-gray);
     font-size: 14px;
     position: absolute;
     bottom: 1rem;
     left: 2rem;
   }
   .post-tips a {
-    color: var(--anzhiyu-gray) !important;
+    color: var(--kchris-gray) !important;
     border: none !important;
   }
   .author-content-item .card-content .banner-button-group {
@@ -262,7 +262,7 @@
     width: 124px;
     border-radius: 20px;
     justify-content: center;
-    background: var(--anzhiyu-card-bg);
+    background: var(--kchris-card-bg);
     color: var(--font-color);
     display: flex;
     align-items: center;
@@ -280,8 +280,8 @@
   }
   
   .author-content-item .card-content .banner-button-group .banner-button:hover {
-    background: var(--anzhiyu-main);
-    color: var(--anzhiyu-white);
+    background: var(--kchris-main);
+    color: var(--kchris-white);
     border-radius: 20px !important;
   }
   .author-content-item.personalities {
@@ -360,7 +360,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background: var(--anzhiyu-maskbg);
+    background: var(--kchris-maskbg);
     padding: 0.6rem 2rem;
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -416,12 +416,12 @@
   }
   
   .post-tips a:hover {
-    color: var(--anzhiyu-main) !important;
+    color: var(--kchris-main) !important;
     background: none !important;
   }
   
   .author-content-item.single.reward .reward-list-updateDate {
-    color: var(--anzhiyu-gray);
+    color: var(--kchris-gray);
     font-size: 14px;
   }
   
@@ -621,7 +621,7 @@
     flex-direction: column;
     justify-content: center;
     background: linear-gradient(120deg, #ff27e8 0, #ff8000 100%);
-    color: var(--anzhiyu-white);
+    color: var(--kchris-white);
     background-size: 200%;
     animation: gradient 15s ease infinite;
     min-height: 200px;
@@ -651,7 +651,7 @@
     background-size: cover;
     min-height: 300px;
     overflow: hidden;
-    color: var(--anzhiyu-white);
+    color: var(--kchris-white);
     width: 59%;
   }
   .author-content-item .content-bottom {
@@ -705,14 +705,14 @@
     background: url(/img/about/tech.png) no-repeat;
     background-size: cover;
     min-height: 230px;
-    color: var(--anzhiyu-white);
+    color: var(--kchris-white);
   }
   
   .author-content-item.like-music {
     background: url(/img/about/voice.gif) no-repeat top;
     background-size: cover;
     min-height: 400px;
-    color: var(--anzhiyu-white);
+    color: var(--kchris-white);
     overflow: hidden;
   }
   
@@ -737,7 +737,7 @@
       display: none;
     }
     [data-theme="dark"] .author-content-item .card-content .banner-button-group .banner-button {
-      color: var(--anzhiyu-black) !important;
+      color: var(--kchris-black) !important;
     }
     .author-content-item .card-content .banner-button-group .banner-button:hover {
       background: none !important;
@@ -809,8 +809,8 @@
       margin-left: 80px;
     }
     .author-content-item .card-content .banner-button-group .banner-button:hover i {
-      background: var(--anzhiyu-background) !important;
-      color: var(--anzhiyu-theme);
+      background: var(--kchris-background) !important;
+      color: var(--kchris-theme);
     }
     #selfInfo-content-year {
       width: 90px;
@@ -841,7 +841,7 @@
     border: var(--style-border-always);
     width: calc((100% / 3) - 0.5rem);
     margin: 0 0.25rem 0.5rem 0.25rem;
-    box-shadow: var(--anzhiyu-shadow-border);
+    box-shadow: var(--kchris-shadow-border);
   }
   
   .reward-list-item .reward-list-item-name {
@@ -870,7 +870,7 @@
   
   .reward-list-item .reward-list-item-time {
     font-size: 12px;
-    color: var(--anzhiyu-secondtext);
+    color: var(--kchris-secondtext);
     white-space: nowrap;
   }
 
@@ -975,7 +975,7 @@
   }
 
   .author-content-item.single.reward .reward-list-updateDate {
-    color: var(--anzhiyu-gray);
+    color: var(--kchris-gray);
     font-size: 14px;
   } */
 
@@ -983,7 +983,7 @@
     #gitcalendar {
       display: none;
     }[	data-theme=dark] .author-content-item .card-content .banner-button-group .banner-button {
-      color: var(--anzhiyu-black)!important;
+      color: var(--kchris-black)!important;
     }
 
     .author-content-item .card-content .banner-button-group .banner-button:hover {
@@ -1042,7 +1042,7 @@
 
     .layout>div:first-child:not(.recent-posts) {
       padding: 1rem 1rem!important;
-      background: var(--anzhiyu-background);
+      background: var(--kchris-background);
       box-shadow: none!important;
     }
 
@@ -1070,8 +1070,8 @@
     }
 
     .author-content-item .card-content .banner-button-group .banner-button:hover i {
-      background: var(--anzhiyu-background)!important;
-      color: var(--anzhiyu-theme);
+      background: var(--kchris-background)!important;
+      color: var(--kchris-theme);
     }
 
     #selfInfo-content-year {

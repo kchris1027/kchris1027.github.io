@@ -1,9 +1,9 @@
 .hello-about {
     margin: 20px auto;
     border-radius: 10px;
-    background: var(--anzhiyu-card-bg);
+    background: var(--kchris-card-bg);
     /* border: var(--style-border-always); */
-    box-shadow: var(--anzhiyu-shadow-border);
+    box-shadow: var(--kchris-shadow-border);
     position: relative;
     overflow: hidden;
     user-select: none;
@@ -60,7 +60,7 @@
     background: transparent;
   }
   [data-theme="dark"] .hello-about h1 {
-    color: var(--anzhiyu-white);
+    color: var(--kchris-white);
   }
   
   .hello-about h1 {
