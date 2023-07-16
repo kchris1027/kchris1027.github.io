@@ -45,5 +45,40 @@
     box-shadow: var(--kchris-shadow-border);
 }
 
+/* 侧边栏标签样式 */
 
+#aside-content .card-tag-cloud a {
+    display: inline-block;
+    font-size: 0.8rem !important;
+    color: var(--kchris-secondtext) !important;
+    padding: 0rem .3rem;
+    margin: .2rem;
+    border: var(--kchris-card-border);
+    border-radius: var(--kchris-border-radius);
+    background: None;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+  }
 
+#aside-content .card-tag-cloud a sup {
+    margin-left: .1em;
+}
+
+#aside-content .card-tag-cloud a:hover {
+    color: var(--kchris-white) !important;
+    background: var(--kchris-blue);
+    border-color: var(--kchris-blue);
+    -webkit-box-shadow: var(--kchris-shadow-border);
+    -moz-box-shadow: var(---kchris-shadow-border);
+    -ms-box-shadow: var(--kchris-shadow-border);
+    -o-box-shadow: var(--kchris-shadow-border);
+    box-shadow: var(--kchris-shadow-border);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+  }
