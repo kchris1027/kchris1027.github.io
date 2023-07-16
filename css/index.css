@@ -6147,9 +6147,9 @@ blockquote.pullquote.right {
 #gitcalendar {
     margin: 0 auto;
     border-radius: 24px;
-    background: var(--anzhiyu-card-bg);
+    background: var(--kchris-card-bg);
     border: var(--style-border-always);
-    box-shadow: var(--anzhiyu-shadow-border);
+    box-shadow: var(--kchris-shadow-border);
     position: relative;
     padding: 1rem 2rem;
     overflow: hidden;
@@ -6201,7 +6201,7 @@ blockquote.pullquote.right {
     background: #6bdf8f;
     position: absolute;
     border-radius: 50%;
-    border: 6px solid var(--anzhiyu-background);
+    border: 6px solid var(--kchris-background);
     top: 50%;
     left: 50%;
     transform: translate(30px, 30px);
@@ -6219,7 +6219,7 @@ blockquote.pullquote.right {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: var(--anzhiyu-white);
+    color: var(--kchris-white);
     background: linear-gradient(120deg, #5b27ff 0, #00d4ff 100%);
     background-size: 200%;
     animation: gradient 15s ease infinite;
@@ -6230,9 +6230,9 @@ blockquote.pullquote.right {
     width: 49%;
     /* 全局radius参数修改 */
     border-radius: 12px;
-    background: var(--anzhiyu-card-bg);
-    border: var(--anzhiyu-transparent-border);
-    box-shadow: var(--anzhiyu-shadow-border);
+    background: var(--kchris-card-bg);
+    border: var(--kchris-transparent-border);
+    box-shadow: var(--kchris-shadow-border);
     position: relative;
     padding: 1rem 2rem;
     overflow: hidden;
@@ -6325,7 +6325,7 @@ blockquote.pullquote.right {
     width: 39%;
     background: url(/img/about/preview.jpg) no-repeat top;
     background-size: cover;
-    color: var(--anzhiyu-white);
+    color: var(--kchris-white);
     overflow: hidden;
   }
   #about-page .about-statistic::after {
@@ -6361,7 +6361,7 @@ blockquote.pullquote.right {
     font-size: 16px;
     border-radius: 15px;
     width: 100%;
-    color: var(--anzhiyu-white);
+    color: var(--kchris-white);
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -6388,14 +6388,14 @@ blockquote.pullquote.right {
   }
   
   .post-tips {
-    color: var(--anzhiyu-gray);
+    color: var(--kchris-gray);
     font-size: 14px;
     position: absolute;
     bottom: 1rem;
     left: 2rem;
   }
   .post-tips a {
-    color: var(--anzhiyu-gray) !important;
+    color: var(--kchris-gray) !important;
     border: none !important;
   }
   .author-content-item .card-content .banner-button-group {
@@ -6408,7 +6408,7 @@ blockquote.pullquote.right {
     width: 124px;
     border-radius: 20px;
     justify-content: center;
-    background: var(--anzhiyu-card-bg);
+    background: var(--kchris-card-bg);
     color: var(--font-color);
     display: flex;
     align-items: center;
@@ -6426,8 +6426,8 @@ blockquote.pullquote.right {
   }
   
   .author-content-item .card-content .banner-button-group .banner-button:hover {
-    background: var(--anzhiyu-main);
-    color: var(--anzhiyu-white);
+    background: var(--kchris-main);
+    color: var(--kchris-white);
     border-radius: 20px !important;
   }
   .author-content-item.personalities {
@@ -6506,7 +6506,7 @@ blockquote.pullquote.right {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: var(--anzhiyu-maskbg);
+    background: var(--kchris-maskbg);
     padding: 0.6rem 2rem;
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -6562,12 +6562,12 @@ blockquote.pullquote.right {
   }
   
   .post-tips a:hover {
-    color: var(--anzhiyu-main) !important;
+    color: var(--kchris-main) !important;
     background: none !important;
   }
   
   .author-content-item.single.reward .reward-list-updateDate {
-    color: var(--anzhiyu-gray);
+    color: var(--kchris-gray);
     font-size: 14px;
   }
   
@@ -6767,7 +6767,7 @@ blockquote.pullquote.right {
     flex-direction: column;
     justify-content: center;
     background: linear-gradient(120deg, #ff27e8 0, #ff8000 100%);
-    color: var(--anzhiyu-white);
+    color: var(--kchris-white);
     background-size: 200%;
     animation: gradient 15s ease infinite;
     min-height: 200px;
@@ -6797,7 +6797,7 @@ blockquote.pullquote.right {
     background-size: cover;
     min-height: 300px;
     overflow: hidden;
-    color: var(--anzhiyu-white);
+    color: var(--kchris-white);
     width: 59%;
   }
   .author-content-item .content-bottom {
@@ -6851,14 +6851,14 @@ blockquote.pullquote.right {
     background: url(/img/about/tech.png) no-repeat;
     background-size: cover;
     min-height: 230px;
-    color: var(--anzhiyu-white);
+    color: var(--kchris-white);
   }
   
   .author-content-item.like-music {
     background: url(/img/about/voice.gif) no-repeat top;
     background-size: cover;
     min-height: 400px;
-    color: var(--anzhiyu-white);
+    color: var(--kchris-white);
     overflow: hidden;
   }
   
@@ -6883,7 +6883,7 @@ blockquote.pullquote.right {
       display: none;
     }
     [data-theme="dark"] .author-content-item .card-content .banner-button-group .banner-button {
-      color: var(--anzhiyu-black) !important;
+      color: var(--kchris-black) !important;
     }
     .author-content-item .card-content .banner-button-group .banner-button:hover {
       background: none !important;
@@ -6955,8 +6955,8 @@ blockquote.pullquote.right {
       margin-left: 80px;
     }
     .author-content-item .card-content .banner-button-group .banner-button:hover i {
-      background: var(--anzhiyu-background) !important;
-      color: var(--anzhiyu-theme);
+      background: var(--kchris-background) !important;
+      color: var(--kchris-theme);
     }
     #selfInfo-content-year {
       width: 90px;
@@ -6987,7 +6987,7 @@ blockquote.pullquote.right {
     border: var(--style-border-always);
     width: calc((100% / 3) - 0.5rem);
     margin: 0 0.25rem 0.5rem 0.25rem;
-    box-shadow: var(--anzhiyu-shadow-border);
+    box-shadow: var(--kchris-shadow-border);
   }
   
   .reward-list-item .reward-list-item-name {
@@ -7016,7 +7016,7 @@ blockquote.pullquote.right {
   
   .reward-list-item .reward-list-item-time {
     font-size: 12px;
-    color: var(--anzhiyu-secondtext);
+    color: var(--kchris-secondtext);
     white-space: nowrap;
   }
 
@@ -7121,7 +7121,7 @@ blockquote.pullquote.right {
   }
 
   .author-content-item.single.reward .reward-list-updateDate {
-    color: var(--anzhiyu-gray);
+    color: var(--kchris-gray);
     font-size: 14px;
   } */
 
@@ -7129,7 +7129,7 @@ blockquote.pullquote.right {
     #gitcalendar {
       display: none;
     }[	data-theme=dark] .author-content-item .card-content .banner-button-group .banner-button {
-      color: var(--anzhiyu-black)!important;
+      color: var(--kchris-black)!important;
     }
 
     .author-content-item .card-content .banner-button-group .banner-button:hover {
@@ -7188,7 +7188,7 @@ blockquote.pullquote.right {
 
     .layout>div:first-child:not(.recent-posts) {
       padding: 1rem 1rem!important;
-      background: var(--anzhiyu-background);
+      background: var(--kchris-background);
       box-shadow: none!important;
     }
 
@@ -7216,8 +7216,8 @@ blockquote.pullquote.right {
     }
 
     .author-content-item .card-content .banner-button-group .banner-button:hover i {
-      background: var(--anzhiyu-background)!important;
-      color: var(--anzhiyu-theme);
+      background: var(--kchris-background)!important;
+      color: var(--kchris-theme);
     }
 
     #selfInfo-content-year {
@@ -7466,7 +7466,7 @@ blockquote.pullquote.right {
     border-radius: 16px;
   }
   .author-content-item.careers .careers-item .name {
-    color: var(--anzhiyu-secondtext);
+    color: var(--kchris-secondtext);
   }
   .author-content-item.careers .careers-item {
     display: flex;
@@ -7479,7 +7479,7 @@ blockquote.pullquote.right {
     border-radius: 16px;
   }
   .author-content-item.careers .careers-item .name {
-    color: var(--anzhiyu-secondtext);
+    color: var(--kchris-secondtext);
   }
   .author-content-item.careers img {
     position: absolute;
@@ -7490,107 +7490,107 @@ blockquote.pullquote.right {
   }
 /* 颜色 */
 :root {
-    --anzhiyu-theme-op: #4259ef23;
-    --anzhiyu-card-bg-none: rgba(255, 255, 255, 0);
-    --anzhiyu-main-op-deep: var(--anzhiyu-theme-op-deep) !important;
-    --anzhiyu-gray-op: #9999992b;
-    --anzhiyu-theme-top: var(--anzhiyu-theme);
-    --anzhiyu-white: #fff;
-    --anzhiyu-white-op: rgba(255, 255, 255, 0.2);
-    --anzhiyu-black: #000;
-    --anzhiyu-black-op: rgba(0, 0, 0, 0.2);
-    --anzhiyu-none: rgba(0, 0, 0, 0);
-    --anzhiyu-gray: #999999;
-    --anzhiyu-yellow: #ffc93e;
-    --anzhiyu-orange: #e38100;
-    --anzhiyu-border-radius: 8px;
-    --anzhiyu-main: var(--anzhiyu-theme);
-    --anzhiyu-main-op: var(--anzhiyu-theme-op);
-    --anzhiyu-shadow-theme: 0 8px 12px -3px var(--anzhiyu-theme-op);
-    --anzhiyu-shadow-main: 0 8px 12px -3px var(--anzhiyu-main-op);
-    --anzhiyu-shadow-blue: 0 8px 12px -3px rgba(40, 109, 234, 0.2);
-    --anzhiyu-shadow-white: 0 8px 12px -3px rgba(255, 255, 255, 0.2);
-    --anzhiyu-shadow-black: 0 0 12px 4px rgba(0, 0, 0, 0.05);
-    --anzhiyu-shadow-yellow: 0px 38px 77px -26px rgba(255, 201, 62, 0.12);
-    --anzhiyu-shadow-red: 0 8px 12px -3px #ee7d7936;
-    --anzhiyu-shadow-green: 0 8px 12px -3px #87ee7936;
-    --anzhiyu-shadow-border: 0 0 12px 4px #2c2d300c;
-    --anzhiyu-shadow-blackdeep: 0 2px 16px -3px rgba(0, 0, 0, 0.15);
-    --anzhiyu-logo-color: linear-gradient(215deg, #4584ff 30%, #ff7676 70%);
-    --style-border: 1px solid var(--anzhiyu-card-border);
-    --anzhiyu-blue-main: #3b70fc;
-    --style-border-hover: 1px solid var(--anzhiyu-main);
-    --style-border-dashed: 1px dashed var(--anzhiyu-theme-op);
-    --style-border-avatar: 4px solid var(--anzhiyu-background);
-    --style-border-always: 1px solid var(--anzhiyu-card-border);
+    --kchris-theme-op: #4259ef23;
+    --kchris-card-bg-none: rgba(255, 255, 255, 0);
+    --kchris-main-op-deep: var(--kchris-theme-op-deep) !important;
+    --kchris-gray-op: #9999992b;
+    --kchris-theme-top: var(--kchris-theme);
+    --kchris-white: #fff;
+    --kchris-white-op: rgba(255, 255, 255, 0.2);
+    --kchris-black: #000;
+    --kchris-black-op: rgba(0, 0, 0, 0.2);
+    --kchris-none: rgba(0, 0, 0, 0);
+    --kchris-gray: #999999;
+    --kchris-yellow: #ffc93e;
+    --kchris-orange: #e38100;
+    --kchris-border-radius: 8px;
+    --kchris-main: var(--kchris-theme);
+    --kchris-main-op: var(--kchris-theme-op);
+    --kchris-shadow-theme: 0 8px 12px -3px var(--kchris-theme-op);
+    --kchris-shadow-main: 0 8px 12px -3px var(--kchris-main-op);
+    --kchris-shadow-blue: 0 8px 12px -3px rgba(40, 109, 234, 0.2);
+    --kchris-shadow-white: 0 8px 12px -3px rgba(255, 255, 255, 0.2);
+    --kchris-shadow-black: 0 0 12px 4px rgba(0, 0, 0, 0.05);
+    --kchris-shadow-yellow: 0px 38px 77px -26px rgba(255, 201, 62, 0.12);
+    --kchris-shadow-red: 0 8px 12px -3px #ee7d7936;
+    --kchris-shadow-green: 0 8px 12px -3px #87ee7936;
+    --kchris-shadow-border: 0 0 12px 4px #2c2d300c;
+    --kchris-shadow-blackdeep: 0 2px 16px -3px rgba(0, 0, 0, 0.15);
+    --kchris-logo-color: linear-gradient(215deg, #4584ff 30%, #ff7676 70%);
+    --style-border: 1px solid var(--kchris-card-border);
+    --kchris-blue-main: #3b70fc;
+    --style-border-hover: 1px solid var(--kchris-main);
+    --style-border-dashed: 1px dashed var(--kchris-theme-op);
+    --style-border-avatar: 4px solid var(--kchris-background);
+    --style-border-always: 1px solid var(--kchris-card-border);
     --style-border-none: 1px solid transparent;
-    --anzhiyu-white-acrylic1: #fefeff !important;
-    --anzhiyu-white-acrylic2: #fcfdff !important;
-    --anzhiyu-black-acrylic2: #08080a !important;
-    --anzhiyu-black-acrylic1: #0b0b0e !important;
-    --anzhiyu-main-none: #b8b8b800 !important;
+    --kchris-white-acrylic1: #fefeff !important;
+    --kchris-white-acrylic2: #fcfdff !important;
+    --kchris-black-acrylic2: #08080a !important;
+    --kchris-black-acrylic1: #0b0b0e !important;
+    --kchris-main-none: #b8b8b800 !important;
   }
   
   [data-theme="light"] {
-    --anzhiyu-theme-op-deep: #4259efdd;
+    --kchris-theme-op-deep: #4259efdd;
     /* --global-bg: #f7f9fe; */
-    --anzhiyu-theme: #3b70fc;
-    --anzhiyu-theme-deep: #1856fb;
-    --anzhiyu-theme-op: #4259ef23;
-    --anzhiyu-blue: #3b70fc;
-    --anzhiyu-red: #d8213c;
-    --anzhiyu-pink: #ff7c7c;
-    --anzhiyu-green: #57bd6a;
-    --anzhiyu-fontcolor: #363636;
-    --anzhiyu-background: #fff;
-    --anzhiyu-reverse: #000;
-    --anzhiyu-maskbg: rgba(255, 255, 255, 0.6);
-    --anzhiyu-maskbgdeep: rgba(255, 255, 255, 0.85);
-    --anzhiyu-hovertext: var(--anzhiyu-theme);
-    --anzhiyu-ahoverbg: #f7f7fa;
-    --anzhiyu-lighttext: var(--anzhiyu-main);
-    --anzhiyu-secondtext: rgba(60, 60, 67, 0.6);
-    --anzhiyu-scrollbar: rgba(60, 60, 67, 0.4);
-    --anzhiyu-card-btn-bg: #edf0f7;
-    --anzhiyu-post-blockquote-bg: #fafcff;
-    --anzhiyu-post-tabs-bg: #f2f5f8;
-    --anzhiyu-secondbg: #f1f3f8;
-    --anzhiyu-shadow-nav: 0 5px 12px -5px rgba(102, 68, 68, 0.05);
-    --anzhiyu-card-bg: #fff;
-    --anzhiyu-shadow-lightblack: 0 5px 12px -5px rgba(102, 68, 68, 0);
-    --anzhiyu-shadow-light2black: 0 5px 12px -5px rgba(102, 68, 68, 0);
-    --anzhiyu-card-border: #e3e8f7;
+    --kchris-theme: #3b70fc;
+    --kchris-theme-deep: #1856fb;
+    --kchris-theme-op: #4259ef23;
+    --kchris-blue: #3b70fc;
+    --kchris-red: #d8213c;
+    --kchris-pink: #ff7c7c;
+    --kchris-green: #57bd6a;
+    --kchris-fontcolor: #363636;
+    --kchris-background: #fff;
+    --kchris-reverse: #000;
+    --kchris-maskbg: rgba(255, 255, 255, 0.6);
+    --kchris-maskbgdeep: rgba(255, 255, 255, 0.85);
+    --kchris-hovertext: var(--kchris-theme);
+    --kchris-ahoverbg: #f7f7fa;
+    --kchris-lighttext: var(--kchris-main);
+    --kchris-secondtext: rgba(60, 60, 67, 0.6);
+    --kchris-scrollbar: rgba(60, 60, 67, 0.4);
+    --kchris-card-btn-bg: #edf0f7;
+    --kchris-post-blockquote-bg: #fafcff;
+    --kchris-post-tabs-bg: #f2f5f8;
+    --kchris-secondbg: #f1f3f8;
+    --kchris-shadow-nav: 0 5px 12px -5px rgba(102, 68, 68, 0.05);
+    --kchris-card-bg: #fff;
+    --kchris-shadow-lightblack: 0 5px 12px -5px rgba(102, 68, 68, 0);
+    --kchris-shadow-light2black: 0 5px 12px -5px rgba(102, 68, 68, 0);
+    --kchris-card-border: #e3e8f7;
   }
   
   [data-theme="dark"] {
-    --anzhiyu-theme-op-deep: #0084ffdd;
+    --kchris-theme-op-deep: #0084ffdd;
     /* --global-bg: #18171d; */
-    --anzhiyu-theme: #0084ff;
-    --anzhiyu-theme-deep: #0076e5;
-    --anzhiyu-theme-op: #0084ff23;
-    --anzhiyu-blue: #0084ff;
-    --anzhiyu-red: #ff3842;
-    --anzhiyu-pink: #ff7c7c;
-    --anzhiyu-green: #57bd6a;
-    --anzhiyu-fontcolor: #f7f7fa;
-    --anzhiyu-background: #121212;
-    --anzhiyu-reverse: #fff;
-    --anzhiyu-maskbg: rgba(0, 0, 0, 0.6);
-    --anzhiyu-maskbgdeep: rgba(0, 0, 0, 0.85);
-    --anzhiyu-hovertext: #0a84ff;
-    --anzhiyu-ahoverbg: #fff;
-    --anzhiyu-lighttext: #f2b94b;
-    --anzhiyu-secondtext: #a1a2b8;
-    --anzhiyu-scrollbar: rgba(200, 200, 223, 0.4);
-    --anzhiyu-card-btn-bg: #30343f;
-    --anzhiyu-post-blockquote-bg: #000;
-    --anzhiyu-post-tabs-bg: #121212;
-    --anzhiyu-secondbg: #30343f;
-    --anzhiyu-shadow-nav: 0 5px 20px 0px rgba(28, 28, 28, 0.4);
-    --anzhiyu-card-bg: #121212;
-    --anzhiyu-shadow-lightblack: 0 5px 12px -5px rgba(102, 68, 68, 0);
-    --anzhiyu-shadow-light2black: 0 5px 12px -5px rgba(102, 68, 68, 0);
-    --anzhiyu-card-border: #42444a;
+    --kchris-theme: #0084ff;
+    --kchris-theme-deep: #0076e5;
+    --kchris-theme-op: #0084ff23;
+    --kchris-blue: #0084ff;
+    --kchris-red: #ff3842;
+    --kchris-pink: #ff7c7c;
+    --kchris-green: #57bd6a;
+    --kchris-fontcolor: #f7f7fa;
+    --kchris-background: #121212;
+    --kchris-reverse: #fff;
+    --kchris-maskbg: rgba(0, 0, 0, 0.6);
+    --kchris-maskbgdeep: rgba(0, 0, 0, 0.85);
+    --kchris-hovertext: #0a84ff;
+    --kchris-ahoverbg: #fff;
+    --kchris-lighttext: #f2b94b;
+    --kchris-secondtext: #a1a2b8;
+    --kchris-scrollbar: rgba(200, 200, 223, 0.4);
+    --kchris-card-btn-bg: #30343f;
+    --kchris-post-blockquote-bg: #000;
+    --kchris-post-tabs-bg: #121212;
+    --kchris-secondbg: #30343f;
+    --kchris-shadow-nav: 0 5px 20px 0px rgba(28, 28, 28, 0.4);
+    --kchris-card-bg: #121212;
+    --kchris-shadow-lightblack: 0 5px 12px -5px rgba(102, 68, 68, 0);
+    --kchris-shadow-light2black: 0 5px 12px -5px rgba(102, 68, 68, 0);
+    --kchris-card-border: #42444a;
   }
 :root {
     --loadingbar-background-color: #2c2b30;
@@ -7717,9 +7717,9 @@ blockquote.pullquote.right {
 .hello-about {
     margin: 20px auto;
     border-radius: 10px;
-    background: var(--anzhiyu-card-bg);
+    background: var(--kchris-card-bg);
     /* border: var(--style-border-always); */
-    box-shadow: var(--anzhiyu-shadow-border);
+    box-shadow: var(--kchris-shadow-border);
     position: relative;
     overflow: hidden;
     user-select: none;
@@ -7776,7 +7776,7 @@ blockquote.pullquote.right {
     background: transparent;
   }
   [data-theme="dark"] .hello-about h1 {
-    color: var(--anzhiyu-white);
+    color: var(--kchris-white);
   }
   
   .hello-about h1 {
@@ -8007,7 +8007,7 @@ blockquote.pullquote.right {
     color: #fff;
     font-size: 66px;
     font-weight: 700;
-    box-shadow: var(--anzhiyu-shadow-blackdeep);
+    box-shadow: var(--kchris-shadow-blackdeep);
     width: 120px;
     height: 120px;
     border-radius: 30px;
@@ -8037,11 +8037,11 @@ blockquote.pullquote.right {
     align-items: center;
     margin-right: 10px;
     margin-top: 10px;
-    background: var(--anzhiyu-background);
+    background: var(--kchris-background);
     border-radius: 40px;
     padding: 4px 12px 4px 8px;
     border: var(--style-border);
-    box-shadow: var(--anzhiyu-shadow-border);
+    box-shadow: var(--kchris-shadow-border);
   }
   .author-content-item.skills .skill-icon {
     width: 32px;

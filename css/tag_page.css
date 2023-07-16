@@ -1,0 +1,49 @@
+/* 标签页样式 */
+#page .tag-cloud-list {
+    margin: 5em 0 3em;
+}
+#page .tag-cloud-list a {
+    display: inline-flex;
+    color: var(--kchris-fontcolor) !important;
+    font-size: 1.2em !important;
+    padding: 0.2em 0.5em;
+    background: var(--kchris-card-bg);
+    margin: 0.5em 0.5em;
+    border-radius: 12px;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    border: var(--style-border-always);
+    box-shadow: var(--kchris-shadow-border);
+    align-items: center;
+}
+#page .tag-cloud-list a:before {
+    color: var(--kchris-fontcolor) !important;
+    cursor: pointer;
+    content: "#" !important;
+    font-family: "iconfont" !important;
+    opacity: 0.4;
+    padding-top: 2px;
+    padding-right: 2px;
+}
+#page .tag-cloud-list a:hover {
+    background: var(--kchris-blue);
+    color: var(--kchris-white)!important;
+
+}
+#page .tag-cloud-list a > sup{
+    top: auto;
+    background: var(--kchris-secondbg);
+    padding: 4px 4px;
+    margin-left: 8px;
+    border-radius: 6px;
+    color: var(--kchris-fontcolor);
+    line-height: 1;
+    text-align: center;
+    min-width: 35px;
+    display: inline-block;
+    font-size: 1rem;
+    box-shadow: var(--kchris-shadow-border);
+}
+
+
+
