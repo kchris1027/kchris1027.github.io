@@ -22,7 +22,7 @@
   }
   
   .tag-Link:hover .tag-link-tips {
-    color: #000000;
+    color: var(--kchris-fontcolor);
   }
   
   .tag-Link .tag-link-bottom {
@@ -56,7 +56,7 @@
   }
   
   .tag-Link:hover .tag-link-bottom .tag-link-right .tag-link-sitename {
-    color: #000000;
+    color: var(--kchris-fontcolor);
   }
   
   .tag-Link .tag-link-bottom i {
