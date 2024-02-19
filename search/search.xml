@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>分镜与故事板</title>
+      <link href="/post/711e32fe.html"/>
+      <url>/post/711e32fe.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="需求来源"><a href="#需求来源" class="headerlink" title="需求来源"></a>需求来源</h2><p>最近由于工作需要，需要对自己负责设计的角色产出大招分镜的制作需求，于是开始琢磨着研究如何输出更专业的分镜需求文档。算是现学现卖了，顺便给学习的内容做个总结。</p><h2 id="概念介绍"><a href="#概念介绍" class="headerlink" title="概念介绍"></a>概念介绍</h2><h3 id="分镜（Shot-List）"><a href="#分镜（Shot-List）" class="headerlink" title="分镜（Shot List）"></a>分镜（Shot List）</h3><p>分镜设计是影视、动画等视觉创作领域中的一项重要工作，用于规划和组织场景的每个镜头，是导演、编剧和其他创作人员进行沟通的工具之一。它是在影片或动画制作之前，通过一系列画面来呈现整个作品的构图、动作和情节的过程，从而帮助团队理解和共同追求创作的视觉效果和叙事目标。</p><p>分镜通常包含以下信息：</p><table><thead><tr><th>序号</th><th>信息类型</th><th>说明</th></tr></thead><tbody><tr><td>1</td><td>镜头编号</td><td>个镜头都应该有一个独一无二的编号，以便在制作中进行引用。</td></tr><tr><td>2</td><td>镜头描述</td><td>对于每个镜头，描述应该简洁而清晰，包括场景的位置、角色的动作和对白。</td></tr><tr><td>3</td><td>画面构图</td><td>显示每个画面中主要元素的相对位置，包括角色、背景、道具等。画面构图通常是一个简化的示意图，用于表示镜头的基本组成。</td></tr><tr><td>4</td><td>角度和距离</td><td>指定摄影机的角度和距离，以及视角的选择。这可以包括镜头是俯视、仰视还是平视，以及摄影机离主体的远近。</td></tr><tr><td>5</td><td>过渡效果</td><td>规定不同镜头之间的过渡效果，比如淡入淡出、切割等。这有助于确保场景之间的平滑过渡。</td></tr><tr><td>6</td><td>动作安排</td><td>描述角色和物体的动作，包括姿势、表情和动作的顺序。这有助于指导动画师或演员的表演。</td></tr><tr><td>7</td><td>对白和声音</td><td>如果有对白或声音效果，分镜也可以包含相应的文字说明或标记。</td></tr><tr><td>8</td><td>时间标记</td><td>指定每个镜头或画面的停留时间，以确保整体流畅。</td></tr><tr><td>9</td><td>备注和说明</td><td>提供任何与镜头相关的额外信息或特殊说明。</td></tr><tr><td>10</td><td>背景图示</td><td>在需要时，可以添加简化的背景示意图，以便更清楚地传达场景的背景。</td></tr></tbody></table><p>以上信息的类型，具体程度和深度取决于制作团队的工作流程和项目的要求。重要的是确保分镜提供足够的信息，使得整个制作团队能够理解并按照设计的方向进行工作。</p><h3 id="故事板（Storyboard）"><a href="#故事板（Storyboard）" class="headerlink" title="故事板（Storyboard）"></a>故事板（Storyboard）</h3><p>故事板是一种用于视觉叙事规划的工具，通常以序列动画的形式展示影片、动画、广告等项目的场景、动作和对白。故事板帮助创作者将故事的想法转化为图像，以更好地可视化并组织叙事元素。</p><p>故事板着重描述故事走向，展示故事创意；分镜侧重讲述拍摄制作的执行。</p><h2 id="工具推荐"><a href="#工具推荐" class="headerlink" title="工具推荐"></a>工具推荐</h2><div calss='anzhiyu-tag-link'><a class="tag-Link" target="_blank" href="https://app.mediastory.cc/">    <div class="tag-link-tips">引用站外地址</div>    <div class="tag-link-bottom">        <div class="tag-link-left" style="background-image: url(https://api.iowen.cn/favicon/app.mediastory.cc/.png);"></div>        <div class="tag-link-right">            <div class="tag-link-title">闪电分镜</div>            <div class="tag-link-sitename">影视飓风</div>        </div>        <i class="fa-solid fa-angle-right"></i>    </div>    </a></div>  <p>影视飓风制作的一款多人在线分镜制作的网页工具，可在分镜列表和故事板之间进行切换预览，亦可直接导出为可供下载的 PDF 文件。</p><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><ul><li><p><a href="https://zhuanlan.zhihu.com/p/584086863">全方位教你搞懂故事板（概念、术语、例子、工具）</a></p></li><li><p><a href="https://zhuanlan.zhihu.com/p/203091191">关于分镜的一切</a></p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 游戏设计 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 游戏设计 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>樱井老师的开发课堂</title>
       <link href="/post/a82bd550.html"/>
       <url>/post/a82bd550.html</url>
@@ -382,7 +407,7 @@
       
       <categories>
           
-          <category> 工作经历 </category>
+          <category> 工作 </category>
           
       </categories>
       
@@ -438,7 +463,7 @@
       
       <categories>
           
-          <category> 游戏解析 </category>
+          <category> 工作 </category>
           
       </categories>
       
@@ -742,7 +767,7 @@
       
       <categories>
           
-          <category> Docs 文档 </category>
+          <category> Notes </category>
           
       </categories>
       
