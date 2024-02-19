@@ -3,7 +3,7 @@ title: Notes
 tags:
   - Note
 categories:
-  - Docs 文档
+  - Notes
 abbrlink: c0da8988
 date: 2023-03-26 17:29:00
 description: 本页面主要用来记录一些琐碎问题  
