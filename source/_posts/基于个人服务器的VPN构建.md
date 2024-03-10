@@ -7,7 +7,7 @@ categories:
 abbrlink: '93337678'
 date: 2024-02-19 12:14:07
 description:
-cover:
+cover: /img/基于个人服务器的VPN构建/cover.png
 ---
 
 ## 需求来源
