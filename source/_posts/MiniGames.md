@@ -11,7 +11,7 @@ swiper_desc: 放松一下，感受游戏的乐趣。
 swiper_cover: /img/MiniGame/cover.png
 ---  
 
-{% tabs %}  
+{% tabs 1 %}  
 
 <!-- tab Catch Cat -->
 {% raw %}
