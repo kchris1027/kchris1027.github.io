@@ -1,0 +1,704 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><!-- hexo injector head_begin start --><style type="text/css">.douban-card-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 400px;
+}
+
+.douban-card {
+    display: flex;
+    margin: 30px 10px;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.douban-card:hover {
+    text-decoration: none;
+}
+
+.douban-card-bgimg {
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    filter: blur(15px) brightness(0.6);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-img {
+    position: relative;
+    height: 130px;
+    width: 80px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-left:hover .douban-card-img {
+    filter: blur(5px) brightness(0.6);
+    transform: perspective(800px) rotateX(180deg);
+}
+
+.douban-card-left .douban-card-img {
+    transition: all 500ms ease;
+}
+
+.douban-card-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.douban-card-left .douban-card-status {
+    height: 130px;
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    transform: rotateX(180deg);
+    backface-visibility: hidden;
+    transition: all 500ms ease;
+}
+
+.douban-card-left:hover .douban-card-status {
+    transform: perspective(800px) rotateX(0deg);
+}
+
+.douban-card-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.3;
+    color: antiquewhite;
+}
+
+.douban-card-item {
+    margin-top: 4px;
+}
+</style><!-- hexo injector head_begin end --><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>游戏设计基础理论 | InAction</title><meta name="author" content="kchris,1098158356@qq.com"><meta name="copyright" content="kchris"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="鉴于工作中的需求，一些个人认为有趣的想法的设计与验证需要一些通用理论作为支撑，由此想着将一些适用面广泛且有效的理论整理于此，方便查阅。                风险与回报                   风险与回报（Risk vs. Reward） 风险与回报理论在游戏设计中是一个核心概念，它强调玩家为了获得更大的奖励愿意承担更高的风险。这个理念不仅适用于游戏设计，也广泛存在于经济学、">
+<meta property="og:type" content="article">
+<meta property="og:title" content="游戏设计基础理论">
+<meta property="og:url" content="http://kongcai.tech/post/428cf2d9.html">
+<meta property="og:site_name" content="InAction">
+<meta property="og:description" content="鉴于工作中的需求，一些个人认为有趣的想法的设计与验证需要一些通用理论作为支撑，由此想着将一些适用面广泛且有效的理论整理于此，方便查阅。                风险与回报                   风险与回报（Risk vs. Reward） 风险与回报理论在游戏设计中是一个核心概念，它强调玩家为了获得更大的奖励愿意承担更高的风险。这个理念不仅适用于游戏设计，也广泛存在于经济学、">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://kongcai.tech/img/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA/cover.png">
+<meta property="article:published_time" content="2024-03-14T15:04:53.000Z">
+<meta property="article:modified_time" content="2024-03-16T02:50:55.074Z">
+<meta property="article:author" content="kchris">
+<meta property="article:tag" content="游戏设计">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://kongcai.tech/img/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA/cover.png"><link rel="shortcut icon" href="/img/base/icon.png"><link rel="canonical" href="http://kongcai.tech/post/428cf2d9.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":500},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '游戏设计基础理论',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-03-16 02:50:55'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/wave_style.css"><link rel="stylesheet" href="/css/progress_bar.css"><link rel="stylesheet" href="/css/twikoo_tips.css"><link rel="stylesheet" href="/css/game_page.css"><link rel="stylesheet" href="/css/tag_link.css"><link rel="stylesheet" href="/css/pagination.css"><link rel="stylesheet" href="/css/tag_page.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiperstyle.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/link/atom.xml" title="InAction" type="application/atom+xml">
+</head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+document.addEventListener('pjax:send', () => {
+  Pace.restart()
+})
+</script><link rel="stylesheet" href="/css/progress_bar.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/base/icon01.png" onerror="onerror=null;src='/img/base/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">33</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">34</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-book"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-headphones"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page child" href="/game/"><i class="fa-fw fas fa-gamepad"></i><span> Game</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-compass"></i><span> 工具</span></a></div><div class="menus_item"><a class="site-page" href="/message/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA/cover.png')"><nav id="nav"><span id="blog-info"><a href="/" title="InAction"><img class="site-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/base/icon.png"/></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-book"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-headphones"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page child" href="/game/"><i class="fa-fw fas fa-gamepad"></i><span> Game</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-compass"></i><span> 工具</span></a></div><div class="menus_item"><a class="site-page" href="/message/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">游戏设计基础理论</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-03-14T15:04:53.000Z" title="发表于 2024-03-14 15:04:53">2024-03-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-03-16T02:50:55.074Z" title="更新于 2024-03-16 02:50:55">2024-03-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/">游戏设计</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>11分钟</span></span><span class="post-meta-separator">|</span><span id="" data-flag-title="游戏设计基础理论"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="twikoo_visitors"><i class="fa-solid fa-spinner fa-spin"></i></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/post/428cf2d9.html#post-comment"><span id="twikoo-count"><i class="fa-solid fa-spinner fa-spin"></i></span></a></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p>鉴于工作中的需求，一些个人认为有趣的想法的设计与验证需要一些通用理论作为支撑，由此想着将一些适用面广泛且有效的理论整理于此，方便查阅。</p>
+</blockquote>
+<div class='spoiler collapsed'>
+    <div class='spoiler-title'>
+        风险与回报
+    </div>
+    <div class='spoiler-content'>
+        <h2 id="风险与回报（Risk-vs-Reward）"><a href="#风险与回报（Risk-vs-Reward）" class="headerlink" title="风险与回报（Risk vs. Reward）"></a>风险与回报（Risk vs. Reward）</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA/Risk%20And%20Reward.png" alt="Alt text"></p>
+<p>风险与回报理论在游戏设计中是一个核心概念，它强调玩家为了获得更大的奖励愿意承担更高的风险。这个理念不仅适用于游戏设计，也广泛存在于经济学、心理学和决策理论等多个领域中。在游戏设计中，这个理论用来创建平衡和吸引人的游戏机制，激励玩家探索、尝试和克服挑战。</p>
+<h3 id="出处"><a href="#出处" class="headerlink" title="出处"></a>出处</h3><p>风险与回报的概念，并没有一个具体的“出生地点”或单一来源，在游戏设计领域，它更像是从实践中逐渐发展起来的共通理解。随着游戏产业和理论研究的发展，很多游戏设计师和理论家都对这个主题进行了探讨和应用，但很难归功于某个特定的人或文献。</p>
+<h3 id="游戏设计中的应用"><a href="#游戏设计中的应用" class="headerlink" title="游戏设计中的应用"></a>游戏设计中的应用</h3><p>在游戏设计中，风险与回报的概念用于平衡游戏的挑战度和奖励系统。设计师通过调整任务的难度、敌人的强度、资源的稀缺性等因素，来创造玩家需要权衡风险与可能获得的回报的情境。有效使用这一概念可以增加游戏的深度和复杂性，提升玩家的参与度和满足感。</p>
+<ul>
+<li><strong>风险：</strong> 玩家在游戏中面临的挑战或可能导致失败的元素。风险可以是敌人、障碍、时间限制或资源损失等。</li>
+<li><strong>回报：</strong> 作为克服风险的奖励，回报可以是分数、装备、能力提升、故事进展或解锁新内容等。</li>
+</ul>
+<p>设计师会仔细考虑如何设置风险与回报，以保证玩家既感受到挑战，又在成功后获得成就感。例如，一个高风险的战斗挑战可能会给予玩家珍贵的物品或大量经验值，鼓励玩家接受挑战并投入努力。</p>
+<h3 id="关键原则"><a href="#关键原则" class="headerlink" title="关键原则"></a>关键原则</h3><ul>
+<li><strong>平衡：</strong> 保证风险与回报之间有合理的平衡，避免游戏过于困难或过于简单。</li>
+<li><strong>透明度：</strong> 让玩家能够预见到潜在的风险和可能获得的回报，以便做出有根据的决策。</li>
+<li><strong>多样性：</strong> 提供不同层次的风险和回报，以满足不同类型玩家的需求和偏好。</li>
+</ul>
+<p>风险与回报理论是游戏设计师工具箱中的重要工具，帮助他们创造更加引人入胜和令人满意的游戏体验。</p>
+
+    </div>
+</div>
+
+
+<div class='spoiler collapsed'>
+    <div class='spoiler-title'>
+        三循环理论
+    </div>
+    <div class='spoiler-content'>
+        <h2 id="三循环理论（Game-Loop-Theory）"><a href="#三循环理论（Game-Loop-Theory）" class="headerlink" title="三循环理论（Game Loop Theory）"></a>三循环理论（Game Loop Theory）</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA/GameLoop.png" alt="Alt text"></p>
+<p>三循环理论（Second to Second, Minute to Minute, Session to Session）是一个在游戏设计领域经常被提及的概念，用于描述和分析玩家在不同时间尺度上的游戏体验。这个理论帮助游戏设计师确保玩家在短期内（每秒钟）、中期内（每分钟）和长期内（每次游戏会话）都能获得满足和乐趣。</p>
+<h3 id="出处与普及"><a href="#出处与普及" class="headerlink" title="出处与普及"></a>出处与普及</h3><p>这个理论并没有一个明确的“发明者”或是第一次被提出的具体文献来源。它更像是游戏设计实践中逐渐形成并被广泛接受的一个概念框架。随着时间的推移，它已经被许多游戏开发者和设计师所采纳，并在各种形式的讲座、教程、书籍和在线资源中被讨论。</p>
+<h3 id="理论解释"><a href="#理论解释" class="headerlink" title="理论解释"></a>理论解释</h3><ul>
+<li><p><strong>Second to Second</strong>：这一层面关注的是游戏中最基本的交互和反馈机制，比如角色的移动、射击、碰撞等。游戏在这个层面需要给玩家即时的反馈和满足感，确保基本的操作和交互设计流畅且富有乐趣。</p>
+</li>
+<li><p><strong>Minute to Minute</strong>：这一层面涵盖了玩家在较短时间内的游戏体验，包括任务的完成、战斗的胜利、资源的收集和使用等。游戏需要在这个水平上提供有意义的挑战和奖励，以维持玩家的兴趣和参与感。</p>
+</li>
+<li><p><strong>Session to Session</strong>：这一层面关注的是玩家每次游戏会话之间的连续性和发展，例如角色成长、故事进展、解锁新内容等。在这个水平上，游戏设计目标是让玩家有持续回归游戏的动力，通过提供新的目标、挑战和奖励来增强游戏的可玩性和深度。</p>
+</li>
+</ul>
+<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><p>三循环理论为游戏设计师提供了一个检视和优化游戏体验的框架，帮助他们平衡和调整游戏的各个方面，确保玩家在所有这些不同的时间尺度上都能获得满意和愉悦的游戏体验。通过关注这三个层面的设计，可以增强游戏的吸引力和留存率，构建起更加完善和圆润的游戏体验。</p>
+<h3 id="文献"><a href="#文献" class="headerlink" title="文献"></a>文献</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://gamedesignskills.com/game-design/core-loops-in-gameplay/#rpg-core-loop-examples">Designing The Core Gameplay Loop: A Beginner’s Guide</a></li>
+</ul>
+
+    </div>
+</div>
+
+
+<div class='spoiler collapsed'>
+    <div class='spoiler-title'>
+        心流理论
+    </div>
+    <div class='spoiler-content'>
+        <h2 id="心流理论（Flow-Theory）"><a href="#心流理论（Flow-Theory）" class="headerlink" title="心流理论（Flow Theory）"></a>心流理论（Flow Theory）</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA/Flow.png" alt="Alt text"></p>
+<p>心流理论（Flow Theory）最初由匈牙利心理学家米哈伊·契克森米哈伊（Mihaly Csikszentmihalyi）在20世纪70年代提出。心流是指个体在进行某项活动时完全投入其中，达到高度专注和满足感的心理状态。在这种状态下，人们会经历时间感的扭曲（通常感觉时间过得更快）、自我忘怀以及对活动结果的深切享受。</p>
+<h3 id="心流理论在游戏设计中的应用"><a href="#心流理论在游戏设计中的应用" class="headerlink" title="心流理论在游戏设计中的应用"></a>心流理论在游戏设计中的应用</h3><p>在游戏设计领域，心流理论被广泛应用于创造引人入胜的游戏体验。游戏设计师利用心流理论的原则，设计游戏以维持玩家的高度参与度和兴趣。为了实现心流状态，游戏需要满足以下几个关键条件：</p>
+<ul>
+<li><strong>挑战与技能平衡</strong>：游戏的挑战程度需要与玩家的技能水平相匹配。如果挑战太低，玩家可能会感到无聊；如果挑战太高，玩家可能会感到沮丧。</li>
+<li><strong>明确的目标</strong>：游戏需要有清晰、可理解的目标，让玩家知道他们应该做什么。</li>
+<li><strong>即时反馈</strong>：玩家的行为需要得到即时的反馈，以便他们可以根据这些信息调整自己的行动。</li>
+<li><strong>专注度的增强</strong>：通过减少干扰和提供吸引人的内容，游戏应鼓励玩家完全投入其中，从而进入心流状态。</li>
+</ul>
+<p>通过遵循心流理论的这些原则，游戏可以更有效地促进玩家的投入度和整体游戏体验的质量。心流状态不仅能提升玩家的娱乐体验，还能促进学习和技能提升，这是教育游戏和训练模拟中尤为重要的。</p>
+<h3 id="心流理论的影响"><a href="#心流理论的影响" class="headerlink" title="心流理论的影响"></a>心流理论的影响</h3><p>心流理论对于理解人类如何与复杂系统交互、如何在困难任务中找到满足感和乐趣以及如何通过设计提升用户体验等方面，都提供了极其宝贵的见解。在游戏设计之外，心流概念也被应用于运动、工作、艺术创作等多个领域，旨在提高个体的表现和幸福感。</p>
+<p>随着游戏产业和用户体验（UX）设计的发展，心流理论继续在设计实践和研究中发挥着关键作用，帮助设计师创建更具吸引力和参与性的产品和服务。</p>
+
+    </div>
+</div>
+
+
+<div class='spoiler collapsed'>
+    <div class='spoiler-title'>
+        情绪曲线
+    </div>
+    <div class='spoiler-content'>
+        <h2 id="情绪曲线（Emotional-Curve）"><a href="#情绪曲线（Emotional-Curve）" class="headerlink" title="情绪曲线（Emotional Curve）"></a>情绪曲线（Emotional Curve）</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA/Emotional%20Curve.png" alt="Alt text"></p>
+<p>游戏设计中的情绪曲线（Emotional Curve）概念，并没有一个明确的单一来源，类似于许多游戏设计理论和技术，它是随着时间逐渐发展和完善的。情绪曲线通常用于描述玩家在游戏过程中经历的情绪变化，包括兴奋、紧张、放松和满足等。这个概念有助于游戏设计师规划和优化游戏体验，确保玩家不会感到无聊或过度挫败。</p>
+<h3 id="历史背景与相关概念"><a href="#历史背景与相关概念" class="headerlink" title="历史背景与相关概念"></a>历史背景与相关概念</h3><p>虽然情绪曲线本身可能没有特定的出处，但它与一些著名的叙事和体验设计理论密切相关：</p>
+<ul>
+<li><p><strong>弗雷塔格三角形（Freytag’s Pyramid）</strong>：这是一种分析叙事结构的方法，由19世纪德国剧作家古斯塔夫·弗雷塔格（Gustav Freytag）提出。它将故事分为五个部分——引子、上升动作、高潮、下降动作和结局，形成了一个金字塔形状的结构。这个理论被广泛应用在文学、电影和游戏叙事中，为情绪曲线的思考提供了基础。</p>
+</li>
+<li><p><strong>英雄之旅（Hero’s Journey）</strong>：由约瑟夫·坎贝尔（Joseph Campbell）在其作品《千面英雄》中提出，描绘了英雄从平凡世界出发，经历试炼，最终取得胜利并归来的经典叙事框架。游戏设计中的情绪曲线经常借鉴英雄之旅中的元素来营造玩家的情绪起伏。</p>
+</li>
+</ul>
+<h3 id="应用于游戏设计"><a href="#应用于游戏设计" class="headerlink" title="应用于游戏设计"></a>应用于游戏设计</h3><p>在游戏设计中，情绪曲线被用来规划玩家的体验，以确保游戏能够持续吸引玩家，并给他们留下深刻的印象。设计师会精心设计游戏的关键事件、挑战和奖励，以促使玩家经历各种情绪状态，如期待、惊喜、紧张、兴奋和成就感等。</p>
+<p>通过调节游戏难度、故事情节、视觉和音效等元素，可以有效地控制玩家的情绪强度和节奏，从而创造出富有吸引力和挑战性的游戏体验。</p>
+<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>情绪曲线在游戏设计中的应用反映了设计师对玩家体验的深入思考。尽管该概念并非源自某个具体的理论或研究，但它汇集了叙事理论、心理学和用户体验设计等领域的智慧，成为指导游戏设计的重要工具之一。通过利用情绪曲线，设计师能够更好地把握玩家的情绪变化，提升游戏的沉浸感和吸引力。</p>
+
+    </div>
+</div>
+
+
+<div class='spoiler collapsed'>
+    <div class='spoiler-title'>
+        游戏节点切分
+    </div>
+    <div class='spoiler-content'>
+        <h2 id="游戏节点切分（Gameplay-Breakdown）"><a href="#游戏节点切分（Gameplay-Breakdown）" class="headerlink" title="游戏节点切分（Gameplay Breakdown）"></a>游戏节点切分（Gameplay Breakdown）</h2><p>游戏设计中的“游戏节点切分”（Gameplay Decomposition 或 Gameplay Breakdown）并不是源自某个单一的出处或论文，而是游戏设计实践中逐渐形成的一种方法论。这种方法旨在通过将游戏体验分解成更小、更易于管理和分析的部分来理解和优化游戏设计。</p>
+<h3 id="背景与应用"><a href="#背景与应用" class="headerlink" title="背景与应用"></a>背景与应用</h3><p>游戏节点切分本质上是对游戏元素和机制进行系统化的分析，这包括但不限于玩家行动、游戏规则、挑战、故事情节、界面设计等方面。通过这种分析，设计师能够识别游戏的核心组成部分，评估它们如何独立工作以及相互之间如何交互，从而提高游戏的整体质量和玩家体验。</p>
+<h3 id="游戏节点切分的关键步骤"><a href="#游戏节点切分的关键步骤" class="headerlink" title="游戏节点切分的关键步骤"></a>游戏节点切分的关键步骤</h3><ol>
+<li><p><strong>识别游戏元素</strong>：明确游戏中的所有关键元素和机制，包括玩家可以进行的操作、游戏环境、NPC（非玩家角色）、任务&#x2F;目标、奖励等。</p>
+</li>
+<li><p><strong>分析元素之间的关系</strong>：探究这些元素如何独立运作，以及它们之间如何相互影响。例如，玩家如何与环境互动？任务完成后给予玩家什么样的反馈？</p>
+</li>
+<li><p><strong>评估游戏循环</strong>：识别和评估游戏中的各种循环（如核心游戏循环、次级循环等），这些循环定义了玩家参与游戏的方式，以及游戏如何提供持续的动力和奖励。</p>
+</li>
+<li><p><strong>优化和调整</strong>：基于以上分析，确定游戏设计中的强项和弱点，进而做出必要的调整以增强玩家体验。</p>
+</li>
+</ol>
+<h3 id="重要性"><a href="#重要性" class="headerlink" title="重要性"></a>重要性</h3><p>游戏节点切分允许设计师更加深入地理解游戏的运作机制，并且提供了一个框架来思考如何提升游戏的互动性和参与度。它是一种有效的工具，可以帮助设计师优化游戏流程、增强游戏的吸引力以及预测可能的设计问题。</p>
+<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>尽管“游戏节点切分”并没有一个明确的起源或单一的权威来源，但它已经成为游戏设计和分析中普遍采用的一种方法。通过系统地分析游戏的各个方面，设计师可以创建出更加深入和丰富的游戏体验，满足不同玩家群体的需求和期望。</p>
+
+    </div>
+</div>
+
+
+<div class='spoiler collapsed'>
+    <div class='spoiler-title'>
+        二八定律
+    </div>
+    <div class='spoiler-content'>
+        <h2 id="二八定律（Pareto-Principle）"><a href="#二八定律（Pareto-Principle）" class="headerlink" title="二八定律（Pareto Principle）"></a>二八定律（Pareto Principle）</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA/Pareto%20Principle.png" alt="Alt text"></p>
+<p>二八定律，又称为帕累托原则（Pareto Principle），最初是由意大利经济学家维尔弗雷多·帕累托（Vilfredo Pareto）在20世纪初提出的。他在研究财富分配时发现，大约80%的意大利土地由大约20%的人口所拥有。这个原则后来被广泛应用于各种领域，包括商业管理、软件工程，以及游戏设计中。</p>
+<h3 id="二八定律在游戏设计中的应用"><a href="#二八定律在游戏设计中的应用" class="headerlink" title="二八定律在游戏设计中的应用"></a>二八定律在游戏设计中的应用</h3><p>在游戏设计中，二八定律可以以多种方式被解释和应用。以下是一些常见的例子：</p>
+<ul>
+<li><p><strong>玩家参与</strong>：可能只有大约20%的玩家会产生80%的游戏互动次数或完成度。这意味着游戏设计师需要特别关注这小部分玩家的体验和需求，同时也要确保其他80%的玩家仍然能找到游戏的乐趣和价值。</p>
+</li>
+<li><p><strong>内容消费</strong>：在许多游戏中，玩家可能只会体验到全部内容的一小部分（大约20%），但这一小部分内容提供了大部分的游戏乐趣和满足感（80%）。因此，重点放在核心和高质量的内容上，可能比尝试填充游戏世界以大量未经优化的内容更为重要。</p>
+</li>
+<li><p><strong>收益来源</strong>：对于盈利型游戏，通常只有大约20%的玩家会贡献出80%的收入。这就提示开发者们需要了解这些玩家的偏好，并为他们提供价值，以保持游戏的盈利性和可持续性。</p>
+</li>
+<li><p><strong>问题和解决方案</strong>：在优化游戏过程中，可能只有20%的问题导致了玩家体验中80%的困扰。识别并解决这些关键问题可以显著提升游戏质量。</p>
+</li>
+</ul>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>虽然二八定律提供了一个有用的视角来理解和优化游戏设计，但它并不是一个硬性规则，实际比例可能会有所不同。游戏设计师应该将其作为一个指导原则，而不是一个严格遵守的法则。成功的游戏设计需要考虑到所有玩家的体验，并努力打造包容性和多样性的游戏世界。</p>
+<p>总之，二八定律在游戏设计中的应用突显了资源分配和优先级设置的重要性，帮助设计师和开发者识别和专注于那些最能影响玩家体验和游戏成功的因素。</p>
+
+    </div>
+</div><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://kongcai.tech">kchris</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://kongcai.tech/post/428cf2d9.html">http://kongcai.tech/post/428cf2d9.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://kongcai.tech" target="_blank">InAction</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/">游戏设计</a></div><div class="post_share"><div class="social-share" data-image="/img/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA/cover.png" data-sites="wechat,weibo,qq,facebook,twitter"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/base/pay_wechat.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/base/pay_wechat.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/base/Alipay.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/base/Alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/post/7fa73044.html" title="《Brotato》玩法解析"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/%E3%80%8ABrotato%E3%80%8B%E7%8E%A9%E6%B3%95%E8%A7%A3%E6%9E%90/header_schinese.jpg" onerror="onerror=null;src='/img/base/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">《Brotato》玩法解析</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/post/6048a2bd.html" title="任天堂如何解决塞尔达的开放世界问题"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/%E4%BB%BB%E5%A4%A9%E5%A0%82%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E5%A1%9E%E5%B0%94%E8%BE%BE%E7%9A%84%E5%BC%80%E6%94%BE%E4%B8%96%E7%95%8C%E9%97%AE%E9%A2%98/cover.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-06-02</div><div class="title">任天堂如何解决塞尔达的开放世界问题</div></div></a></div><div><a href="/post/96253f08.html" title="关卡设计之经验谈01"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/%E5%85%B3%E5%8D%A1%E8%AE%BE%E8%AE%A1%E4%B9%8B%E7%BB%8F%E9%AA%8C%E8%B0%8801/cover.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-06-23</div><div class="title">关卡设计之经验谈01</div></div></a></div><div><a href="/post/711e32fe.html" title="分镜与故事板"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-10-07</div><div class="title">分镜与故事板</div></div></a></div><div><a href="/post/80fc2ac6.html" title="基于关卡的体验设计(Dawn)"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/%E5%9F%BA%E4%BA%8E%E5%85%B3%E5%8D%A1%E7%9A%84%E4%BD%93%E9%AA%8C%E8%AE%BE%E8%AE%A1-Dawn/%E7%8E%A9%E6%B3%95%E8%AE%BE%E8%AE%A1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-03</div><div class="title">基于关卡的体验设计(Dawn)</div></div></a></div><div><a href="/post/17b23a90.html" title="战斗设计之经验谈01"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/%E6%88%98%E6%96%97%E8%AE%BE%E8%AE%A1%E4%B9%8B%E7%BB%8F%E9%AA%8C%E8%B0%8801/1687853945576.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-06-26</div><div class="title">战斗设计之经验谈01</div></div></a></div><div><a href="/post/a82bd550.html" title="樱井老师的开发课堂"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/%E6%A8%B1%E4%BA%95%E8%80%81%E5%B8%88%E7%9A%84%E5%BC%80%E5%8F%91%E8%AF%BE%E5%A0%82/cover.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-30</div><div class="title">樱井老师的开发课堂</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/base/icon01.png" onerror="this.onerror=null;this.src='/img/base/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">kchris</div><div class="author-info__description">接纳一切新鲜有趣的事物</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">33</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">34</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><a id="card-info-btn" href="mailto:1098158356@qq.com"><i class="fas fa-envelope"></i><span>Contact Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://pd.qq.com/s/e2ja3ehfs" target="_blank" title="QQ频道"><i class="fas fa-hashtag"></i></a><a class="social-icon" href="https://steamcommunity.com/profiles/76561198326647546/" target="_blank" title="好友代码：366381818"><i class="fab fa-steam"></i></a><a class="social-icon" href="https://space.bilibili.com/6518211" target="_blank" title="b站"><i class="fab fa-bilibili"></i></a><a class="social-icon" href="http://kchris1027.github.io/link/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来聊~</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A3%8E%E9%99%A9%E4%B8%8E%E5%9B%9E%E6%8A%A5%EF%BC%88Risk-vs-Reward%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">风险与回报（Risk vs. Reward）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BA%E5%A4%84"><span class="toc-number">1.1.</span> <span class="toc-text">出处</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-number">1.2.</span> <span class="toc-text">游戏设计中的应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E5%8E%9F%E5%88%99"><span class="toc-number">1.3.</span> <span class="toc-text">关键原则</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E5%BE%AA%E7%8E%AF%E7%90%86%E8%AE%BA%EF%BC%88Game-Loop-Theory%EF%BC%89"><span class="toc-number">2.</span> <span class="toc-text">三循环理论（Game Loop Theory）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BA%E5%A4%84%E4%B8%8E%E6%99%AE%E5%8F%8A"><span class="toc-number">2.1.</span> <span class="toc-text">出处与普及</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%90%86%E8%AE%BA%E8%A7%A3%E9%87%8A"><span class="toc-number">2.2.</span> <span class="toc-text">理论解释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%94%E7%94%A8"><span class="toc-number">2.3.</span> <span class="toc-text">应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E7%8C%AE"><span class="toc-number">2.4.</span> <span class="toc-text">文献</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%83%E6%B5%81%E7%90%86%E8%AE%BA%EF%BC%88Flow-Theory%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">心流理论（Flow Theory）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%83%E6%B5%81%E7%90%86%E8%AE%BA%E5%9C%A8%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-number">3.1.</span> <span class="toc-text">心流理论在游戏设计中的应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%83%E6%B5%81%E7%90%86%E8%AE%BA%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="toc-number">3.2.</span> <span class="toc-text">心流理论的影响</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%83%85%E7%BB%AA%E6%9B%B2%E7%BA%BF%EF%BC%88Emotional-Curve%EF%BC%89"><span class="toc-number">4.</span> <span class="toc-text">情绪曲线（Emotional Curve）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%86%E5%8F%B2%E8%83%8C%E6%99%AF%E4%B8%8E%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5"><span class="toc-number">4.1.</span> <span class="toc-text">历史背景与相关概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E4%BA%8E%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1"><span class="toc-number">4.2.</span> <span class="toc-text">应用于游戏设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E8%AE%BA"><span class="toc-number">4.3.</span> <span class="toc-text">结论</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B8%B8%E6%88%8F%E8%8A%82%E7%82%B9%E5%88%87%E5%88%86%EF%BC%88Gameplay-Breakdown%EF%BC%89"><span class="toc-number">5.</span> <span class="toc-text">游戏节点切分（Gameplay Breakdown）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%83%8C%E6%99%AF%E4%B8%8E%E5%BA%94%E7%94%A8"><span class="toc-number">5.1.</span> <span class="toc-text">背景与应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B8%B8%E6%88%8F%E8%8A%82%E7%82%B9%E5%88%87%E5%88%86%E7%9A%84%E5%85%B3%E9%94%AE%E6%AD%A5%E9%AA%A4"><span class="toc-number">5.2.</span> <span class="toc-text">游戏节点切分的关键步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E8%A6%81%E6%80%A7"><span class="toc-number">5.3.</span> <span class="toc-text">重要性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E8%AE%BA"><span class="toc-number">5.4.</span> <span class="toc-text">结论</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E5%85%AB%E5%AE%9A%E5%BE%8B%EF%BC%88Pareto-Principle%EF%BC%89"><span class="toc-number">6.</span> <span class="toc-text">二八定律（Pareto Principle）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E5%85%AB%E5%AE%9A%E5%BE%8B%E5%9C%A8%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-number">6.1.</span> <span class="toc-text">二八定律在游戏设计中的应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">6.2.</span> <span class="toc-text">注意事项</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/post/428cf2d9.html" title="游戏设计基础理论"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA/cover.png" onerror="this.onerror=null;this.src='/img/base/404.jpg'" alt="游戏设计基础理论"/></a><div class="content"><a class="title" href="/post/428cf2d9.html" title="游戏设计基础理论">游戏设计基础理论</a><time datetime="2024-03-14T15:04:53.000Z" title="发表于 2024-03-14 15:04:53">2024-03-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/7fa73044.html" title="《Brotato》玩法解析"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/%E3%80%8ABrotato%E3%80%8B%E7%8E%A9%E6%B3%95%E8%A7%A3%E6%9E%90/header_schinese.jpg" onerror="this.onerror=null;this.src='/img/base/404.jpg'" alt="《Brotato》玩法解析"/></a><div class="content"><a class="title" href="/post/7fa73044.html" title="《Brotato》玩法解析">《Brotato》玩法解析</a><time datetime="2024-02-29T23:36:09.000Z" title="发表于 2024-02-29 23:36:09">2024-02-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/93337678.html" title="基于个人服务器的VPN构建"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84VPN%E6%9E%84%E5%BB%BA/cover.png" onerror="this.onerror=null;this.src='/img/base/404.jpg'" alt="基于个人服务器的VPN构建"/></a><div class="content"><a class="title" href="/post/93337678.html" title="基于个人服务器的VPN构建">基于个人服务器的VPN构建</a><time datetime="2024-02-19T12:14:07.000Z" title="发表于 2024-02-19 12:14:07">2024-02-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/711e32fe.html" title="分镜与故事板">分镜与故事板</a><time datetime="2023-10-07T19:42:10.000Z" title="发表于 2023-10-07 19:42:10">2023-10-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/a82bd550.html" title="樱井老师的开发课堂"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/%E6%A8%B1%E4%BA%95%E8%80%81%E5%B8%88%E7%9A%84%E5%BC%80%E5%8F%91%E8%AF%BE%E5%A0%82/cover.png" onerror="this.onerror=null;this.src='/img/base/404.jpg'" alt="樱井老师的开发课堂"/></a><div class="content"><a class="title" href="/post/a82bd550.html" title="樱井老师的开发课堂">樱井老师的开发课堂</a><time datetime="2023-07-30T10:26:22.000Z" title="发表于 2023-07-30 10:26:22">2023-07-30</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By kchris</div><div class="footer_custom_text">前路漫漫，愿君莫笑岁月荒唐</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><div class="js-pjax"><script>(() => {
+  const $mermaidWrap = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaidWrap.length) {
+    window.runMermaid = () => {
+      window.loadMermaid = true
+      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+      Array.from($mermaidWrap).forEach((item, index) => {
+        const mermaidSrc = item.firstElementChild
+        const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+        const mermaidID = 'mermaid-' + index
+        const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+        mermaid.mermaidAPI.render(mermaidID, mermaidDefinition, (svgCode) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svgCode)
+        })
+      })
+    }
+
+    const loadMermaid = () => {
+      window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+    }
+
+    btf.addModeChange('mermaid', () => {
+      window.runMermaid()
+    })
+
+    window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+  }
+})()</script><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://comments.kongcai.tech/',
+      region: 'ap-tokyo',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://comments.kongcai.tech/',
+      region: 'ap-tokyo',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.textContent = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'https://comments.kongcai.tech/',
+        region: 'ap-tokyo',
+        pageSize: 6,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 10/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.textContent= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script defer src="/js/ripples/jquery.min.js"></script><script defer data-pjax src="/js/fish/addfish.js"></script><script type="text/javascript" src ="/js/about/reward.js" ></script><script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.16/dist/sweetalert2.all.min.js"></script><script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script><script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script><script> LA.init({id:"K2NNRDxRALSyQWuV",ck:"K2NNRDxRALSyQWuV"})</script><script>new LingQue.Monitor().init({id:"K2NNRDxRALSyQWuV",sendSuspicious:true});</script><script defer data-pjax src="/js/pagination.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && location.pathname =='/'){
+    
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/樱井老师的开发课堂/cover01.png" alt="/img/樱井老师的开发课堂/cover01.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2023-07-30</span><a class="blog-slider__title" href="post/a82bd550.html">樱井老师的开发课堂</a><div class="blog-slider__text">优秀的人永远值得被学习</div><a class="blog-slider__button" href="post/a82bd550.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/妙趣横生的游戏制作之旅/cover.png" alt="/img/妙趣横生的游戏制作之旅/cover.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2023-05-16</span><a class="blog-slider__title" href="post/bfd75427.html">读书笔记之《妙趣横生的游戏制作之旅》</a><div class="blog-slider__text">推荐给每一个从事于游戏研发的人</div><a class="blog-slider__button" href="post/bfd75427.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/MiniGame/cover.png" alt="/img/MiniGame/cover.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2023-04-20</span><a class="blog-slider__title" href="post/52d239e4.html">MiniGames</a><div class="blog-slider__text">放松一下，感受游戏的乐趣。</div><a class="blog-slider__button" href="post/52d239e4.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/base/cover02.png" alt="/img/base/cover02.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2023-03-27</span><a class="blog-slider__title" href="post/a01715fb.html">AI绘画</a><div class="blog-slider__text">画一个AI的画</div><a class="blog-slider__button" href="post/a01715fb.html">详情</a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载swiper')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.js"></script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper@0.18/swiper/swiperindex.js"></script>
+<style></style><!-- hexo injector body_end end -->
+      <div id="sakana" style="position:fixed;right:0;bottom:0px;"></div>
+      <script async onload='initSakanaWidget({"character":"takina","enable":true,"enable_mobile":false,"size":200,"autoFit":false,"bottom":"0px","controls":true,"stroke":{"color":"#b4b4b4","width":10},"threshold":0.1,"rotate":0,"customCharacters":[]})' src="https://cdn.jsdelivr.net/npm/sakana-widget@2.3.0/lib/sakana.min.js"></script>
+      <script>
+      function log(msg) {
+        console.log("[hexo-sakana] " + msg);
+      }
+
+      function initSakanaWidget(config) {
+        if (
+          !config.enable_mobile &&
+          window.navigator.userAgent.match(
+            /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+          )
+        ) {
+          log(
+            '检测为移动端，且配置中未开启在移动端启用组件，hexo-sakana 已禁用'
+          );
+          return;
+        }
+        for (character of config.customCharacters) {
+          if (!["takina", "chisato"].includes(character.base)) {
+            log(`无效基础角色 ${character.base}，取消注册`);
+            continue;
+          }
+          if (character.name === "") {
+            log("名称为空，取消注册");
+            continue;
+          }
+          const originCharacter = SakanaWidget.getCharacter(character.base);
+          originCharacter.initialState = {
+            ...originCharacter.initialState,
+            ...character,
+          };
+          originCharacter.image = !character.image ? originCharacter.image : character.image
+          SakanaWidget.registerCharacter(character.name, originCharacter);
+          log(`注册自定义角色：${character.name}`)
+        }
+        new SakanaWidget({
+          character: config.character,
+          size: config.size,
+          autoFit: config.autoFit,
+          controls: config.controls,
+          stroke: config.stroke,
+          threshold: config.threshold,
+          rotate: config.rotate,
+        }).mount("#sakana");
+      }
+  </script>
+    </body></html>
