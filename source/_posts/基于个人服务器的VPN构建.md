@@ -18,21 +18,21 @@ cover: /img/基于个人服务器的VPN构建/cover.png
 
 ## 工具推荐
 
-### `FranzKafkaYu/x-ui`
+### FranzKafkaYu/x-ui
 - 推荐指数 ⭐⭐⭐⭐⭐
 - 脚本+可视化面板的组合，支持支持单端口多用户、多协议。
 
 {% link FranzKafkaYu/x-ui,GitHub,https://github.com/FranzKafkaYu/x-ui %}
 
 
-### `233boy/Xray`
+### 233boy/Xray
 - 推荐指数 ⭐⭐⭐⭐
 - 一款超便捷的构建脚本，开箱即用。
 
 {% link 233boy/Xray,GitHub,https://github.com/233boy/Xray %}
 
 
-### `wulabing/Xray_onekey`
+### wulabing/Xray_onekey
 - 推荐指数 ⭐⭐⭐
 - 听说口碑不错，不过由于我之前已经安装了Nginx，脚本构建过程中失败后也就没有继续尝试下去了，有兴趣的朋友可以试试。
 
