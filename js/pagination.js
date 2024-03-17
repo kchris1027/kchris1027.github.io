@@ -30,4 +30,3 @@ var icattoPage = {
 icattoPage.listenToPageInputPress();
 
 // 自定页数跳转
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>

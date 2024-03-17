@@ -206,4 +206,4 @@ var CountUp = function (target, startVal, endVal, decimals, duration, options) {
     if (self.initialize()) {
       self.printValue(self.startVal);
     }
-  };<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+  };
