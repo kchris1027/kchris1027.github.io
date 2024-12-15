@@ -214,39 +214,6 @@ swiper:
   temple_html: '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container">${temple_html_item}</div></div>'
   plus_style: ""
 
-#「Sakana! Widget」 https://socket.dev/npm/package/hexo-sakana
-sakana:
-  # 默认角色
-  character: takina
-  # 是否启用
-  enable: true
-  # 是否在移动端启用
-  enable_mobile: false
-  #  组件大小，默认为 200
-  size: 200
-  # 自适应容器大小 （最小 120px）
-  # 另见：https://github.com/dsrkafuu/sakana-widget/blob/main/README.zh.md#%E8%87%AA%E5%8A%A8%E7%BC%A9%E6%94%BE
-  autoFit: false
-  # 组件据底部距离，需填写单位或百分号
-  bottom: 0px
-  # 是否启用控制栏
-  controls: true
-  # 线条设置
-  stroke:
-    # 颜色
-    color: "#b4b4b4"
-    # 粗细
-    width: 10
-  # 停止动画的阈值
-  threshold: 0.1
-  # 旋转角度
-  rotate: 0
-  # 自定义角色
-  # customCharacters:
-  #   - base: takina
-  #     name: takina1
-  #     ...
-
 
 
 # Extensions

@@ -30,7 +30,6 @@
     "hexo-renderer-marked": "^6.0.0",
     "hexo-renderer-pug": "^3.0.0",
     "hexo-renderer-stylus": "^2.1.0",
-    "hexo-sakana": "^1.0.2",
     "hexo-server": "^3.0.0",
     "hexo-swiper-bar": "^1.1.1",
     "hexo-tag-aplayer": "^3.0.4",
