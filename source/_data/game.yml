@@ -1,21 +1,16 @@
 - class_name: ✨ 待体验
   description: 小手搓搓，期待一波
   game_list:
-    - name: 最终幻想16
+    - name: 失落之魂
       specification: 游戏启动中
-      description: SE的年度大作，各项设定都挺吸引人!
-      image: https://image.api.playstation.com/vulcan/ap/rnd/202211/1009/oehAww2ytCqKnxk12h74Hx7y.jpg?w=780&thumb=false
-      link: https://www.playstation.com/en-us/games/final-fantasy-xvi/
-    - name: 末光
+      description: 急急急！
+      image: https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/3378960/header_schinese.jpg?t=1734571547
+      link: https://store.steampowered.com/app/3378960/_/
+    - name: MIGHTREYA
       specification: 游戏启动中
-      description: 战斗看起来不错，准备试试手感
-      image: https://cdn.akamai.steamstatic.com/steam/apps/2162020/header_schinese.jpg?t=1687883214
-      link: https://store.steampowered.com/app/2162020/_/
-    - name: Planet of Lana
-      specification: 游戏启动中
-      description: 是我喜欢的画风~
-      image: https://cdn.akamai.steamstatic.com/steam/apps/1608230/header.jpg?t=1688045807
-      link: https://store.steampowered.com/app/1608230/Planet_of_Lana/
+      description: 让人新奇的战斗！
+      image: https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/3077640/header_schinese.jpg?t=1731083138
+      link: https://store.steampowered.com/app/3077640/MIGHTREYA/
     - name: 战神：诸神黄昏
       specification: 游戏启动中
       description: 战神4真的太棒了，5想必也不差。
@@ -25,21 +20,40 @@
 - class_name: 🚀 持续体验中
   description: 小手搓搓，期待一波
   game_list:
-    - name: 蓝色协议
+    - name: 鸣潮
       specification: 游戏运行中
-      description: 期待了几年的MMO新作！！
-      image: https://blue-protocol.com/assets/img/top-release/story_visual2_pc.jpg
-      link: https://blue-protocol.com/
+      description: 高机动性的开放世界二游！
+      image: https://mc.kurogames.com/static4.0/assets/big-hl-247d5093.jpg
+      link: https://mc.kurogames.com/
     - name: 崩坏3
       specification: 游戏运行中
       description: 从开服一直玩到现在，目前佛系游玩中......
       image: https://uploadstatic.mihoyo.com/contentweb/20211023/2021102319505169569.png
       link: https://www.taptap.cn/app/10056
+    - name: 剑星
+      specification: 游戏运行中
+      description: 想玩，但真的没时间
+      image: https://gmedia.playstation.com/is/image/SIEPDC/stellar-blade-screenshot-06-en-06feb23?$1600px$
+      link: https://www.playstation.com/zh-hans-hk/games/stellar-blade/
+
+- class_name: 📌 2024
+  description: 今年加班忙成狗，游戏时间少得可怜
+  game_list:
+    - name: 蓝色协议
+      specification: 游戏运行中
+      description: 期待了几年的MMO新作！！已然凉凉~
+      image: https://blue-protocol.com/assets/img/top-release/story_visual2_pc.jpg
+      link: https://blue-protocol.com/
     - name: 逆水寒
       specification: 游戏运行中
       description: 当初端游真的让人很惊艳，可惜后期运营过于窒息。抱着好奇心想看看网易能把手游做成什么样子。
       image: /img/game/1688366064098.png
       link: https://www.taptap.cn/app/191385
+    - name: 最终幻想16
+      specification: 游戏启动中
+      description: SE的年度大作，各项设定都挺吸引人!
+      image: https://image.api.playstation.com/vulcan/ap/rnd/202211/1009/oehAww2ytCqKnxk12h74Hx7y.jpg?w=780&thumb=false
+      link: https://www.playstation.com/en-us/games/final-fantasy-xvi/
 
 - class_name: 📌 2023
   description: 那个男人，他终于回来了！
@@ -47,7 +61,7 @@
     - name: 塞尔达传说之王国之泪
       specification: 游戏时长：150h
       description: 任天堂对开放世界的进一步探索与想象，预定2023年度最佳游戏！
-      image: https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.0/c_scale,w_1700/ncom/software/switch/70010000063714/276a412988e07c4d55a2996c6d38abb408b464413b2dfeb44d2aa460b9f622e1
+      image: https://upload.wikimedia.org/wikipedia/zh/thumb/9/97/%E8%96%A9%E7%88%BE%E9%81%94%E5%82%B3%E8%AA%AA%E7%8E%8B%E5%9C%8B%E4%B9%8B%E6%B7%9A.jpg/220px-%E8%96%A9%E7%88%BE%E9%81%94%E5%82%B3%E8%AA%AA%E7%8E%8B%E5%9C%8B%E4%B9%8B%E6%B7%9A.jpg
       link: https://www.nintendo.com/store/products/the-legend-of-zelda-tears-of-the-kingdom-switch/
     - name: 卧龙
       specification: 游戏时长：60h
@@ -71,7 +85,7 @@
     - name: Nintendo Switch 运动
       specification: 游戏时长：60h
       description: 疫情3个月封闭在家锻炼的唯二渠道！给咪普利老师留一个名额。
-      image: https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.0/c_scale,w_1700/ncom/software/switch/70010000049931/cf8adb2c74522b91412eb40b9d77216e8f8436fc4e63731e0dc262e6666930eb
+      image: https://upload.wikimedia.org/wikipedia/zh/thumb/7/7b/Nintendo_Switch_%E9%81%8B%E5%8B%95.jpg/220px-Nintendo_Switch_%E9%81%8B%E5%8B%95.jpg
       link: https://www.nintendo.com/store/products/nintendo-switch-sports-switch/
     - name: 异度之刃3
       specification: 游戏时长：50h
