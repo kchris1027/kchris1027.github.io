@@ -6793,7 +6793,7 @@ blockquote.pullquote.right {
     transition: 2s ease-in-out;
   }
   .author-content-item.game-yuanshen {
-    background: url(https://mc.kurogames.com/static4.0/assets/rinascita-06-b8503d26.webp) no-repeat top;
+    background: url(/img/about/mingchao.png) no-repeat top;
     background-size: cover;
     min-height: 300px;
     overflow: hidden;
