@@ -39,21 +39,27 @@
 - class_name: 📌 2024
   description: 今年加班忙成狗，游戏时间少得可怜
   game_list:
-    - name: 蓝色协议
-      specification: 游戏运行中
-      description: 期待了几年的MMO新作！！已然凉凉~
-      image: https://blue-protocol.com/assets/img/top-release/story_visual2_pc.jpg
-      link: https://blue-protocol.com/
-    - name: 逆水寒
-      specification: 游戏运行中
-      description: 当初端游真的让人很惊艳，可惜后期运营过于窒息。抱着好奇心想看看网易能把手游做成什么样子。
-      image: /img/game/1688366064098.png
-      link: https://www.taptap.cn/app/191385
+    - name: 黑神话：悟空
+      specification: 游戏时长：60h
+      description: 见证国产单机崛起！
+      image: https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2358720/header_schinese.jpg?t=1734426465
+      link: https://store.steampowered.com/app/2358720/_/
     - name: 最终幻想16
-      specification: 游戏启动中
+      specification: 游戏时长：50h
       description: SE的年度大作，各项设定都挺吸引人!
       image: https://image.api.playstation.com/vulcan/ap/rnd/202211/1009/oehAww2ytCqKnxk12h74Hx7y.jpg?w=780&thumb=false
       link: https://www.playstation.com/en-us/games/final-fantasy-xvi/
+    - name: 蓝色协议
+      specification: 游戏已然凉凉~
+      description: 期待了几年的MMO新作！！
+      image: https://blue-protocol.com/assets/img/top-release/story_visual2_pc.jpg
+      link: https://blue-protocol.com/
+    - name: 逆水寒
+      specification: 换汤不换药
+      description: 当初端游真的让人很惊艳，可惜后期运营过于窒息。抱着好奇心想看看网易能把手游做成什么样子。
+      image: /img/game/1688366064098.png
+      link: https://www.taptap.cn/app/191385
+
 
 - class_name: 📌 2023
   description: 那个男人，他终于回来了！
