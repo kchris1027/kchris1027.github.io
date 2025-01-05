@@ -1,0 +1,612 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><!-- hexo injector head_begin start --><style type="text/css">.douban-card-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 400px;
+}
+
+.douban-card {
+    display: flex;
+    margin: 30px 10px;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.douban-card:hover {
+    text-decoration: none;
+}
+
+.douban-card-bgimg {
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    filter: blur(15px) brightness(0.6);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-img {
+    position: relative;
+    height: 130px;
+    width: 80px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-left:hover .douban-card-img {
+    filter: blur(5px) brightness(0.6);
+    transform: perspective(800px) rotateX(180deg);
+}
+
+.douban-card-left .douban-card-img {
+    transition: all 500ms ease;
+}
+
+.douban-card-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.douban-card-left .douban-card-status {
+    height: 130px;
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    transform: rotateX(180deg);
+    backface-visibility: hidden;
+    transition: all 500ms ease;
+}
+
+.douban-card-left:hover .douban-card-status {
+    transform: perspective(800px) rotateX(0deg);
+}
+
+.douban-card-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.3;
+    color: antiquewhite;
+}
+
+.douban-card-item {
+    margin-top: 4px;
+}
+</style><!-- hexo injector head_begin end --><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Follow - 新一代RSS阅读器 | InAction</title><meta name="author" content="kchris,1098158356@qq.com"><meta name="copyright" content="kchris"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="背景说明 ” 我们身处信息爆炸的时代，只是信息爆炸了，但知识并没有爆炸。海量的信息不仅增加了我们甄别筛选知识的难度，还让我们随时随地处于即时信息和肤浅信息的包围中。“  需求来源如今的社会中，信息是个既廉价又宝贵的资源。廉价到通过手机唾手可得，却又在某些时刻，贵重到一个信息差，能拉开人与人之间的社会差距。 在和同事的一次闲聊中，我聊到自己不太喜欢国内这种全家桶式的软件设计。于是他接过话题，开始说到">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Follow - 新一代RSS阅读器">
+<meta property="og:url" content="http://kongcai.tech/post/c1ea16e5.html">
+<meta property="og:site_name" content="InAction">
+<meta property="og:description" content="背景说明 ” 我们身处信息爆炸的时代，只是信息爆炸了，但知识并没有爆炸。海量的信息不仅增加了我们甄别筛选知识的难度，还让我们随时随地处于即时信息和肤浅信息的包围中。“  需求来源如今的社会中，信息是个既廉价又宝贵的资源。廉价到通过手机唾手可得，却又在某些时刻，贵重到一个信息差，能拉开人与人之间的社会差距。 在和同事的一次闲聊中，我聊到自己不太喜欢国内这种全家桶式的软件设计。于是他接过话题，开始说到">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://kongcai.tech/img/Follow-%E6%96%B0%E4%B8%80%E4%BB%A3RSS%E9%98%85%E8%AF%BB%E5%99%A8/cover.png">
+<meta property="article:published_time" content="2024-12-16T13:15:17.000Z">
+<meta property="article:modified_time" content="2025-01-05T11:55:13.943Z">
+<meta property="article:author" content="kchris">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://kongcai.tech/img/Follow-%E6%96%B0%E4%B8%80%E4%BB%A3RSS%E9%98%85%E8%AF%BB%E5%99%A8/cover.png"><link rel="shortcut icon" href="/img/base/icon.png"><link rel="canonical" href="http://kongcai.tech/post/c1ea16e5.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":500},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Follow - 新一代RSS阅读器',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-01-05 11:55:13'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/wave_style.css"><link rel="stylesheet" href="/css/progress_bar.css"><link rel="stylesheet" href="/css/twikoo_tips.css"><link rel="stylesheet" href="/css/game_page.css"><link rel="stylesheet" href="/css/tag_link.css"><link rel="stylesheet" href="/css/pagination.css"><link rel="stylesheet" href="/css/tag_page.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiperstyle.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/link/atom.xml" title="InAction" type="application/atom+xml">
+</head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+document.addEventListener('pjax:send', () => {
+  Pace.restart()
+})
+</script><link rel="stylesheet" href="/css/progress_bar.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/base/icon01.png" onerror="onerror=null;src='/img/base/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">35</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">35</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-book"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-headphones"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page child" href="/game/"><i class="fa-fw fas fa-gamepad"></i><span> Game</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-compass"></i><span> 工具</span></a></div><div class="menus_item"><a class="site-page" href="/message/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/Follow-%E6%96%B0%E4%B8%80%E4%BB%A3RSS%E9%98%85%E8%AF%BB%E5%99%A8/cover.png')"><nav id="nav"><span id="blog-info"><a href="/" title="InAction"><img class="site-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/base/icon.png"/></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-book"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-headphones"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page child" href="/game/"><i class="fa-fw fas fa-gamepad"></i><span> Game</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-compass"></i><span> 工具</span></a></div><div class="menus_item"><a class="site-page" href="/message/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Follow - 新一代RSS阅读器</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-12-16T13:15:17.000Z" title="发表于 2024-12-16 13:15:17">2024-12-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-01-05T11:55:13.943Z" title="更新于 2025-01-05 11:55:13">2025-01-05</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span id="" data-flag-title="Follow - 新一代RSS阅读器"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="twikoo_visitors"><i class="fa-solid fa-spinner fa-spin"></i></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/post/c1ea16e5.html#post-comment"><span id="twikoo-count"><i class="fa-solid fa-spinner fa-spin"></i></span></a></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="背景说明"><a href="#背景说明" class="headerlink" title="背景说明"></a>背景说明</h2><blockquote>
+<p>” 我们身处信息爆炸的时代，只是信息爆炸了，但知识并没有爆炸。海量的信息不仅增加了我们甄别筛选知识的难度，还让我们随时随地处于即时信息和肤浅信息的包围中。“</p>
+</blockquote>
+<h3 id="需求来源"><a href="#需求来源" class="headerlink" title="需求来源"></a>需求来源</h3><p>如今的社会中，信息是个既廉价又宝贵的资源。廉价到通过手机唾手可得，却又在某些时刻，贵重到一个信息差，能拉开人与人之间的社会差距。</p>
+<p>在和同事的一次闲聊中，我聊到自己不太喜欢国内这种全家桶式的软件设计。于是他接过话题，开始说到微信这款国民级软件，广告越来越多、刷不到自己想看到的信息…是的，刷不到自己想看到的信息，这也是目前国内主流互联网平台的共通问题所在了。如今的平台靠着大数据和推荐算法在刻意为用户制造对平台有益的“信息茧房”，让用户只看到他们想让用户看到的信息，而这个信息通过一些手段，包装成用户自己想看到的信息。</p>
+<p>为了避免这种情况，我开始选择性的过滤掉对自己无用信息，只是这个过程还是浪费了大量时间。随着生活和工作节奏的加快，时间对于我而言成为一个日渐短缺的资源。于是我开始寻求解决方案。</p>
+<p>首先确定的一个大方向是，尽可能接触一手信息。基于这个目标，我开始在互联网上搜罗，紧接着了解并接触到 RSS，一种很原始的网站订阅方式。尽管原始，但纵观目前互联网主流平台上的关注、公众号、动态…这些功能的本质也是一种 RSS 订阅，只不过是平台为了完成圈地而制造的新概念，并借机将用户的数字信息据为己有，所获而来的信息通过各种商业模式完成变现。</p>
+<h3 id="概念说明"><a href="#概念说明" class="headerlink" title="概念说明"></a>概念说明</h3><ul>
+<li><p><strong>RSS</strong></p>
+<p>  RSS（Really Simple Syndication 或 Rich Site Summary）是一种用于订阅和自动获取网站内容更新的技术和格式。它允许用户通过聚合器（又称 RSS 阅读器）方便地接收和阅读来自不同网站的最新信息，而无需访问每个网站。</p>
+<p>  早年间的个人博客基本就靠这个来进行传播，只是现在平台垄断越发明显，个人RSS成为孤岛，难以为继。</p>
+</li>
+<li><p><strong>RSS 阅读器</strong></p>
+<p>  RSS 阅读器是一种专门用于订阅、聚合和管理 RSS Feed 的工具或应用程序。通过 RSS 阅读器，用户可以集中查看来自不同网站的最新内容，而无需频繁访问每个网站。这种工具对于希望跟踪多个新闻来源、博客、播客或其他内容发布平台的用户尤其有用。</p>
+</li>
+</ul>
+<h2 id="软件简介"><a href="#软件简介" class="headerlink" title="软件简介"></a>软件简介</h2><div class="note warning simple"><p>简介内容由AI总结输出。</p>
+</div>
+
+<p>RSS 工具 Follow 主要面向互联网用户，尤其是那些希望方便快捷地获取信息和内容的用户。</p>
+<h3 id="软件简要描述："><a href="#软件简要描述：" class="headerlink" title="软件简要描述："></a>软件简要描述：</h3><p>Follow 是一款现代化的 RSS 阅读器，旨在帮助用户方便地订阅和管理各种内容源。其主要功能包括：</p>
+<ul>
+<li><strong>用户友好的界面</strong>：简单直观的设计，让用户能够快速找到所需的信息。</li>
+<li><strong>多源订阅</strong>：支持多种类型的 RSS 源订阅，用户可以根据自己的需求自由选择。</li>
+<li><strong>内容分类</strong>：提供分类管理功能，帮助用户将不同主题的内容进行整理。</li>
+<li><strong>离线功能</strong>：支持离线阅读，用户可以在没有网络连接时访问之前存储的内容。</li>
+<li><strong>跨设备同步</strong>：支持账户同步功能，用户在任何设备上都能获取最新的订阅更新。</li>
+<li><strong>推送通知</strong>：实时推送最新更新，确保用户不会错过重要信息。</li>
+</ul>
+<h3 id="衍生内容："><a href="#衍生内容：" class="headerlink" title="衍生内容："></a>衍生内容：</h3><p>除了 Follow，用户也可以探索其他类似的 RSS 工具和应用，如 Feedly、Inoreader 和 The Old Reader。这些工具各有特点，如 Feedly 强调社交功能，Inoreader 提供高级订阅管理选项，而 The Old Reader 则更注重简洁的阅读体验。用户可以根据自身需求，选择最合适的工具来管理自己的信息获取方式。</p>
+<h2 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h2><h3 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h3><ul>
+<li><p>可以直接从官网下载对应平台安装包。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://follow.is/">Follow</a></li>
+</ul>
+</li>
+<li><p>如果能访问外网的话，也可以从 GitHub 上找到最新的 Release 下载。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/RSSNext/Follow">https://github.com/RSSNext/Follow</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="软件配置"><a href="#软件配置" class="headerlink" title="软件配置"></a>软件配置</h3><ul>
+<li><p><strong>订阅源配置</strong></p>
+<ol>
+<li><p>点击“+”，打开发现页面。</p>
+<p> <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/Follow-%E6%96%B0%E4%B8%80%E4%BB%A3RSS%E9%98%85%E8%AF%BB%E5%99%A8/image_1.png" alt="alt text"></p>
+</li>
+<li><p>选择感兴趣的信息源。<br> 优先选择热门推荐的信息源（比较稳定）。</p>
+<p> <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/Follow-%E6%96%B0%E4%B8%80%E4%BB%A3RSS%E9%98%85%E8%AF%BB%E5%99%A8/image_2.png" alt="alt text"></p>
+</li>
+<li><p>点击“预览”，选择分组，完成订阅。</p>
+<p> <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/Follow-%E6%96%B0%E4%B8%80%E4%BB%A3RSS%E9%98%85%E8%AF%BB%E5%99%A8/image_3.png" alt="alt text"></p>
+</li>
+<li><p>订阅的信息源会在左侧栏中显示，接着便可以像微信公众号一样进行信息浏览了。</p>
+<p> <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/Follow-%E6%96%B0%E4%B8%80%E4%BB%A3RSS%E9%98%85%E8%AF%BB%E5%99%A8/image_4.png" alt="alt text"></p>
+</li>
+</ol>
+</li>
+<li><p><strong>自动化配置</strong></p>
+<p>  在设置页面中可以找到一些诸如：AI摘要、翻译、阅读模式、原文显示等自动化的规则设置，这部分属于个人定制化的操作了，可以匹配个人习惯自动完成一些重复操作。</p>
+<p>  <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/Follow-%E6%96%B0%E4%B8%80%E4%BB%A3RSS%E9%98%85%E8%AF%BB%E5%99%A8/image_5.png" alt="alt text"></p>
+<p>  <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/Follow-%E6%96%B0%E4%B8%80%E4%BB%A3RSS%E9%98%85%E8%AF%BB%E5%99%A8/image_6.png" alt="alt text"></p>
+<p>  <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/Follow-%E6%96%B0%E4%B8%80%E4%BB%A3RSS%E9%98%85%E8%AF%BB%E5%99%A8/image_7.png" alt="alt text"></p>
+</li>
+</ul>
+<h3 id="信息源获取"><a href="#信息源获取" class="headerlink" title="信息源获取"></a>信息源获取</h3><p>除了软件发现页面推荐的信息源，我们还可以自己选择信息源，应该说这才是我们使用这个软件的本质目的——打造一套自己的信息流。</p>
+<p>信息源的获取有以下几种途径：</p>
+<ul>
+<li><p><strong>网站 RSS 链接</strong></p>
+<ol>
+<li>一般允许被订阅的网站都会带有“RSS”图形或是文字标识，点击后即可获得订阅链接。这个属于官方的订阅链接了，优先推荐。</li>
+</ol>
+<p>  <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/Follow-%E6%96%B0%E4%B8%80%E4%BB%A3RSS%E9%98%85%E8%AF%BB%E5%99%A8/image_8.png" alt="alt text"></p>
+<p>  <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/Follow-%E6%96%B0%E4%B8%80%E4%BB%A3RSS%E9%98%85%E8%AF%BB%E5%99%A8/image_9.png" alt="alt text"></p>
+<p>  <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/Follow-%E6%96%B0%E4%B8%80%E4%BB%A3RSS%E9%98%85%E8%AF%BB%E5%99%A8/image_10.png" alt="alt text">
+  </p>
+</li>
+<li><p><strong>RSS 生成器（第三方）</strong></p>
+<ol>
+<li>如果第一种方式是官方行为，那么这种方式可以戏称为“民间行为”了。调侃归调侃，互联网本身就是主打开源精神，RSS从道德层面上来讲本身就是面向开放给所有人的。只是当代互联网平台通过利益绑架了这种开源精神，所以才有了民间开源。</li>
+<li>目前主流的第三方RSS生成器是RSSHub，通过浏览器插件，可以快速获取到未开放RSS网站的订阅链接。Follow 软件的前身就是 RSSHub。有兴趣的朋友可以去官方了解下。</li>
+</ol>
+<p>  <a target="_blank" rel="noopener" href="https://rsshub.netlify.app/zh/">介绍 | RSSHub</a>
+  </p>
+</li>
+<li><p><strong>RSS 生成器（自建）</strong></p>
+<ol>
+<li>由于第三方生成器并不能保证提供所有个人想订阅的网站RSS，且数据更新并非及时有效。所以有需求的同学可以自行搭建，通过自己本地主机或服务器生成有效的网页数据RSS。</li>
+<li>具体搭建方式可见上述 RSSHub 官网介绍。</li>
+</ol>
+</li>
+</ul>
+<h2 id="使用感受"><a href="#使用感受" class="headerlink" title="使用感受"></a>使用感受</h2><p>总的来说，这款软件还是比较符合我个人诉求的。</p>
+<p>不过依然存在以下不足：</p>
+<ul>
+<li>订阅源经常失效</li>
+<li>信息相较于网站来说更新不及时，受限于订阅源服务器的更新频率。</li>
+</ul>
+<p>当然以上问题也是有解决方案，就是根据自己的诉求自建一个专属RSS源。现阶段的我实在没精力再往下折腾了，等后面有空再折腾下看看效果。</p>
+<p>回归软件本身的工具属性而言，这款软件已经做得很棒了！对于使用者来说，更重要还是信息源。搜寻并整理自己所需信息，进行持续的价值积累，才是这款软件的意义所在。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://kongcai.tech">kchris</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://kongcai.tech/post/c1ea16e5.html">http://kongcai.tech/post/c1ea16e5.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://kongcai.tech" target="_blank">InAction</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/Follow-%E6%96%B0%E4%B8%80%E4%BB%A3RSS%E9%98%85%E8%AF%BB%E5%99%A8/cover.png" data-sites="wechat,weibo,qq,facebook,twitter"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/base/pay_wechat.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/base/pay_wechat.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/base/Alipay.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/base/Alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/post/55f95be9.html" title="Obsidian多端同步方案"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/Obsidian%E5%A4%9A%E7%AB%AF%E5%90%8C%E6%AD%A5%E6%96%B9%E6%A1%88/Plugin.png" onerror="onerror=null;src='/img/base/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Obsidian多端同步方案</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/base/icon01.png" onerror="this.onerror=null;this.src='/img/base/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">kchris</div><div class="author-info__description">接纳一切新鲜有趣的事物</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">35</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">35</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><a id="card-info-btn" href="mailto:1098158356@qq.com"><i class="fas fa-envelope"></i><span>Contact Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://pd.qq.com/s/e2ja3ehfs" target="_blank" title="QQ频道"><i class="fas fa-hashtag"></i></a><a class="social-icon" href="https://steamcommunity.com/profiles/76561198326647546/" target="_blank" title="好友代码：366381818"><i class="fab fa-steam"></i></a><a class="social-icon" href="https://space.bilibili.com/6518211" target="_blank" title="b站"><i class="fab fa-bilibili"></i></a><a class="social-icon" href="http://kchris1027.github.io/link/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来聊~</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%83%8C%E6%99%AF%E8%AF%B4%E6%98%8E"><span class="toc-number">1.</span> <span class="toc-text">背景说明</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9C%80%E6%B1%82%E6%9D%A5%E6%BA%90"><span class="toc-number">1.1.</span> <span class="toc-text">需求来源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5%E8%AF%B4%E6%98%8E"><span class="toc-number">1.2.</span> <span class="toc-text">概念说明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E7%AE%80%E4%BB%8B"><span class="toc-number">2.</span> <span class="toc-text">软件简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E7%AE%80%E8%A6%81%E6%8F%8F%E8%BF%B0%EF%BC%9A"><span class="toc-number">2.1.</span> <span class="toc-text">软件简要描述：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8D%E7%94%9F%E5%86%85%E5%AE%B9%EF%BC%9A"><span class="toc-number">2.2.</span> <span class="toc-text">衍生内容：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E"><span class="toc-number">3.</span> <span class="toc-text">使用说明</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="toc-number">3.1.</span> <span class="toc-text">软件安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE"><span class="toc-number">3.2.</span> <span class="toc-text">软件配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E6%BA%90%E8%8E%B7%E5%8F%96"><span class="toc-number">3.3.</span> <span class="toc-text">信息源获取</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%84%9F%E5%8F%97"><span class="toc-number">4.</span> <span class="toc-text">使用感受</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/post/c1ea16e5.html" title="Follow - 新一代RSS阅读器"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/Follow-%E6%96%B0%E4%B8%80%E4%BB%A3RSS%E9%98%85%E8%AF%BB%E5%99%A8/cover.png" onerror="this.onerror=null;this.src='/img/base/404.jpg'" alt="Follow - 新一代RSS阅读器"/></a><div class="content"><a class="title" href="/post/c1ea16e5.html" title="Follow - 新一代RSS阅读器">Follow - 新一代RSS阅读器</a><time datetime="2024-12-16T13:15:17.000Z" title="发表于 2024-12-16 13:15:17">2024-12-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/55f95be9.html" title="Obsidian多端同步方案"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/Obsidian%E5%A4%9A%E7%AB%AF%E5%90%8C%E6%AD%A5%E6%96%B9%E6%A1%88/Plugin.png" onerror="this.onerror=null;this.src='/img/base/404.jpg'" alt="Obsidian多端同步方案"/></a><div class="content"><a class="title" href="/post/55f95be9.html" title="Obsidian多端同步方案">Obsidian多端同步方案</a><time datetime="2024-04-05T17:55:46.000Z" title="发表于 2024-04-05 17:55:46">2024-04-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/428cf2d9.html" title="游戏设计基础理论"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA/cover.png" onerror="this.onerror=null;this.src='/img/base/404.jpg'" alt="游戏设计基础理论"/></a><div class="content"><a class="title" href="/post/428cf2d9.html" title="游戏设计基础理论">游戏设计基础理论</a><time datetime="2024-03-14T15:04:53.000Z" title="发表于 2024-03-14 15:04:53">2024-03-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/7fa73044.html" title="《Brotato》玩法解析"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/%E3%80%8ABrotato%E3%80%8B%E7%8E%A9%E6%B3%95%E8%A7%A3%E6%9E%90/header_schinese.jpg" onerror="this.onerror=null;this.src='/img/base/404.jpg'" alt="《Brotato》玩法解析"/></a><div class="content"><a class="title" href="/post/7fa73044.html" title="《Brotato》玩法解析">《Brotato》玩法解析</a><time datetime="2024-02-29T23:36:09.000Z" title="发表于 2024-02-29 23:36:09">2024-02-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/93337678.html" title="基于个人服务器的VPN构建"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84VPN%E6%9E%84%E5%BB%BA/cover.png" onerror="this.onerror=null;this.src='/img/base/404.jpg'" alt="基于个人服务器的VPN构建"/></a><div class="content"><a class="title" href="/post/93337678.html" title="基于个人服务器的VPN构建">基于个人服务器的VPN构建</a><time datetime="2024-02-19T12:14:07.000Z" title="发表于 2024-02-19 12:14:07">2024-02-19</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2025 By kchris</div><div class="footer_custom_text">前路漫漫，愿君莫笑岁月荒唐</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><div class="js-pjax"><script>(() => {
+  const $mermaidWrap = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaidWrap.length) {
+    window.runMermaid = () => {
+      window.loadMermaid = true
+      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+      Array.from($mermaidWrap).forEach((item, index) => {
+        const mermaidSrc = item.firstElementChild
+        const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+        const mermaidID = 'mermaid-' + index
+        const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+        mermaid.mermaidAPI.render(mermaidID, mermaidDefinition, (svgCode) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svgCode)
+        })
+      })
+    }
+
+    const loadMermaid = () => {
+      window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+    }
+
+    btf.addModeChange('mermaid', () => {
+      window.runMermaid()
+    })
+
+    window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+  }
+})()</script><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://comments.kongcai.tech/',
+      region: 'ap-tokyo',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://comments.kongcai.tech/',
+      region: 'ap-tokyo',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.textContent = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'https://comments.kongcai.tech/',
+        region: 'ap-tokyo',
+        pageSize: 6,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 10/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.textContent= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script defer src="/js/ripples/jquery.min.js"></script><script defer data-pjax src="/js/fish/addfish.js"></script><script type="text/javascript" src ="/js/about/reward.js" ></script><script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.16/dist/sweetalert2.all.min.js"></script><script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script><script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script><script> LA.init({id:"K2NNRDxRALSyQWuV",ck:"K2NNRDxRALSyQWuV"})</script><script>new LingQue.Monitor().init({id:"K2NNRDxRALSyQWuV",sendSuspicious:true});</script><script defer data-pjax src="/js/pagination.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && location.pathname =='/'){
+    
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/樱井老师的开发课堂/cover01.png" alt="/img/樱井老师的开发课堂/cover01.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2023-07-30</span><a class="blog-slider__title" href="post/a82bd550.html">樱井老师的开发课堂</a><div class="blog-slider__text">优秀的人永远值得被学习</div><a class="blog-slider__button" href="post/a82bd550.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/妙趣横生的游戏制作之旅/cover.png" alt="/img/妙趣横生的游戏制作之旅/cover.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2023-05-16</span><a class="blog-slider__title" href="post/bfd75427.html">读书笔记之《妙趣横生的游戏制作之旅》</a><div class="blog-slider__text">推荐给每一个从事于游戏研发的人</div><a class="blog-slider__button" href="post/bfd75427.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/MiniGame/cover.png" alt="/img/MiniGame/cover.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2023-04-20</span><a class="blog-slider__title" href="post/52d239e4.html">MiniGames</a><div class="blog-slider__text">放松一下，感受游戏的乐趣。</div><a class="blog-slider__button" href="post/52d239e4.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/base/cover02.png" alt="/img/base/cover02.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2023-03-27</span><a class="blog-slider__title" href="post/a01715fb.html">AI绘画</a><div class="blog-slider__text">画一个AI的画</div><a class="blog-slider__button" href="post/a01715fb.html">详情</a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载swiper')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.js"></script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper@0.18/swiper/swiperindex.js"></script>
+<style></style><!-- hexo injector body_end end --></body></html>
