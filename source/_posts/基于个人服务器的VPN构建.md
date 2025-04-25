@@ -82,9 +82,8 @@ cover: /img/基于个人服务器的VPN构建/cover.png
 
 ## 补充说明
 
-我目前在使用的是 ~~`FranzKafkaYu/x-ui`~~ `FranzKafkaYu/x-ui`，在按照使用说明操作的过程中，有几个需要注意的点，否则无法连接至服务器：
-1. ~~在 [cloudflare](https://dash.cloudflare.com/) 托管的域名DNS解析中，代理状态需要关闭，即代理状态需要调整至 `仅DNS` 。~~
-2. x-ui 管理面板中添加的入站对应端口，需要加入服务器防火墙的白名单中。
+如果遇到无法连接至服务器的情况，可以参考如下方式进行排查：
+1. x-ui 管理面板中添加的入站对应端口，需要加入服务器防火墙的白名单中。
 
     ```bash
     # 开放端口
@@ -93,4 +92,5 @@ cover: /img/基于个人服务器的VPN构建/cover.png
     # 查看端口开放状态
     sudo ufw status
     ```
-3. 入站配置中的域名需要修改为 cloudflare 托管的域名名称，而非 IP 地址。
+2. 入站配置中的域名需要修改为 cloudflare 托管的域名名称，而非 IP 地址。
+3. 在 [cloudflare](https://dash.cloudflare.com/) 托管的域名DNS解析中，代理状态需要关闭，即代理状态需要调整至 `仅DNS` 。
