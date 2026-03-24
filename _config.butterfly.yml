@@ -369,7 +369,7 @@ facebook_comments:
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  envId: https://comments.kongcai.tech/
+  envId: https://comments.kongcai.cc/
   region: ap-tokyo
   visitor: true
   option:
@@ -618,7 +618,7 @@ display_mode: light
 beautify:
   enable: true
   field: post # site/post
-  title-prefix-icon: '\f02b' # '\f0c1'
+  title-prefix-icon: '\f1d8' # '\f0c1'
   title-prefix-icon-color: '#F47466' # '#F47466'
 
 # Global font settings
