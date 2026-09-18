@@ -29,6 +29,8 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.ACCESS_TOKEN }}
           ARGS: "-rlgoDzvc -i --delete"
           SOURCE: "public/"
+          # 45.77.97.0 的 22 已被屏蔽，SSH 在 2222（2026-09-18 修：此前硬编码 -p 22 导致该步骤长期失败）
+          REMOTE_PORT: "2222"
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: ${{ secrets.TARGET }}
