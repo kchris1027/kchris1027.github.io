@@ -29,7 +29,6 @@ jobs:
       - name: Build domestic site
         run: npm run build:cn
 
-      # First production run follows the confirmed ICP footer change.
       - name: Deploy domestic site
         uses: easingthemes/ssh-deploy@main
         env:
